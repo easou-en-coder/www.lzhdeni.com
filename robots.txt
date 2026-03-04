@@ -14,6 +14,7 @@ Disallow: /50x.html
 Disallow: /googled6475cbd1dbfa286.html
 Disallow: /.htaccess
 Disallow: /nginx.htaccess
+Disallow: /*.txt
 
 # Optional: block internal/system paths if any exist
 Disallow: /assets/js/
