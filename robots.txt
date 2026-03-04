@@ -1,0 +1,27 @@
+# robots.txt for lzhdeni.com
+# Updated: 2026-03
+
+User-agent: *
+Allow: /
+
+# Error & fallback pages (no SEO value)
+Disallow: /404
+Disallow: /404.html
+Disallow: /50x
+Disallow: /50x.html
+
+# Verification / server files
+Disallow: /googled6475cbd1dbfa286.html
+Disallow: /.htaccess
+Disallow: /nginx.htaccess
+
+# Optional: block internal/system paths if any exist
+# Disallow: /assets/js/
+# Disallow: /assets/css/
+
+# Sitemaps
+Sitemap: https://love8.me/sitemap.xml
+Sitemap: https://love8.me/sitemap-en.xml
+Sitemap: https://love8.me/sitemap-zh-hans.xml
+Sitemap: https://love8.me/sitemap-zh-hant.xml
+Sitemap: https://love8.me/sitemap-ja.xml
