@@ -16,12 +16,8 @@ Disallow: /.htaccess
 Disallow: /nginx.htaccess
 
 # Optional: block internal/system paths if any exist
-# Disallow: /assets/js/
-# Disallow: /assets/css/
+Disallow: /assets/js/
+Disallow: /assets/css/
 
 # Sitemaps
-Sitemap: https://love8.me/sitemap.xml
-Sitemap: https://love8.me/sitemap-en.xml
-Sitemap: https://love8.me/sitemap-zh-hans.xml
-Sitemap: https://love8.me/sitemap-zh-hant.xml
-Sitemap: https://love8.me/sitemap-ja.xml
+Sitemap: https://lzhdeni.com/sitemap.xml
