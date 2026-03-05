@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Weekly Planning System for Remote Work | Lzhdeni.com</title>
+
+    <meta name="description"
+        content="Learn a simple weekly planning system designed for remote work. Organize priorities, reduce chaos, and maintain focus throughout the week." />
+
+    <meta name="robots" content="index,follow" />
+
+    <link rel="canonical" href="https://lzhdeni.com/systems/weekly-planning-system" />
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Weekly Planning System for Remote Work">
+    <meta property="og:description"
+        content="A lightweight weekly planning framework to organize priorities and maintain focus in remote work environments.">
+    <meta property="og:url" content="https://lzhdeni.com/systems/weekly-planning-system">
+    <meta property="og:image" content="https://lzhdeni.com/assets/images/og-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Weekly Planning System for Remote Work">
+    <meta name="twitter:description"
+        content="Build a simple weekly planning rhythm that prevents chaos and improves productivity.">
+    <meta name="twitter:image" content="https://lzhdeni.com/assets/images/og-image.png">
+
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/web-app-manifest-192x192.png">
+    <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
+    <link rel="icon" href="/assets/images/favicon-96x96.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+    <link rel="manifest" href="/site.webmanifest">
+
+    <meta http-equiv="Content-Language" content="en">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-size: 17px;
+      line-height: 1.7;
+      background: #f8f9fa;
+    }
+
+    .nav-link {
+      border: 1px solid #999;
+      border-radius: 8px;
+      padding: 0.1rem 0.8rem;
+      margin-right: 10px;
+      margin-bottom: 5px;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+
+    .nav-link:hover,
+    .nav-link:active,
+    .nav-link:focus {
+      border: 1px solid #f80000;
+      color: #f80000;
+    }
+
+    /* ===== Section spacing ===== */
+    section {
+      padding: 3.5rem 0;
+    }
+
+    /* ===== Hero ===== */
+    .hero-gradient {
+      background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%);
+      padding: 3.5rem 0;
+    }
+
+    h1.display-5 {
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    /* Reduce hero density */
+    .hero-gradient .badge-soft {
+      font-size: .75rem;
+      padding: .5rem .9rem;
+    }
+
+    /* ===== Card Style ===== */
+    .card {
+      border-radius: 18px;
+      border: 1px solid rgba(0, 0, 0, .04);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .04);
+    }
+
+    .card-body {
+      padding: 1.6rem;
+    }
+
+    .card-hover:hover {
+      transform: none;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
+    }
+
+    /* ===== Section Background Separation ===== */
+    #featured {
+      background: #ffffff;
+    }
+
+    section.bg-light {
+      background: #f3f5f7 !important;
+    }
+
+    /* ===== Buttons ===== */
+    .btn-lg {
+      padding: .9rem 1rem;
+      font-weight: 600;
+    }
+
+    /* ===== Suggested Path Better Spacing ===== */
+    .list-group {
+      gap: .75rem;
+    }
+
+    .list-group-item {
+      border-radius: 14px !important;
+      border: 1px solid rgba(0, 0, 0, .05);
+      padding: 1rem 1.2rem;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #111 !important;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, .7);
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    /* ================= MOBILE OPTIMIZATION ================= */
+    @media (max-width: 991px) {
+
+      body {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 2.8rem 0;
+      }
+
+      /* Hero vertical rhythm */
+      .hero-gradient {
+        padding: 2.8rem 0;
+      }
+
+      .hero-gradient .row {
+        flex-direction: column;
+      }
+
+      .hero-gradient .col-lg-5 {
+        margin-top: 2rem;
+      }
+
+      /* Headline scale */
+      h1.display-5 {
+        font-size: 1.85rem;
+      }
+
+      /* Buttons full width */
+      .btn-lg {
+        width: 100%;
+      }
+
+      .btn-lg+.btn-lg {
+        margin-top: .8rem;
+      }
+
+      /* Suggested path layout */
+      .list-group-item {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+      }
+
+      .list-group-item .btn {
+        margin-top: .6rem;
+        width: 100%;
+      }
+
+      /* Category stacking */
+      .row-cols-lg-3>*,
+      #featured .row>*,
+      .row-cols-md-2>* {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      /* Add spacing between cards */
+      .card {
+        margin-bottom: 1.2rem;
+      }
+
+      /* Footer vertical spacing */
+      footer .col-lg-5,
+      footer .col-6,
+      footer .col-lg-3,
+      footer .col-lg-4 {
+        margin-bottom: 1.8rem;
+      }
+
+      footer .row {
+        text-align: center;
+      }
+
+    }
+
+    /* ===== Fix Hero Top Badge Layout ===== */
+    .hero-top-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      align-items: center;
+    }
+
+    @media (max-width:991px) {
+
+      .hero-top-badges {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-top-badges span {
+        display: block;
+      }
+
+      .hero-gradient .row {
+        align-items: flex-start !important;
+      }
+
+    }
+  </style>
+
+
+</head>
+
+<body class="bg-body">
+
+    <!-- Top bar / Nav -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top"
+        style="padding-left: 10px; padding-right: 10px; box-shadow: 0 2px 5px rgba(16, 24, 40, .3);"
+        aria-label="Main navigation">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-semibold" href="/" aria-label="Lzhdeni Home">
+                <img src="/assets/images/logo.png" alt="Lzhdeni Logo" class="me-2" width="30" height="30">
+                Lzhdeni.com
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMain">
+
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
+                    <li class="nav-item"><a class="nav-link" href="/start-here">Start Here</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/foundations/">Foundations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/systems/">Systems</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/team-work/">Team Work</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/tools/">Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/comparisons/">Comparisons</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/case-studies/">Case Studies</a></li>
+                </ul>
+
+                <div class="d-flex ms-lg-3 gap-2">
+                    <a class="btn btn-outline-primary btn-sm" href="/about">About</a>
+                    <a class="btn btn-primary btn-sm" href="/start-here">Get the Framework</a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero-gradient border-bottom">
+
+        <div class="container py-lg-4">
+
+            <div class="row align-items-center g-4">
+
+                <div class="col-lg-8">
+
+                    <div class="hero-top-badges mb-3">
+                        <span class="rounded-pill px-3 py-2">Systems • Planning Framework</span>
+                        <span class="text-secondary small">Remote work productivity</span>
+                    </div>
+
+                    <h1 class="display-5 fw-semibold mb-3">
+
+                        Weekly Planning System
+
+                    </h1>
+
+                    <p class="lead text-secondary">
+
+                        Remote work removes the natural structure of office environments.
+                        Without a weekly planning rhythm, tasks accumulate, priorities shift,
+                        and attention becomes fragmented.
+
+                        A simple weekly planning system restores structure and provides a clear
+                        direction for the entire week.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTENT -->
+    <section>
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-lg-8">
+
+                    <h2 class="h3 fw-semibold mb-3">
+
+                        Why weekly planning matters
+
+                    </h2>
+
+                    <p>
+
+                        In many remote teams, work becomes reactive. Messages, emails, and
+                        requests arrive continuously, making it difficult to focus on meaningful
+                        tasks.
+
+                        Weekly planning creates a structured moment to step back and evaluate
+                        priorities before the week begins.
+
+                    </p>
+
+                    <p>
+
+                        Instead of reacting to every new request, workers operate with a
+                        predefined plan aligned with larger goals.
+
+                    </p>
+
+
+                    <h2 class="h3 fw-semibold mt-5 mb-3">
+
+                        The weekly planning workflow
+
+                    </h2>
+
+                    <ol>
+
+                        <li>Review the previous week’s outcomes</li>
+
+                        <li>Identify key objectives for the upcoming week</li>
+
+                        <li>Select 3–5 high-impact priorities</li>
+
+                        <li>Schedule deep work blocks for those priorities</li>
+
+                        <li>Group smaller operational tasks into batches</li>
+
+                    </ol>
+
+                    <p>
+
+                        This workflow ensures the most important work receives dedicated time
+                        before smaller tasks fill the schedule.
+
+                    </p>
+
+
+                    <h2 class="h3 fw-semibold mt-5 mb-3">
+
+                        Daily execution within the weekly plan
+
+                    </h2>
+
+                    <p>
+
+                        Once the weekly structure exists, daily planning becomes simple.
+
+                        Each day begins by reviewing the weekly priorities and selecting
+                        specific tasks that move those priorities forward.
+
+                    </p>
+
+                    <p>
+
+                        This approach avoids the common mistake of building completely new
+                        daily task lists that ignore weekly objectives.
+
+                    </p>
+
+
+                    <h2 class="h3 fw-semibold mt-5 mb-3">
+
+                        Common mistakes
+
+                    </h2>
+
+                    <ul>
+
+                        <li>Creating weekly plans that are too detailed</li>
+
+                        <li>Adding too many priorities</li>
+
+                        <li>Ignoring time constraints</li>
+
+                        <li>Not reviewing the plan mid-week</li>
+
+                    </ul>
+
+                    <p>
+
+                        A weekly plan should guide work, not restrict it. Flexibility is
+                        essential, but structure must still exist.
+
+                    </p>
+
+
+                    <h2 class="h3 fw-semibold mt-5 mb-3">
+
+                        Related guides
+
+                    </h2>
+
+                    <ul>
+
+                        <li><a href="/systems/task-priority-framework">Task Priority Framework</a></li>
+
+                        <li><a href="/foundations/time-blocking-vs-task-batching">Time Blocking vs Task Batching</a>
+                        </li>
+
+                        <li><a href="/tools/tool-overload-when-less-is-more">Tool Overload: When Less Is More</a></li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="col-lg-4">
+
+                    <div class="card">
+
+                        <div class="card-body">
+
+                            <h3 class="h5 fw-semibold mb-3">
+
+                                Weekly Planning Checklist
+
+                            </h3>
+
+                            <ul class="small">
+
+                                <li>Review last week's results</li>
+
+                                <li>Choose 3–5 priorities</li>
+
+                                <li>Schedule focus blocks</li>
+
+                                <li>Batch smaller tasks</li>
+
+                                <li>Review mid-week</li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-lg-5">
+
+                    <div class="fw-semibold fs-5">Lzhdeni.com</div>
+
+                    <p class="text-white-50 mb-3">
+                        Practical guides and systems for remote work productivity, built to be implemented.
+                    </p>
+
+                    <div class="gap-4 footer-links small" style="text-align:center;">
+                        <a href="/privacy-policy">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="/terms">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="/contact">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="/about">About</a>
+                    </div>
+
+                </div>
+
+                <div class="col-6 col-lg-3">
+
+                    <div class="text-uppercase text-white-50 small mb-2">Sections</div>
+
+                    <div class="footer-links d-flex flex-column gap-1 small">
+                        <a href="/foundations/">Foundations</a>
+                        <a href="/systems/">Systems</a>
+                        <a href="/tools/">Tools</a>
+                        <a href="/team-work/">Team Work</a>
+                        <a href="/comparisons/">Comparisons</a>
+                        <a href="/case-studies/">Case Studies</a>
+                    </div>
+
+                </div>
+
+                <div class="col-6 col-lg-4">
+
+                    <div class="text-uppercase text-white-50 small mb-2">Start</div>
+
+                    <div class="footer-links d-flex flex-column gap-1 small">
+                        <a href="/start-here">Start Here</a>
+                        <a href="/resources">Resources</a>
+                        <a href="/sitemap.xml">Sitemap</a>
+                        <a href="/robots.txt">Robots</a>
+                    </div>
+
+                    <div class="mt-3 text-white-50 small">
+                        © <span id="year"></span> Lzhdeni.com. All rights reserved.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>

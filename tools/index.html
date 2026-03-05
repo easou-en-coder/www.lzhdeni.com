@@ -5,26 +5,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Goal Setting for Remote Work | Lzhdeni.com</title>
+    <title>Productivity Tools Decision Guides | Lzhdeni.com</title>
 
     <meta name="description"
-        content="Learn practical goal setting strategies for remote work. Align weekly priorities, reduce distractions, and build a clear execution system for distributed teams." />
+        content="Learn how to evaluate productivity tools for remote work. Avoid tool overload and build a minimal, effective productivity stack." />
 
     <meta name="robots" content="index,follow" />
 
-    <link rel="canonical" href="https://lzhdeni.com/systems/goal-setting-for-remote-work" />
+    <link rel="canonical" href="https://lzhdeni.com/tools/" />
 
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Goal Setting for Remote Work">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Productivity Tools Decision Guides">
     <meta property="og:description"
-        content="A practical framework for setting goals in remote work environments, improving focus, alignment, and execution.">
-    <meta property="og:url" content="https://lzhdeni.com/systems/goal-setting-for-remote-work">
+        content="Choose productivity tools without tool overload. Decision frameworks, evaluation criteria, and system design.">
+    <meta property="og:url" content="https://lzhdeni.com/tools/">
     <meta property="og:image" content="https://lzhdeni.com/assets/images/og-image.png">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Goal Setting for Remote Work">
-    <meta name="twitter:description"
-        content="Learn how to design effective goal systems for remote teams and individual remote workers.">
+    <meta name="twitter:title" content="Productivity Tools Decision Guides">
+    <meta name="twitter:description" content="Frameworks to evaluate productivity tools and avoid tool overload.">
     <meta name="twitter:image" content="https://lzhdeni.com/assets/images/og-image.png">
 
     <!-- Icons -->
@@ -32,8 +31,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/web-app-manifest-192x192.png">
+
     <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
     <link rel="icon" href="/assets/images/favicon-96x96.png" type="image/png">
+
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
 
     <link rel="manifest" href="/site.webmanifest">
@@ -44,7 +45,7 @@
 
     <style>
         :root {
-            scroll-behavior: smooth;
+            scroll-behavior: smooth
         }
 
         body {
@@ -71,12 +72,17 @@
         }
 
         section {
-            padding: 3.5rem 0;
+            padding: 3.5rem 0
         }
 
         .hero-gradient {
             background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%);
             padding: 3.5rem 0;
+        }
+
+        h1.display-5 {
+            font-weight: 700;
+            line-height: 1.25;
         }
 
         .card {
@@ -86,43 +92,72 @@
         }
 
         .card-body {
-            padding: 1.6rem;
+            padding: 1.6rem
+        }
+
+        .card-hover:hover {
+            transform: none;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
+        }
+
+        section.bg-light {
+            background: #f3f5f7 !important
+        }
+
+        .btn-lg {
+            padding: .9rem 1rem;
+            font-weight: 600;
         }
 
         footer {
-            background: #111 !important;
+            background: #111 !important
         }
 
         .footer-links a {
-            color: rgba(255, 255, 255, .7);
+            color: rgba(255, 255, 255, .7)
         }
 
         .footer-links a:hover {
-            color: #fff;
+            color: #fff
         }
 
-        @media (max-width:991px) {
+        @media(max-width:991px) {
 
             body {
-                font-size: 16px;
+                font-size: 16px
             }
 
             section {
-                padding: 2.8rem 0;
+                padding: 2.8rem 0
             }
 
             .hero-gradient {
-                padding: 2.8rem 0;
+                padding: 2.8rem 0
+            }
+
+            h1.display-5 {
+                font-size: 1.85rem
+            }
+
+            .btn-lg {
+                width: 100%
             }
 
             .card {
-                margin-bottom: 1.2rem;
+                margin-bottom: 1.2rem
             }
 
             footer .row {
-                text-align: center;
+                text-align: center
             }
 
+        }
+
+        .hero-top-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .6rem;
+            align-items: center;
         }
     </style>
 
@@ -130,14 +165,17 @@
 
 <body class="bg-body">
 
-    <!-- NAV (保持完全一致) -->
+    <!-- NAV (完全一样) -->
+
     <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top"
-        style="padding-left: 10px; padding-right: 10px; box-shadow: 0 2px 5px rgba(16, 24, 40, .3);"
+        style="padding-left:10px;padding-right:10px;box-shadow:0 2px 5px rgba(16,24,40,.3);"
         aria-label="Main navigation">
+
         <div class="container">
 
             <a class="navbar-brand fw-semibold" href="/" aria-label="Lzhdeni Home">
-                <img src="/assets/images/logo.png" alt="Lzhdeni Logo" class="me-2" width="30" height="30"> Lzhdeni.com
+                <img src="/assets/images/logo.png" alt="Lzhdeni Logo" class="me-2" width="30" height="30">
+                Lzhdeni.com
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
@@ -176,24 +214,30 @@
 
             <div class="row align-items-center g-4">
 
-                <div class="col-lg-7">
+                <div class="col-lg-7" style="padding-left:20px;padding-right:20px;">
 
-                    <h1 class="display-5 fw-semibold mb-3">
-                        Goal Setting for Remote Work
+                    <div class="hero-top-badges mb-3">
+                        <span class="rounded-pill px-3 py-2">Productivity Tools • Decision Frameworks</span>
+                        <span class="text-secondary small">Choose tools intentionally.</span>
+                    </div>
+
+                    <h1 class="display-5 fw-semibold lh-1 mb-3">
+                        Choose productivity tools without tool overload
                     </h1>
 
                     <p class="lead text-secondary mb-4">
-                        Effective remote work depends on clear goals. Without a shared office environment, structured
-                        goal systems help individuals and teams stay aligned, focused, and accountable.
+                        Productivity tools should support systems, not replace them.
+                        These guides explain how to evaluate tools, avoid constant switching, and build a minimal
+                        workflow stack.
                     </p>
 
                     <div class="d-flex flex-wrap gap-2">
-                        <a class="btn btn-primary btn-lg" href="/systems/">Explore Systems</a>
-                        <a class="btn btn-outline-secondary btn-lg" href="#framework">See the Framework</a>
+                        <a class="btn btn-primary btn-lg" href="/tools/tool-overload-when-less-is-more">Read Tool
+                            Overload Guide</a>
+                        <a class="btn btn-outline-secondary btn-lg" href="#guides">Explore Guides</a>
                     </div>
 
                 </div>
-
 
                 <div class="col-lg-5">
 
@@ -201,17 +245,30 @@
 
                         <div class="card-body">
 
-                            <h2 class="h5 fw-semibold mb-3">What this guide covers</h2>
+                            <h2 class="h5 fw-semibold mb-3">Evaluation principles</h2>
 
                             <ul class="list-group list-group-flush">
 
-                                <li class="list-group-item px-0">How remote work changes goal setting</li>
+                                <li class="list-group-item">
+                                    <strong>Minimize switching</strong><br>
+                                    <span class="text-secondary small">
+                                        Frequent tool changes destroy workflow stability.
+                                    </span>
+                                </li>
 
-                                <li class="list-group-item px-0">Simple frameworks for weekly goals</li>
+                                <li class="list-group-item">
+                                    <strong>System first</strong><br>
+                                    <span class="text-secondary small">
+                                        Tools must support an existing workflow.
+                                    </span>
+                                </li>
 
-                                <li class="list-group-item px-0">Aligning daily work with long-term goals</li>
-
-                                <li class="list-group-item px-0">Reducing distraction and task drift</li>
+                                <li class="list-group-item">
+                                    <strong>Low cognitive overhead</strong><br>
+                                    <span class="text-secondary small">
+                                        Complex tools often reduce productivity.
+                                    </span>
+                                </li>
 
                             </ul>
 
@@ -222,99 +279,80 @@
 
             </div>
         </div>
+
     </header>
 
 
-    <!-- CONTENT -->
+    <!-- TOOL GUIDES -->
 
-    <section id="framework">
+    <section id="guides">
 
         <div class="container">
 
-            <h2 class="h3 fw-semibold mb-3">Why goal setting matters in remote work</h2>
-
-            <p class="text-secondary mb-4">
-                Remote environments remove many natural signals that exist in traditional offices. Without hallway
-                conversations, visible progress, or direct supervision, goals become the primary mechanism that guides
-                daily work decisions.
-            </p>
-
+            <div class="mb-4" style="padding-left:20px;padding-right:20px;">
+                <h2 class="h3 fw-semibold">Tools decision guides</h2>
+                <p class="text-secondary">
+                    Frameworks to help you choose tools intentionally.
+                </p>
+            </div>
 
             <div class="row g-4">
 
-                <div class="col-md-6">
+                <div class="col-md-6 col-lg-4">
 
-                    <div class="card h-100">
+                    <div class="card h-100 border-0 shadow-sm">
 
                         <div class="card-body">
 
-                            <h3 class="h5 fw-semibold">Define outcomes, not tasks</h3>
+                            <h3 class="h5 fw-semibold">Tool Overload: When Less Is More</h3>
 
-                            <p class="text-secondary mb-0">
-                                Strong goals describe outcomes instead of activity. For example, “publish the
-                                documentation guide” is clearer than “work on documentation”.
+                            <p class="text-secondary">
+                                Understand why too many productivity tools reduce focus and create friction.
                             </p>
 
-                        </div>
-                    </div>
+                            <a class="stretched-link" href="/tools/tool-overload-when-less-is-more"></a>
 
+                        </div>
+
+                    </div>
                 </div>
 
+                <div class="col-md-6 col-lg-4">
 
-                <div class="col-md-6">
-
-                    <div class="card h-100">
+                    <div class="card h-100 border-0 shadow-sm">
 
                         <div class="card-body">
 
-                            <h3 class="h5 fw-semibold">Limit weekly priorities</h3>
+                            <h3 class="h5 fw-semibold">Documentation Tools Guide</h3>
 
-                            <p class="text-secondary mb-0">
-                                Remote workers often face information overload. Limiting weekly priorities to 3–5 key
-                                outcomes helps maintain focus.
+                            <p class="text-secondary">
+                                How to choose tools for writing, documentation, and knowledge management.
                             </p>
 
-                        </div>
-                    </div>
+                            <a class="stretched-link" href="/tools/documentation-tools-guide"></a>
 
+                        </div>
+
+                    </div>
                 </div>
 
+                <div class="col-md-6 col-lg-4">
 
-                <div class="col-md-6">
-
-                    <div class="card h-100">
-
-                        <div class="card-body">
-
-                            <h3 class="h5 fw-semibold">Connect goals to systems</h3>
-
-                            <p class="text-secondary mb-0">
-                                Goals should connect to your planning systems. Weekly planning and daily reviews ensure
-                                that goals translate into consistent execution.
-                            </p>
-
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <div class="col-md-6">
-
-                    <div class="card h-100">
+                    <div class="card h-100 border-0 shadow-sm">
 
                         <div class="card-body">
 
-                            <h3 class="h5 fw-semibold">Measure progress frequently</h3>
+                            <h3 class="h5 fw-semibold">Task Management Tools Comparison</h3>
 
-                            <p class="text-secondary mb-0">
-                                Frequent reviews help remote teams stay aligned. Short weekly check-ins often outperform
-                                complex quarterly planning structures.
+                            <p class="text-secondary">
+                                A practical comparison of task management systems for remote teams.
                             </p>
 
-                        </div>
-                    </div>
+                            <a class="stretched-link" href="/tools/task-management-tools"></a>
 
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
@@ -324,89 +362,35 @@
     </section>
 
 
-
-    <!-- RELATED -->
-
-    <section class="bg-light border-top border-bottom">
-
-        <div class="container">
-
-            <h2 class="h3 fw-semibold mb-4">Related systems</h2>
-
-            <div class="row g-3">
-
-
-                <div class="col-md-6">
-
-                    <div class="card h-100">
-
-                        <div class="card-body">
-
-                            <h3 class="h5 fw-semibold">Weekly Planning System</h3>
-
-                            <p class="text-secondary">
-                                A practical planning routine that connects long-term goals with weekly priorities.
-                            </p>
-
-                            <a class="stretched-link" href="/systems/weekly-planning-system"></a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="col-md-6">
-
-                    <div class="card h-100">
-
-                        <div class="card-body">
-
-                            <h3 class="h5 fw-semibold">Daily Review Method</h3>
-
-                            <p class="text-secondary">
-                                A short daily review process that keeps work aligned with priorities.
-                            </p>
-
-                            <a class="stretched-link" href="/systems/daily-review-method"></a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- Footer (保持完全一致) -->
+    <!-- Footer (完全一样) -->
 
     <footer class="bg-dark text-white py-5">
+
         <div class="container">
+
             <div class="row g-4">
 
                 <div class="col-lg-5">
+
                     <div class="fw-semibold fs-5">Lzhdeni.com</div>
+
                     <p class="text-white-50 mb-3">
                         Practical guides and systems for remote work productivity, built to be implemented.
                     </p>
-                    <div class="gap-4 footer-links small" style="text-align: center;">
+
+                    <div class="gap-4 footer-links small" style="text-align:center;">
                         <a href="/privacy-policy">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="/terms">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="/contact">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="/about">About</a>
                     </div>
+
                 </div>
 
                 <div class="col-6 col-lg-3">
+
                     <div class="text-uppercase text-white-50 small mb-2">Sections</div>
+
                     <div class="footer-links d-flex flex-column gap-1 small">
                         <a href="/foundations/">Foundations</a>
                         <a href="/systems/">Systems</a>
@@ -415,25 +399,29 @@
                         <a href="/comparisons/">Comparisons</a>
                         <a href="/case-studies/">Case Studies</a>
                     </div>
+
                 </div>
 
                 <div class="col-6 col-lg-4">
+
                     <div class="text-uppercase text-white-50 small mb-2">Start</div>
+
                     <div class="footer-links d-flex flex-column gap-1 small">
                         <a href="/start-here">Start Here</a>
                         <a href="/resources">Resources</a>
                         <a href="/sitemap.xml">Sitemap</a>
                         <a href="/robots.txt">Robots</a>
                     </div>
+
                     <div class="mt-3 text-white-50 small">
                         © <span id="year"></span> Lzhdeni.com. All rights reserved.
                     </div>
+
                 </div>
 
             </div>
         </div>
     </footer>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
