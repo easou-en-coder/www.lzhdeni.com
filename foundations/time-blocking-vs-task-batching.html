@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Time Blocking vs Task Batching: Which Productivity System Works Better? | Lzhdeni.com</title>
+
+    <meta name="description"
+        content="Compare time blocking vs task batching for remote work productivity. Learn the strengths, weaknesses, and when to use each planning system." />
+
+    <meta name="robots" content="index,follow" />
+
+    <link rel="canonical" href="https://lzhdeni.com/foundations/time-blocking-vs-task-batching" />
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Time Blocking vs Task Batching">
+    <meta property="og:description"
+        content="Understand the difference between time blocking and task batching, and when each productivity strategy works best.">
+    <meta property="og:url" content="https://lzhdeni.com/foundations/time-blocking-vs-task-batching">
+    <meta property="og:image" content="https://lzhdeni.com/assets/images/og-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Time Blocking vs Task Batching">
+    <meta name="twitter:description"
+        content="Compare two popular productivity planning methods for deep work and remote teams.">
+    <meta name="twitter:image" content="https://lzhdeni.com/assets/images/og-image.png">
+
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/web-app-manifest-192x192.png">
+
+    <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
+    <link rel="icon" href="/assets/images/favicon-96x96.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+    <link rel="manifest" href="/site.webmanifest">
+
+    <meta http-equiv="Content-Language" content="en">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-size: 17px;
+            line-height: 1.7;
+            background: #f8f9fa;
+        }
+
+        .nav-link {
+            border: 1px solid #999;
+            border-radius: 8px;
+            padding: 0.1rem 0.8rem;
+            margin-right: 10px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        .nav-link:hover,
+        .nav-link:active,
+        .nav-link:focus {
+            border: 1px solid #f80000;
+            color: #f80000;
+        }
+
+        /* ===== Section spacing ===== */
+        section {
+            padding: 3.5rem 0;
+        }
+
+        /* ===== Hero ===== */
+        .hero-gradient {
+            background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%);
+            padding: 3.5rem 0;
+        }
+
+        h1.display-5 {
+            font-weight: 700;
+            line-height: 1.25;
+        }
+
+        /* Reduce hero density */
+        .hero-gradient .badge-soft {
+            font-size: .75rem;
+            padding: .5rem .9rem;
+        }
+
+        /* ===== Card Style ===== */
+        .card {
+            border-radius: 18px;
+            border: 1px solid rgba(0, 0, 0, .04);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .04);
+        }
+
+        .card-body {
+            padding: 1.6rem;
+        }
+
+        .card-hover:hover {
+            transform: none;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
+        }
+
+        /* ===== Section Background Separation ===== */
+        #featured {
+            background: #ffffff;
+        }
+
+        section.bg-light {
+            background: #f3f5f7 !important;
+        }
+
+        /* ===== Buttons ===== */
+        .btn-lg {
+            padding: .9rem 1rem;
+            font-weight: 600;
+        }
+
+        /* ===== Suggested Path Better Spacing ===== */
+        .list-group {
+            gap: .75rem;
+        }
+
+        .list-group-item {
+            border-radius: 14px !important;
+            border: 1px solid rgba(0, 0, 0, .05);
+            padding: 1rem 1.2rem;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            background: #111 !important;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, .7);
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        /* ================= MOBILE OPTIMIZATION ================= */
+        @media (max-width: 991px) {
+
+            body {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 2.8rem 0;
+            }
+
+            /* Hero vertical rhythm */
+            .hero-gradient {
+                padding: 2.8rem 0;
+            }
+
+            .hero-gradient .row {
+                flex-direction: column;
+            }
+
+            .hero-gradient .col-lg-5 {
+                margin-top: 2rem;
+            }
+
+            /* Headline scale */
+            h1.display-5 {
+                font-size: 1.85rem;
+            }
+
+            /* Buttons full width */
+            .btn-lg {
+                width: 100%;
+            }
+
+            .btn-lg+.btn-lg {
+                margin-top: .8rem;
+            }
+
+            /* Suggested path layout */
+            .list-group-item {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+            }
+
+            .list-group-item .btn {
+                margin-top: .6rem;
+                width: 100%;
+            }
+
+            /* Category stacking */
+            .row-cols-lg-3>*,
+            #featured .row>*,
+            .row-cols-md-2>* {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+            /* Add spacing between cards */
+            .card {
+                margin-bottom: 1.2rem;
+            }
+
+            /* Footer vertical spacing */
+            footer .col-lg-5,
+            footer .col-6,
+            footer .col-lg-3,
+            footer .col-lg-4 {
+                margin-bottom: 1.8rem;
+            }
+
+            footer .row {
+                text-align: center;
+            }
+
+        }
+
+        /* ===== Fix Hero Top Badge Layout ===== */
+        .hero-top-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .6rem;
+            align-items: center;
+        }
+
+        @media (max-width:991px) {
+
+            .hero-top-badges {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .hero-top-badges span {
+                display: block;
+            }
+
+            .hero-gradient .row {
+                align-items: flex-start !important;
+            }
+
+        }
+    </style>
+</head>
+
+<body class="bg-body">
+
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top"
+        style="padding-left:10px;padding-right:10px;box-shadow:0 2px 5px rgba(16,24,40,.3);"
+        aria-label="Main navigation">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-semibold" href="/" aria-label="Lzhdeni Home">
+                <img src="/assets/images/logo.png" alt="Lzhdeni Logo" class="me-2" width="30" height="30"> Lzhdeni.com
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+                aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMain">
+
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
+                    <li class="nav-item"><a class="nav-link" href="/start-here">Start Here</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/foundations/">Foundations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/systems/">Systems</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/team-work/">Team Work</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/tools/">Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/comparisons/">Comparisons</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/case-studies/">Case Studies</a></li>
+                </ul>
+
+                <div class="d-flex ms-lg-3 gap-2">
+                    <a class="btn btn-outline-primary btn-sm" href="/about">About</a>
+                    <a class="btn btn-primary btn-sm" href="/start-here">Get the Framework</a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero-gradient border-bottom">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-8">
+
+                    <span class="badge text-bg-light border mb-2">Foundations • Planning</span>
+
+                    <h1 class="display-5 fw-semibold mb-3">
+                        Time Blocking vs Task Batching
+                    </h1>
+
+                    <p class="lead text-secondary">
+
+                        Two of the most common productivity planning methods are time blocking and task batching.
+
+                        Both attempt to reduce chaos and protect focus — but they solve different problems.
+
+                    </p>
+
+                    <p class="text-secondary">
+
+                        Understanding when to use each method can dramatically improve your daily workflow,
+                        especially in remote environments where attention is easily fragmented.
+
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ARTICLE -->
+
+    <section>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-8">
+
+                    <h2 class="h3 fw-semibold mb-3">What is time blocking?</h2>
+
+                    <p>
+
+                        Time blocking is a planning method where the day is divided into dedicated time slots,
+                        each reserved for a specific task or category of work.
+
+                    </p>
+
+                    <p>
+
+                        Instead of reacting to incoming tasks throughout the day,
+                        the schedule defines when different kinds of work occur.
+
+                    </p>
+
+                    <p>
+
+                        Typical time blocks include:
+
+                    </p>
+
+                    <ul>
+
+                        <li>deep work sessions</li>
+                        <li>meetings</li>
+                        <li>administrative tasks</li>
+                        <li>communication windows</li>
+
+                    </ul>
+
+                    <p>
+
+                        The goal is to create structure and prevent reactive scheduling.
+
+                    </p>
+
+                    <hr class="my-5">
+
+                    <h2 class="h3 fw-semibold mb-3">What is task batching?</h2>
+
+                    <p>
+
+                        Task batching focuses on grouping similar tasks together.
+
+                    </p>
+
+                    <p>
+
+                        Rather than scheduling specific time slots,
+                        it organizes work by **task type**.
+
+                    </p>
+
+                    <p>
+
+                        Examples include:
+
+                    </p>
+
+                    <ul>
+
+                        <li>answering emails in one batch</li>
+                        <li>editing multiple documents together</li>
+                        <li>reviewing all messages in a dedicated session</li>
+
+                    </ul>
+
+                    <p>
+
+                        Batching reduces context switching because similar tasks require similar mental states.
+
+                    </p>
+
+                    <hr class="my-5">
+
+                    <h2 class="h3 fw-semibold mb-3">When time blocking works best</h2>
+
+                    <p>
+
+                        Time blocking is particularly effective for:
+
+                    </p>
+
+                    <ul>
+
+                        <li>creative work</li>
+                        <li>analysis and strategy</li>
+                        <li>deep focus sessions</li>
+                        <li>structured workdays</li>
+
+                    </ul>
+
+                    <p>
+
+                        It provides strong control over attention
+                        and ensures important work receives protected time.
+
+                    </p>
+
+                    <hr class="my-5">
+
+                    <h2 class="h3 fw-semibold mb-3">When task batching works best</h2>
+
+                    <p>
+
+                        Task batching is useful for operational tasks such as:
+
+                    </p>
+
+                    <ul>
+
+                        <li>emails</li>
+                        <li>administrative work</li>
+                        <li>reviews</li>
+                        <li>routine updates</li>
+
+                    </ul>
+
+                    <p>
+
+                        These tasks rarely require deep concentration,
+                        so grouping them together improves efficiency.
+
+                    </p>
+
+                    <hr class="my-5">
+
+                    <h2 class="h3 fw-semibold mb-3">Combining both systems</h2>
+
+                    <p>
+
+                        Many effective productivity systems combine both methods.
+
+                    </p>
+
+                    <p>
+
+                        For example:
+
+                    </p>
+
+                    <ul>
+
+                        <li>morning deep work blocks</li>
+                        <li>afternoon communication batches</li>
+                        <li>end-of-day review sessions</li>
+
+                    </ul>
+
+                    <p>
+
+                        The key is aligning planning methods with the type of work being performed.
+
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="card p-4 mb-4">
+
+                        <h3 class="h6 fw-semibold mb-2">Related guides</h3>
+
+                        <ul class="list-unstyled small">
+
+                            <li class="mb-2">
+                                <a href="/foundations/deep-work-principles">Deep Work Principles</a>
+                            </li>
+
+                            <li class="mb-2">
+                                <a href="/systems/weekly-planning-system">Weekly Planning System</a>
+                            </li>
+
+                            <li class="mb-2">
+                                <a href="/tools/tool-overload-when-less-is-more">Tool Overload</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="card p-4">
+
+                        <h3 class="h6 fw-semibold mb-2">Quick takeaway</h3>
+
+                        <p class="small text-secondary mb-0">
+
+                            Time blocking protects attention.
+
+                            Task batching reduces context switching.
+
+                            The most effective productivity systems combine both.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-lg-5">
+                    <div class="fw-semibold fs-5">Lzhdeni.com</div>
+                    <p class="text-white-50 mb-3">
+                        Practical guides and systems for remote work productivity, built to be implemented.
+                    </p>
+                    <div class="gap-4 footer-links small" style="text-align:center;">
+                        <a href="/privacy-policy">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="/terms">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="/contact">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="/about">About</a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <div class="text-uppercase text-white-50 small mb-2">Sections</div>
+                    <div class="footer-links d-flex flex-column gap-1 small">
+                        <a href="/foundations/">Foundations</a>
+                        <a href="/systems/">Systems</a>
+                        <a href="/tools/">Tools</a>
+                        <a href="/team-work/">Team Work</a>
+                        <a href="/comparisons/">Comparisons</a>
+                        <a href="/case-studies/">Case Studies</a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-4">
+                    <div class="text-uppercase text-white-50 small mb-2">Start</div>
+                    <div class="footer-links d-flex flex-column gap-1 small">
+                        <a href="/start-here">Start Here</a>
+                        <a href="/resources">Resources</a>
+                        <a href="/sitemap.xml">Sitemap</a>
+                        <a href="/robots.txt">Robots</a>
+                    </div>
+
+                    <div class="mt-3 text-white-50 small">
+                        © <span id="year"></span> Lzhdeni.com. All rights reserved.
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>
