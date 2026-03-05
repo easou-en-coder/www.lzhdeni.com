@@ -23,217 +23,231 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
+    <!-- Icons -->
+    <!-- SVG favicon（现代浏览器优先） -->
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+    <!-- PNG fallback -->
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/web-app-manifest-192x192.png">
+
+    <!-- ICO（Windows / 老浏览器 / 搜索引擎） -->
+    <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
+    <link rel="icon" href="/assets/images/favicon-96x96.png" type="image/png">
+    <!-- iOS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/site.webmanifest">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <style>
-    :root {
-      scroll-behavior: smooth;
-    }
+    <style>
+        :root {
+            scroll-behavior: smooth;
+        }
 
-    body {
-      font-size: 17px;
-      line-height: 1.7;
-      background: #f8f9fa;
-    }
+        body {
+            font-size: 17px;
+            line-height: 1.7;
+            background: #f8f9fa;
+        }
 
-    .nav-link{
-      border: 1px solid #999;
-      border-radius: 8px;
-      padding: 0.1rem 0.8rem;
-      margin-right: 10px;
-      margin-bottom: 5px;
-      margin-top: 5px;
-      font-size: 14px;
-    }
+        .nav-link {
+            border: 1px solid #999;
+            border-radius: 8px;
+            padding: 0.1rem 0.8rem;
+            margin-right: 10px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            font-size: 14px;
+        }
 
-    .nav-link:hover,
-    .nav-link:active,
-    .nav-link:focus {
-      border: 1px solid #f80000;
-      color: #f80000;
-    }
+        .nav-link:hover,
+        .nav-link:active,
+        .nav-link:focus {
+            border: 1px solid #f80000;
+            color: #f80000;
+        }
 
-    /* ===== Section spacing ===== */
-    section {
-      padding: 3.5rem 0;
-    }
+        /* ===== Section spacing ===== */
+        section {
+            padding: 3.5rem 0;
+        }
 
-    /* ===== Hero ===== */
-    .hero-gradient {
-      background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%);
-      padding: 3.5rem 0;
-    }
+        /* ===== Hero ===== */
+        .hero-gradient {
+            background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%);
+            padding: 3.5rem 0;
+        }
 
-    h1.display-5 {
-      font-weight: 700;
-      line-height: 1.25;
-    }
+        h1.display-5 {
+            font-weight: 700;
+            line-height: 1.25;
+        }
 
-    /* Reduce hero density */
-    .hero-gradient .badge-soft {
-      font-size: .75rem;
-      padding: .5rem .9rem;
-    }
+        /* Reduce hero density */
+        .hero-gradient .badge-soft {
+            font-size: .75rem;
+            padding: .5rem .9rem;
+        }
 
-    /* ===== Card Style ===== */
-    .card {
-      border-radius: 18px;
-      border: 1px solid rgba(0, 0, 0, .04);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, .04);
-    }
+        /* ===== Card Style ===== */
+        .card {
+            border-radius: 18px;
+            border: 1px solid rgba(0, 0, 0, .04);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .04);
+        }
 
-    .card-body {
-      padding: 1.6rem;
-    }
+        .card-body {
+            padding: 1.6rem;
+        }
 
-    .card-hover:hover {
-      transform: none;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
-    }
+        .card-hover:hover {
+            transform: none;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
+        }
 
-    /* ===== Section Background Separation ===== */
-    #featured {
-      background: #ffffff;
-    }
+        /* ===== Section Background Separation ===== */
+        #featured {
+            background: #ffffff;
+        }
 
-    section.bg-light {
-      background: #f3f5f7 !important;
-    }
+        section.bg-light {
+            background: #f3f5f7 !important;
+        }
 
-    /* ===== Buttons ===== */
-    .btn-lg {
-      padding: .9rem 1rem;
-      font-weight: 600;
-    }
+        /* ===== Buttons ===== */
+        .btn-lg {
+            padding: .9rem 1rem;
+            font-weight: 600;
+        }
 
-    /* ===== Suggested Path Better Spacing ===== */
-    .list-group {
-      gap: .75rem;
-    }
+        /* ===== Suggested Path Better Spacing ===== */
+        .list-group {
+            gap: .75rem;
+        }
 
-    .list-group-item {
-      border-radius: 14px !important;
-      border: 1px solid rgba(0, 0, 0, .05);
-      padding: 1rem 1.2rem;
-    }
+        .list-group-item {
+            border-radius: 14px !important;
+            border: 1px solid rgba(0, 0, 0, .05);
+            padding: 1rem 1.2rem;
+        }
 
-    /* ===== Footer ===== */
-    footer {
-      background: #111 !important;
-    }
+        /* ===== Footer ===== */
+        footer {
+            background: #111 !important;
+        }
 
-    .footer-links a {
-      color: rgba(255, 255, 255, .7);
-    }
+        .footer-links a {
+            color: rgba(255, 255, 255, .7);
+        }
 
-    .footer-links a:hover {
-      color: #fff;
-    }
+        .footer-links a:hover {
+            color: #fff;
+        }
 
-    /* ================= MOBILE OPTIMIZATION ================= */
-    @media (max-width: 991px) {
+        /* ================= MOBILE OPTIMIZATION ================= */
+        @media (max-width: 991px) {
 
-      body {
-        font-size: 16px;
-      }
+            body {
+                font-size: 16px;
+            }
 
-      section {
-        padding: 2.8rem 0;
-      }
+            section {
+                padding: 2.8rem 0;
+            }
 
-      /* Hero vertical rhythm */
-      .hero-gradient {
-        padding: 2.8rem 0;
-      }
+            /* Hero vertical rhythm */
+            .hero-gradient {
+                padding: 2.8rem 0;
+            }
 
-      .hero-gradient .row {
-        flex-direction: column;
-      }
+            .hero-gradient .row {
+                flex-direction: column;
+            }
 
-      .hero-gradient .col-lg-5 {
-        margin-top: 2rem;
-      }
+            .hero-gradient .col-lg-5 {
+                margin-top: 2rem;
+            }
 
-      /* Headline scale */
-      h1.display-5 {
-        font-size: 1.85rem;
-      }
+            /* Headline scale */
+            h1.display-5 {
+                font-size: 1.85rem;
+            }
 
-      /* Buttons full width */
-      .btn-lg {
-        width: 100%;
-      }
+            /* Buttons full width */
+            .btn-lg {
+                width: 100%;
+            }
 
-      .btn-lg+.btn-lg {
-        margin-top: .8rem;
-      }
+            .btn-lg+.btn-lg {
+                margin-top: .8rem;
+            }
 
-      /* Suggested path layout */
-      .list-group-item {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-      }
+            /* Suggested path layout */
+            .list-group-item {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+            }
 
-      .list-group-item .btn {
-        margin-top: .6rem;
-        width: 100%;
-      }
+            .list-group-item .btn {
+                margin-top: .6rem;
+                width: 100%;
+            }
 
-      /* Category stacking */
-      .row-cols-lg-3>*,
-      #featured .row>*,
-      .row-cols-md-2>* {
-        flex: 0 0 100%;
-        max-width: 100%;
-      }
+            /* Category stacking */
+            .row-cols-lg-3>*,
+            #featured .row>*,
+            .row-cols-md-2>* {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
 
-      /* Add spacing between cards */
-      .card {
-        margin-bottom: 1.2rem;
-      }
+            /* Add spacing between cards */
+            .card {
+                margin-bottom: 1.2rem;
+            }
 
-      /* Footer vertical spacing */
-      footer .col-lg-5,
-      footer .col-6,
-      footer .col-lg-3,
-      footer .col-lg-4 {
-        margin-bottom: 1.8rem;
-      }
+            /* Footer vertical spacing */
+            footer .col-lg-5,
+            footer .col-6,
+            footer .col-lg-3,
+            footer .col-lg-4 {
+                margin-bottom: 1.8rem;
+            }
 
-      footer .row {
-        text-align: center;
-      }
+            footer .row {
+                text-align: center;
+            }
 
-    }
+        }
 
-    /* ===== Fix Hero Top Badge Layout ===== */
-    .hero-top-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .6rem;
-      align-items: center;
-    }
+        /* ===== Fix Hero Top Badge Layout ===== */
+        .hero-top-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .6rem;
+            align-items: center;
+        }
 
-    @media (max-width:991px) {
+        @media (max-width:991px) {
 
-      .hero-top-badges {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+            .hero-top-badges {
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
-      .hero-top-badges span {
-        display: block;
-      }
+            .hero-top-badges span {
+                display: block;
+            }
 
-      .hero-gradient .row {
-        align-items: flex-start !important;
-      }
+            .hero-gradient .row {
+                align-items: flex-start !important;
+            }
 
-    }
-  </style>
+        }
+    </style>
 
 </head>
 
