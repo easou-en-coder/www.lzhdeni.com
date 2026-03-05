@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Lzhdeni.com — Remote Work Productivity Systems & Practical Guides (2026)</title>
+  <meta name="description"
+    content="Lzhdeni.com is a structured knowledge hub for remote work productivity: deep work principles, planning systems, async team workflows, and practical comparisons. Start here." />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0d6efd" />
+  <link rel="canonical" href="https://lzhdeni.com/tools/documentation-tools-guide" />
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="lzhdeni.com – Remote Work Productivity Systems & Practical Guides (2026)">
+  <meta property="og:description"
+    content="Lzhdeni.com is a structured knowledge hub for remote work productivity: deep work principles, planning systems, async team workflows, and practical comparisons. Start here.">
+  <meta property="og:url" content="https://lzhdeni.com/tools/documentation-tools-guide">
+  <meta property="og:image" content="https://lzhdeni.com/assets/images/og-image.png">
+
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="lzhdeni.com – Remote Work Productivity Systems & Practical Guides (2026)">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="lzhdeni.com – Remote Work Productivity Systems & Practical Guides (2026)">
+  <meta name="twitter:description"
+    content="Lzhdeni.com is a structured knowledge hub for remote work productivity: deep work principles, planning systems, async team workflows, and practical comparisons. Start here.">
+  <meta name="twitter:image" content="https://lzhdeni.com/assets/images/og-image.png">
+
+  <!-- Icons -->
+  <!-- SVG favicon（现代浏览器优先） -->
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <!-- PNG fallback -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/web-app-manifest-192x192.png">
+
+  <!-- ICO（Windows / 老浏览器 / 搜索引擎） -->
+  <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/images/favicon-96x96.png" type="image/png">
+  <!-- iOS -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+  <!-- PWA -->
+  <link rel="manifest" href="/site.webmanifest">
+
+  <meta http-equiv="Content-Language" content="en">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-size: 17px;
+      line-height: 1.7;
+      background: #f8f9fa;
+    }
+
+    .nav-link {
+      border: 1px solid #999;
+      border-radius: 8px;
+      padding: 0.1rem 0.8rem;
+      margin-right: 10px;
+      margin-bottom: 5px;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+
+    .nav-link:hover,
+    .nav-link:active,
+    .nav-link:focus {
+      border: 1px solid #f80000;
+      color: #f80000;
+    }
+
+    /* ===== Section spacing ===== */
+    section {
+      padding: 3.5rem 0;
+    }
+
+    /* ===== Hero ===== */
+    .hero-gradient {
+      background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%);
+      padding: 3.5rem 0;
+    }
+
+    h1.display-5 {
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    /* Reduce hero density */
+    .hero-gradient .badge-soft {
+      font-size: .75rem;
+      padding: .5rem .9rem;
+    }
+
+    /* ===== Card Style ===== */
+    .card {
+      border-radius: 18px;
+      border: 1px solid rgba(0, 0, 0, .04);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .04);
+    }
+
+    .card-body {
+      padding: 1.6rem;
+    }
+
+    .card-hover:hover {
+      transform: none;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
+    }
+
+    /* ===== Section Background Separation ===== */
+    #featured {
+      background: #ffffff;
+    }
+
+    section.bg-light {
+      background: #f3f5f7 !important;
+    }
+
+    /* ===== Buttons ===== */
+    .btn-lg {
+      padding: .9rem 1rem;
+      font-weight: 600;
+    }
+
+    /* ===== Suggested Path Better Spacing ===== */
+    .list-group {
+      gap: .75rem;
+    }
+
+    .list-group-item {
+      border-radius: 14px !important;
+      border: 1px solid rgba(0, 0, 0, .05);
+      padding: 1rem 1.2rem;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #111 !important;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, .7);
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    /* ================= MOBILE OPTIMIZATION ================= */
+    @media (max-width: 991px) {
+
+      body {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 2.8rem 0;
+      }
+
+      /* Hero vertical rhythm */
+      .hero-gradient {
+        padding: 2.8rem 0;
+      }
+
+      .hero-gradient .row {
+        flex-direction: column;
+      }
+
+      .hero-gradient .col-lg-5 {
+        margin-top: 2rem;
+      }
+
+      /* Headline scale */
+      h1.display-5 {
+        font-size: 1.85rem;
+      }
+
+      /* Buttons full width */
+      .btn-lg {
+        width: 100%;
+      }
+
+      .btn-lg+.btn-lg {
+        margin-top: .8rem;
+      }
+
+      /* Suggested path layout */
+      .list-group-item {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+      }
+
+      .list-group-item .btn {
+        margin-top: .6rem;
+        width: 100%;
+      }
+
+      /* Category stacking */
+      .row-cols-lg-3>*,
+      #featured .row>*,
+      .row-cols-md-2>* {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      /* Add spacing between cards */
+      .card {
+        margin-bottom: 1.2rem;
+      }
+
+      /* Footer vertical spacing */
+      footer .col-lg-5,
+      footer .col-6,
+      footer .col-lg-3,
+      footer .col-lg-4 {
+        margin-bottom: 1.8rem;
+      }
+
+      footer .row {
+        text-align: center;
+      }
+
+    }
+
+    /* ===== Fix Hero Top Badge Layout ===== */
+    .hero-top-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      align-items: center;
+    }
+
+    @media (max-width:991px) {
+
+      .hero-top-badges {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-top-badges span {
+        display: block;
+      }
+
+      .hero-gradient .row {
+        align-items: flex-start !important;
+      }
+
+    }
+  </style>
+
+</head>
+
+<body class="bg-body">
+
+  <!-- Top bar / Nav -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top"
+    style="padding-left: 10px; padding-right: 10px; box-shadow: 0 2px 5px rgba(16, 24, 40, .3);"
+    aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="/" aria-label="Lzhdeni Home">
+        <img src="/assets/images/logo.png" alt="Lzhdeni Logo" class="me-2" width="30" height="30"> Lzhdeni.com
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+        aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="/start-here">Start Here</a></li>
+          <li class="nav-item"><a class="nav-link" href="/foundations/">Foundations</a></li>
+          <li class="nav-item"><a class="nav-link" href="/systems/">Systems</a></li>
+          <li class="nav-item"><a class="nav-link" href="/team-work/">Team Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="/tools/">Tools</a></li>
+          <li class="nav-item"><a class="nav-link" href="/comparisons/">Comparisons</a></li>
+          <li class="nav-item"><a class="nav-link" href="/case-studies/">Case Studies</a></li>
+        </ul>
+
+        <div class="d-flex ms-lg-3 gap-2">
+          <a class="btn btn-outline-primary btn-sm" href="/about">About</a>
+          <a class="btn btn-primary btn-sm" href="/start-here">Get the Framework</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-gradient border-bottom">
+    <div class="container py-lg-4">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7" style="padding-left: 20px; padding-right: 20px;">
+          <div class="hero-top-badges mb-3">
+            <span class="rounded-pill px-3 py-2">Remote Work • Productivity Systems • 2026</span>
+            <span class="text-secondary small">Structured guides, not listicles.</span>
+          </div>
+
+          <h1 class="display-5 fw-semibold lh-1 text-balance mb-3">
+            Practical productivity systems for remote work — built to be implemented.
+          </h1>
+
+          <p class="lead text-secondary text-balance mb-4">
+            Lzhdeni.com is a structured knowledge hub for focus, planning, async collaboration, and decision frameworks.
+            Start with the fundamentals, then assemble a system that fits your role and constraints.
+          </p>
+
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-primary btn-lg" href="/start-here">Start Here</a>
+            <a class="btn btn-outline-secondary btn-lg" href="#featured">Browse Featured Guides</a>
+          </div>
+
+          <div class="mt-4 small text-secondary">
+            No paywalls. No affiliate bait. Designed for long-term usefulness.
+          </div>
+        </div>
+
+        <div class="col-lg-5" style="width: 100%;">
+          <div class="card shadow-sm border-0">
+            <div class="card-body p-4">
+              <h2 class="h5 fw-semibold mb-3">Suggested path (10 minutes)</h2>
+
+              <ol class="list-group list-group-numbered">
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-semibold">Understand the core model</div>
+                    Foundations: focus, constraints, and tradeoffs.
+                  </div>
+                  <a class="btn btn-sm btn-outline-primary" href="/foundations/">Open</a>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-semibold">Pick your planning system</div>
+                    Weekly planning + daily review frameworks.
+                  </div>
+                  <a class="btn btn-sm btn-outline-primary" href="/systems/">Open</a>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-semibold">Improve team async flow</div>
+                    Communication norms & documentation-first habits.
+                  </div>
+                  <a class="btn btn-sm btn-outline-primary" href="/team-work/">Open</a>
+                </li>
+              </ol>
+
+              <div class="mt-3 p-3 bg-soft rounded-3">
+                <div class="fw-semibold">Tip:</div>
+                <div class="text-secondary small">
+                  If you’re building this site for AdSense review, keep content stable (no placeholders), include
+                  About/Privacy/Contact,
+                  and avoid ad-like calls-to-action during review.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Categories -->
+  <section class="py-5">
+    <div class="container">
+      <div class="d-flex align-items-end justify-content-between flex-wrap gap-3 mb-3"
+        style="padding-left: 20px; padding-right: 20px;">
+        <div>
+          <h2 class="h3 fw-semibold mb-1">Explore by category</h2>
+          <p class="text-secondary mb-0">A knowledge-base layout designed for fast navigation and internal linking.</p>
+        </div>
+        <a class="link-muted" href="/sitemap.xml">View sitemap →</a>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col-md-6 col-lg-4">
+          <a class="text-decoration-none" href="/foundations/">
+            <div class="card card-hover h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <span class="badge rounded-pill text-bg-light border">Foundations</span>
+                  <span class="text-secondary small">Core principles</span>
+                </div>
+                <h3 class="h5 fw-semibold">Deep work, focus, and constraints</h3>
+                <p class="text-secondary mb-0">Build the mental model before choosing tools and routines.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a class="text-decoration-none" href="/systems/">
+            <div class="card card-hover h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <span class="badge rounded-pill text-bg-light border">Systems</span>
+                  <span class="text-secondary small">Routines</span>
+                </div>
+                <h3 class="h5 fw-semibold">Weekly planning & daily review</h3>
+                <p class="text-secondary mb-0">Templates and frameworks you can implement in under an hour.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a class="text-decoration-none" href="/tools/">
+            <div class="card card-hover h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <span class="badge rounded-pill text-bg-light border">Tools</span>
+                  <span class="text-secondary small">Decision guides</span>
+                </div>
+                <h3 class="h5 fw-semibold">Choose tools without tool-churn</h3>
+                <p class="text-secondary mb-0">Evaluation criteria, tradeoffs, and when “less is more”.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a class="text-decoration-none" href="/team-work/">
+            <div class="card card-hover h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <span class="badge rounded-pill text-bg-light border">Team Work</span>
+                  <span class="text-secondary small">Async-first</span>
+                </div>
+                <h3 class="h5 fw-semibold">Async communication & documentation</h3>
+                <p class="text-secondary mb-0">Reduce meetings by improving written workflows and norms.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a class="text-decoration-none" href="/comparisons/">
+            <div class="card card-hover h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <span class="badge rounded-pill text-bg-light border">Comparisons</span>
+                  <span class="text-secondary small">Role-based</span>
+                </div>
+                <h3 class="h5 fw-semibold">Freelancer vs full-time vs teams</h3>
+                <p class="text-secondary mb-0">Pick a setup based on context, not internet defaults.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a class="text-decoration-none" href="/case-studies/">
+            <div class="card card-hover h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <span class="badge rounded-pill text-bg-light border">Case Studies</span>
+                  <span class="text-secondary small">Applied</span>
+                </div>
+                <h3 class="h5 fw-semibold">Realistic examples & adaptations</h3>
+                <p class="text-secondary mb-0">How systems change with roles, constraints, and team size.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured -->
+  <section id="featured" class="py-5 bg-light border-top border-bottom">
+    <div class="container">
+      <div class="row align-items-end g-3 mb-3" style="padding-left: 20px; padding-right: 20px; ">
+        <div class="col-lg-8">
+          <h2 class="h3 fw-semibold mb-1">Featured guides</h2>
+          <p class="text-secondary mb-0">Start with these. They’re designed as “pillars” that link out to sub-pages.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a class="btn btn-outline-primary" href="/start-here">See the full learning path</a>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <!-- Replace hrefs with real pages as you publish them -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body p-4">
+              <div class="d-flex gap-2 flex-wrap mb-2">
+                <span class="badge text-bg-primary">Foundation</span>
+                <span class="badge text-bg-light border">Focus</span>
+              </div>
+              <h3 class="h5 fw-semibold">Deep Work for Remote Environments</h3>
+              <p class="text-secondary">A practical model for attention management when your home is your office.</p>
+              <a class="stretched-link" href="/foundations/deep-work-principles" aria-label="Open guide"></a>
+            </div>
+            <div class="card-footer bg-white border-0 px-4 pb-4 pt-0">
+              <span class="text-secondary small">~12 min read</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body p-4">
+              <div class="d-flex gap-2 flex-wrap mb-2">
+                <span class="badge text-bg-success">System</span>
+                <span class="badge text-bg-light border">Planning</span>
+              </div>
+              <h3 class="h5 fw-semibold">Weekly Planning System</h3>
+              <p class="text-secondary">A lightweight cadence that prevents chaos without over-optimizing.</p>
+              <a class="stretched-link" href="/systems/weekly-planning-system" aria-label="Open guide"></a>
+            </div>
+            <div class="card-footer bg-white border-0 px-4 pb-4 pt-0">
+              <span class="text-secondary small">~10 min read</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body p-4">
+              <div class="d-flex gap-2 flex-wrap mb-2">
+                <span class="badge text-bg-dark">Team Work</span>
+                <span class="badge text-bg-light border">Async</span>
+              </div>
+              <h3 class="h5 fw-semibold">Async Communication Best Practices</h3>
+              <p class="text-secondary">How to reduce meetings by improving written norms and handoffs.</p>
+              <a class="stretched-link" href="/team-work/async-communication-guide" aria-label="Open guide"></a>
+            </div>
+            <div class="card-footer bg-white border-0 px-4 pb-4 pt-0">
+              <span class="text-secondary small">~14 min read</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body p-4">
+              <div class="d-flex gap-2 flex-wrap mb-2">
+                <span class="badge text-bg-warning">Comparison</span>
+                <span class="badge text-bg-light border">Decision</span>
+              </div>
+              <h3 class="h5 fw-semibold">Time Blocking vs Task Batching</h3>
+              <p class="text-secondary">A clear decision tree based on the kind of work you actually do.</p>
+              <a class="stretched-link" href="/foundations/time-blocking-vs-task-batching" aria-label="Open guide"></a>
+            </div>
+            <div class="card-footer bg-white border-0 px-4 pb-4 pt-0">
+              <span class="text-secondary small">Includes decision checklist</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body p-4">
+              <div class="d-flex gap-2 flex-wrap mb-2">
+                <span class="badge text-bg-info">Tools</span>
+                <span class="badge text-bg-light border">Avoid tool-churn</span>
+              </div>
+              <h3 class="h5 fw-semibold">Tool Overload: When Less Is More</h3>
+              <p class="text-secondary">Evaluation criteria to prevent constant switching and lost momentum.</p>
+              <a class="stretched-link" href="/tools/tool-overload-when-less-is-more" aria-label="Open guide"></a>
+            </div>
+            <div class="card-footer bg-white border-0 px-4 pb-4 pt-0">
+              <span class="text-secondary small">Includes score rubric</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Credibility / About snippet -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-7" style="padding-left: 20px; padding-right: 20px;">
+          <h2 class="h3 fw-semibold mb-2" style="padding-left: 10px; padding-right: 10px;">What makes this different?
+          </h2>
+          <p class="text-secondary mb-3" style="padding-left: 10px; padding-right: 10px;">
+            This site is built as a <strong>system library</strong>: principles → frameworks → role-based decisions →
+            examples.
+            Each page is designed to link to related pages, so readers can move from concept to implementation.
+          </p>
+
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col-md-6">
+              <div class="p-3 border rounded-3 h-100">
+                <div class="fw-semibold">Structured, not fluffy</div>
+                <div class="text-secondary small">Decision trees, checklists, and tradeoffs.</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 border rounded-3 h-100">
+                <div class="fw-semibold">Role-aware</div>
+                <div class="text-secondary small">Different constraints for freelancers, teams, and managers.</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 border rounded-3 h-100">
+                <div class="fw-semibold">Implementation-first</div>
+                <div class="text-secondary small">Step-by-step frameworks you can adopt quickly.</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 border rounded-3 h-100">
+                <div class="fw-semibold">Policy-safe</div>
+                <div class="text-secondary small">No sensitive content. Clean structure for ad review.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 d-flex flex-wrap gap-2">
+            <a class="btn btn-primary" href="/about">Read About</a>
+            <a class="btn btn-outline-secondary" href="/contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+              <h2 class="h5 fw-semibold mb-3">Quick checklist (for AdSense readiness)</h2>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item px-0">
+                  <span class="fw-semibold">Core pages:</span>
+                  <span class="text-secondary"> About, Privacy, Contact, Terms</span>
+                </li>
+                <li class="list-group-item px-0">
+                  <span class="fw-semibold">Content depth:</span>
+                  <span class="text-secondary"> 20–30 substantive pages</span>
+                </li>
+                <li class="list-group-item px-0">
+                  <span class="fw-semibold">Indexing:</span>
+                  <span class="text-secondary"> Submit to Search Console</span>
+                </li>
+                <li class="list-group-item px-0">
+                  <span class="fw-semibold">Clean UX:</span>
+                  <span class="text-secondary"> No popups, no aggressive CTAs</span>
+                </li>
+              </ul>
+
+              <div class="mt-3">
+                <a class="btn btn-outline-primary w-100" href="/start-here">Open Start Here</a>
+              </div>
+
+              <div class="mt-3 small text-secondary">
+                Tip: avoid publishing many pages in one day. Spread releases over 2–3 weeks to look organic.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <div class="fw-semibold fs-5">Lzhdeni.com</div>
+          <p class="text-white-50 mb-3">
+            Practical guides and systems for remote work productivity, built to be implemented.
+          </p>
+          <div class="gap-4 footer-links small" style="text-align: center;">
+            <a href="/privacy-policy">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/terms">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/contact">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/about">About</a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="text-uppercase text-white-50 small mb-2">Sections</div>
+          <div class="footer-links d-flex flex-column gap-1 small">
+            <a href="/foundations/">Foundations</a>
+            <a href="/systems/">Systems</a>
+            <a href="/tools/">Tools</a>
+            <a href="/team-work/">Team Work</a>
+            <a href="/comparisons/">Comparisons</a>
+            <a href="/case-studies/">Case Studies</a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-4">
+          <div class="text-uppercase text-white-50 small mb-2">Start</div>
+          <div class="footer-links d-flex flex-column gap-1 small">
+            <a href="/start-here">Start Here</a>
+            <a href="/resources">Resources</a>
+            <a href="/sitemap.xml">Sitemap</a>
+            <a href="/robots.txt">Robots</a>
+          </div>
+          <div class="mt-3 text-white-50 small">
+            © <span id="year"></span> Lzhdeni.com. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
