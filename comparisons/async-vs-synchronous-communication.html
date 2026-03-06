@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Async vs Synchronous Communication | Lzhdeni.com</title>
+
+    <meta name="description"
+        content="Compare async vs synchronous communication in remote work. Learn when to use meetings, chat, docs, and recorded updates to reduce friction and improve team clarity." />
+
+    <meta name="robots" content="index,follow" />
+
+    <link rel="canonical" href="https://lzhdeni.com/comparisons/async-vs-synchronous-communication" />
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Async vs Synchronous Communication">
+    <meta property="og:description"
+        content="A practical comparison of async and synchronous communication for remote teams, with use cases, tradeoffs, and a simple decision framework.">
+    <meta property="og:url" content="https://lzhdeni.com/comparisons/async-vs-synchronous-communication">
+    <meta property="og:image" content="https://lzhdeni.com/assets/images/og-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Async vs Synchronous Communication">
+    <meta name="twitter:description"
+        content="When should remote teams use meetings instead of docs, chat, or recorded updates? This guide explains the tradeoffs clearly.">
+    <meta name="twitter:image" content="https://lzhdeni.com/assets/images/og-image.png">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Async vs Synchronous Communication",
+          "description": "A practical comparison of async and synchronous communication for remote teams, with use cases, tradeoffs, and a simple decision framework.",
+          "author": {
+            "@type": "Organization",
+            "name": "Lzhdeni.com"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Lzhdeni.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://lzhdeni.com/assets/images/logo.png"
+            }
+          },
+          "mainEntityOfPage": "https://lzhdeni.com/comparisons/async-vs-synchronous-communication",
+          "image": "https://lzhdeni.com/assets/images/og-image.png",
+          "dateModified": "2026-03-06"
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://lzhdeni.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Comparisons",
+              "item": "https://lzhdeni.com/comparisons/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Async vs Synchronous Communication",
+              "item": "https://lzhdeni.com/comparisons/async-vs-synchronous-communication"
+            }
+          ]
+        }
+    </script>
+
+    <!-- Icons -->
+    <!-- SVG favicon（现代浏览器优先） -->
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+    <!-- PNG fallback -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/web-app-manifest-192x192.png">
+
+    <!-- ICO（Windows / 老浏览器 / 搜索引擎） -->
+    <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
+    <link rel="icon" href="/assets/images/favicon-96x96.png" type="image/png">
+    <!-- iOS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <meta http-equiv="Content-Language" content="en">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-size: 17px;
+            line-height: 1.7;
+            background: #f8f9fa;
+        }
+
+        .nav-link {
+            border: 1px solid #999;
+            border-radius: 8px;
+            padding: 0.1rem 0.8rem;
+            margin-right: 10px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        .nav-link:hover,
+        .nav-link:active,
+        .nav-link:focus {
+            border: 1px solid #f80000;
+            color: #f80000;
+        }
+
+        section {
+            padding: 3.5rem 0;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%);
+            padding: 3.5rem 0;
+        }
+
+        h1.display-5 {
+            font-weight: 700;
+            line-height: 1.25;
+        }
+
+        .hero-gradient .badge-soft {
+            font-size: .75rem;
+            padding: .5rem .9rem;
+        }
+
+        .card {
+            border-radius: 18px;
+            border: 1px solid rgba(0, 0, 0, .04);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .04);
+        }
+
+        .card-body {
+            padding: 1.6rem;
+        }
+
+        .card-hover:hover {
+            transform: none;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
+        }
+
+        section.bg-light {
+            background: #f3f5f7 !important;
+        }
+
+        .btn-lg {
+            padding: .9rem 1rem;
+            font-weight: 600;
+        }
+
+        .list-group {
+            gap: .75rem;
+        }
+
+        .list-group-item {
+            border-radius: 14px !important;
+            border: 1px solid rgba(0, 0, 0, .05);
+            padding: 1rem 1.2rem;
+        }
+
+        footer {
+            background: #111 !important;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, .7);
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .hero-top-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .6rem;
+            align-items: center;
+        }
+
+        .eyebrow {
+            letter-spacing: .04em;
+            text-transform: uppercase;
+            font-size: .82rem;
+            color: #6c757d;
+            font-weight: 600;
+        }
+
+        .article-card h2 {
+            font-size: 1.55rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-card h3 {
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            margin-bottom: .75rem;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+        }
+
+        .callout {
+            border-left: 4px solid #0d6efd;
+            background: #eef4ff;
+            border-radius: 12px;
+            padding: 1rem 1.1rem;
+        }
+
+        .checklist li+li {
+            margin-top: .6rem;
+        }
+
+        @media (max-width: 991px) {
+            body {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 2.8rem 0;
+            }
+
+            .hero-gradient {
+                padding: 2.8rem 0;
+            }
+
+            .hero-gradient .row {
+                flex-direction: column;
+            }
+
+            .hero-gradient .col-lg-5 {
+                margin-top: 2rem;
+            }
+
+            h1.display-5 {
+                font-size: 1.85rem;
+            }
+
+            .btn-lg {
+                width: 100%;
+            }
+
+            .btn-lg+.btn-lg {
+                margin-top: .8rem;
+            }
+
+            .list-group-item {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+            }
+
+            .list-group-item .btn {
+                margin-top: .6rem;
+                width: 100%;
+            }
+
+            .row-cols-lg-3>*,
+            .row-cols-md-2>* {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+            .card {
+                margin-bottom: 1.2rem;
+            }
+
+            footer .col-lg-5,
+            footer .col-6,
+            footer .col-lg-3,
+            footer .col-lg-4 {
+                margin-bottom: 1.8rem;
+            }
+
+            footer .row {
+                text-align: center;
+            }
+
+            .hero-top-badges {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .hero-top-badges span {
+                display: block;
+            }
+
+            .hero-gradient .row {
+                align-items: flex-start !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-body">
+
+    <!-- Top bar / Nav -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top"
+        style="padding-left: 10px; padding-right: 10px; box-shadow: 0 2px 5px rgba(16, 24, 40, .3);"
+        aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand fw-semibold" href="/" aria-label="Lzhdeni Home">
+                <img src="/assets/images/logo.png" alt="Lzhdeni Logo" class="me-2" width="30" height="30"> Lzhdeni.com
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+                aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMain">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
+                    <li class="nav-item"><a class="nav-link" href="/start-here">Start Here</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/foundations/">Foundations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/systems/">Systems</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/team-work/">Team Work</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/tools/">Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/comparisons/">Comparisons</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/case-studies/">Case Studies</a></li>
+                </ul>
+
+                <div class="d-flex ms-lg-3 gap-2">
+                    <a class="btn btn-outline-primary btn-sm" href="/about">About</a>
+                    <a class="btn btn-primary btn-sm" href="/start-here">Get the Framework</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-gradient border-bottom">
+        <div class="container py-lg-4">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7" style="padding-left: 20px; padding-right: 20px;">
+                    <div class="hero-top-badges mb-3">
+                        <span class="rounded-pill px-3 py-2">Comparisons • Remote Collaboration • 2026</span>
+                        <span class="text-secondary small">Use the right mode for the right problem.</span>
+                    </div>
+
+                    <div class="eyebrow mb-2">Comparison Guide</div>
+
+                    <h1 class="display-5 fw-semibold text-balance mb-3">
+                        Async vs synchronous communication:
+                        when should remote teams use each?
+                    </h1>
+
+                    <p class="lead text-secondary text-balance mb-4">
+                        The real question is not which one is “better.” It is which communication mode matches the
+                        urgency, ambiguity, coordination cost, and documentation needs of the work.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-2">
+                        <a class="btn btn-primary btn-lg" href="#comparison-table">See the comparison</a>
+                        <a class="btn btn-outline-secondary btn-lg" href="#decision-framework">Use the decision framework</a>
+                    </div>
+
+                    <div class="mt-4 small text-secondary">
+                        Best for distributed teams, managers, founders, and individual contributors working across time zones.
+                    </div>
+                </div>
+
+                <div class="col-lg-5" style="width: 100%;">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <h2 class="h5 fw-semibold mb-3">At a glance</h2>
+
+                            <ol class="list-group list-group-numbered">
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-semibold">Use async by default</div>
+                                        For updates, documentation, status visibility, and low-urgency decisions.
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-semibold">Use synchronous selectively</div>
+                                        For fast alignment, emotionally sensitive topics, or high ambiguity.
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-semibold">Document the outcome either way</div>
+                                        Meetings without written follow-up create drift and repeated discussion.
+                                    </div>
+                                </li>
+                            </ol>
+
+                            <div class="mt-3 callout">
+                                <div class="fw-semibold">Core principle:</div>
+                                <div class="text-secondary small">
+                                    Default to the lowest-cost communication method that still preserves clarity.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main article -->
+    <section>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-8" style="padding-left: 20px; padding-right: 20px;">
+                    <article class="card border-0 article-card">
+                        <div class="card-body">
+                            <h2>Why this comparison matters</h2>
+                            <p>
+                                Remote teams often fail not because they lack tools, but because they use the wrong communication
+                                mode for the task. A simple status update becomes a meeting. A complex conflict gets pushed into chat.
+                                A decision is made live, then forgotten because nobody documented it.
+                            </p>
+                            <p>
+                                Async and synchronous communication are both necessary. The problem starts when one becomes the default
+                                for everything. Strong teams separate routine coordination from real-time problem solving.
+                            </p>
+
+                            <h2 id="comparison-table">Async vs synchronous: core differences</h2>
+                            <div class="table-wrap">
+                                <table class="table table-bordered align-middle">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Dimension</th>
+                                            <th>Async communication</th>
+                                            <th>Synchronous communication</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Speed of response</strong></td>
+                                            <td>Slower, delayed by availability</td>
+                                            <td>Immediate or near-immediate</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Best for</strong></td>
+                                            <td>Status updates, documentation, straightforward decisions, distributed work</td>
+                                            <td>Ambiguous issues, conflict resolution, brainstorming, urgent coordination</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Focus cost</strong></td>
+                                            <td>Lower interruption cost</td>
+                                            <td>Higher interruption and scheduling cost</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Documentation quality</strong></td>
+                                            <td>Usually better because writing is built in</td>
+                                            <td>Often weak unless someone records decisions afterward</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Time-zone friendliness</strong></td>
+                                            <td>High</td>
+                                            <td>Low to medium</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Nuance / emotion</strong></td>
+                                            <td>Weaker for tone-sensitive topics</td>
+                                            <td>Stronger for context, tone, and trust repair</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Coordination overhead</strong></td>
+                                            <td>Low</td>
+                                            <td>High</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Risk</strong></td>
+                                            <td>Delay, misinterpretation, slow closure</td>
+                                            <td>Meeting sprawl, poor records, context switching</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h2>When async works best</h2>
+                            <p>
+                                Async communication is usually the better default for remote work because it protects deep work,
+                                reduces scheduling overhead, and creates a durable written trail. It works especially well when the
+                                task is clear, the stakes are moderate, and the receiver does not need to respond instantly.
+                            </p>
+
+                            <h3>Good async use cases</h3>
+                            <ul class="checklist">
+                                <li>Daily or weekly status updates</li>
+                                <li>Project documentation and handoffs</li>
+                                <li>Requests for review with clear context</li>
+                                <li>Low-urgency decisions that benefit from thoughtful input</li>
+                                <li>Knowledge sharing across different time zones</li>
+                                <li>Recorded demos, loom videos, and written proposals</li>
+                            </ul>
+
+                            <h3>Why async scales well</h3>
+                            <p>
+                                Async systems reduce the number of times multiple people must stop what they are doing at once.
+                                That matters more as teams become distributed or cross-functional. Written communication also forces
+                                clearer thinking: what is the issue, what is the context, what decision is needed, and by when?
+                            </p>
+
+                            <h2>When synchronous works best</h2>
+                            <p>
+                                Synchronous communication becomes valuable when the cost of delay is high or the issue is too unclear,
+                                sensitive, or dynamic to resolve well in writing alone. Live interaction helps teams compress cycles
+                                of confusion into one conversation.
+                            </p>
+
+                            <h3>Good synchronous use cases</h3>
+                            <ul class="checklist">
+                                <li>Urgent blockers that stop execution right now</li>
+                                <li>Conflict resolution or emotionally sensitive feedback</li>
+                                <li>Complex decisions with many moving parts</li>
+                                <li>Kickoff meetings where alignment matters more than detail density</li>
+                                <li>Live workshops, retrospectives, and collaborative problem-solving</li>
+                                <li>Situations where rapid back-and-forth materially saves time</li>
+                            </ul>
+
+                            <h3>Why meetings still matter</h3>
+                            <p>
+                                Live discussion is often the fastest way to surface hidden assumptions. Tone, hesitation, confidence,
+                                disagreement, and uncertainty are easier to detect in real time. That makes synchronous communication
+                                useful for trust-heavy work that would otherwise generate long, inefficient message threads.
+                            </p>
+
+                            <h2 id="decision-framework">A simple decision framework</h2>
+                            <p>
+                                Before sending a message or scheduling a meeting, ask four questions:
+                            </p>
+
+                            <div class="callout mb-4">
+                                <ol class="mb-0">
+                                    <li><strong>Is it urgent?</strong> If delay creates real cost, use synchronous.</li>
+                                    <li><strong>Is it ambiguous?</strong> If the issue needs rapid clarification, use synchronous.</li>
+                                    <li><strong>Does it need a permanent record?</strong> If yes, use async or document the meeting output.</li>
+                                    <li><strong>Can one clear written message solve it?</strong> If yes, do not create a meeting.</li>
+                                </ol>
+                            </div>
+
+                            <p>
+                                In practice, many teams benefit from a hybrid pattern: start async with a clear written brief; escalate
+                                to a short call only if the thread becomes slow, confusing, or emotionally charged; then return to async
+                                by documenting the decision.
+                            </p>
+
+                            <h2>Common failure patterns</h2>
+
+                            <h3>1. Meeting-first culture</h3>
+                            <p>
+                                Teams schedule calls for routine updates, lightweight approvals, and information sharing that should have
+                                been written. The result is fragmented calendars, lower focus time, and weak documentation.
+                            </p>
+
+                            <h3>2. Chat-first culture</h3>
+                            <p>
+                                Teams push every issue into instant messaging. This feels fast, but often produces shallow discussion,
+                                hidden decisions, and lost context. Important information disappears into scrollback.
+                            </p>
+
+                            <h3>3. Async absolutism</h3>
+                            <p>
+                                Some teams become so committed to async that they avoid real-time conversation even when it would clearly
+                                save time or reduce tension. This can make collaboration feel cold, slow, and unnecessarily rigid.
+                            </p>
+
+                            <h2>Recommended operating rule</h2>
+                            <p>
+                                Use <strong>async as the default operating layer</strong> for visibility, documentation, and non-urgent work.
+                                Use <strong>synchronous as the escalation layer</strong> for urgency, ambiguity, or trust-sensitive moments.
+                            </p>
+                            <p>
+                                This model keeps the team calm, searchable, and efficient without pretending that every important problem
+                                can be solved in a comment thread.
+                            </p>
+
+                            <h2>Final takeaway</h2>
+                            <p>
+                                Async communication is usually better for scale, focus, and documentation. Synchronous communication is
+                                better for speed, nuance, and difficult alignment. Strong remote teams do not pick one ideology. They
+                                design clear thresholds for when to switch modes.
+                            </p>
+                            <p class="mb-0">
+                                The goal is not fewer meetings at any cost. The goal is lower coordination friction with higher clarity.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card border-0 mb-4">
+                        <div class="card-body">
+                            <h2 class="h5 fw-semibold mb-3">Quick recommendation</h2>
+                            <p class="text-secondary mb-3">
+                                For most remote teams, a good default rule is:
+                            </p>
+                            <ul class="mb-0">
+                                <li>Write first</li>
+                                <li>Call second</li>
+                                <li>Document decisions always</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 mb-4">
+                        <div class="card-body">
+                            <h2 class="h5 fw-semibold mb-3">Related pages</h2>
+                            <div class="d-flex flex-column gap-2">
+                                <a class="btn btn-outline-primary text-start" href="/team-work/async-communication-guide">Async Communication Best Practices</a>
+                                <a class="btn btn-outline-primary text-start" href="/tools/tool-overload-when-less-is-more">Tool Overload: When Less Is More</a>
+                                <a class="btn btn-outline-primary text-start" href="/systems/weekly-planning-system">Weekly Planning System</a>
+                                <a class="btn btn-outline-primary text-start" href="/foundations/deep-work-principles">Deep Work for Remote Environments</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <h2 class="h5 fw-semibold mb-3">Publishing note</h2>
+                            <p class="text-secondary small mb-0">
+                                This page works well as a comparison pillar because it naturally links to team-work, systems,
+                                and tools content while staying informational and ad-safe.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next steps -->
+    <section class="py-5 bg-light border-top border-bottom">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-8" style="padding-left: 20px; padding-right: 20px;">
+                    <h2 class="h3 fw-semibold mb-2">Build a cleaner remote communication system</h2>
+                    <p class="text-secondary mb-0">
+                        After this comparison, the next step is not adding more tools. It is setting clearer rules for when to use
+                        docs, chat, recorded updates, and meetings.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a class="btn btn-primary" href="/start-here">Open Start Here</a>
+                    <a class="btn btn-outline-secondary ms-lg-2 mt-2 mt-lg-0" href="/comparisons/">More comparisons</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="fw-semibold fs-5">Lzhdeni.com</div>
+                    <p class="text-white-50 mb-3">
+                        Practical guides and systems for remote work productivity, built to be implemented.
+                    </p>
+                    <div class="gap-4 footer-links small" style="text-align: center;">
+                        <a href="/privacy-policy">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="/terms">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="/contact">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="/about">About</a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <div class="text-uppercase text-white-50 small mb-2">Sections</div>
+                    <div class="footer-links d-flex flex-column gap-1 small">
+                        <a href="/foundations/">Foundations</a>
+                        <a href="/systems/">Systems</a>
+                        <a href="/tools/">Tools</a>
+                        <a href="/team-work/">Team Work</a>
+                        <a href="/comparisons/">Comparisons</a>
+                        <a href="/case-studies/">Case Studies</a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-4">
+                    <div class="text-uppercase text-white-50 small mb-2">Start</div>
+                    <div class="footer-links d-flex flex-column gap-1 small">
+                        <a href="/start-here">Start Here</a>
+                        <a href="/resources">Resources</a>
+                        <a href="/sitemap.xml">Sitemap</a>
+                        <a href="/robots.txt">Robots</a>
+                    </div>
+                    <div class="mt-3 text-white-50 small">
+                        © <span id="year"></span> Lzhdeni.com. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

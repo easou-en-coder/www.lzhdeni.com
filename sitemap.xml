@@ -4,6 +4,27 @@
     <loc>https://lzhdeni.com/</loc>
   </url>
   <url>
+    <loc>https://lzhdeni.com/about</loc>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/contact</loc>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/privacy-policy</loc>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/resources</loc>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/start-here</loc>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/terms</loc>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/case-studies/</loc>
+  </url>
+  <url>
     <loc>https://lzhdeni.com/case-studies/async-team-example</loc>
   </url>
   <url>
@@ -14,6 +35,21 @@
   </url>
   <url>
     <loc>https://lzhdeni.com/case-studies/startup-remote-process</loc>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/comparisons/</loc>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/comparisons/async-vs-synchronous-communication</loc>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/comparisons/freelancer-vs-full-time-remote</loc>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/comparisons/remote-vs-office-work</loc>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/foundations/</loc>
   </url>
   <url>
     <loc>https://lzhdeni.com/foundations/attention-management</loc>
@@ -28,7 +64,13 @@
     <loc>https://lzhdeni.com/foundations/time-blocking-vs-task-batching</loc>
   </url>
   <url>
+    <loc>https://lzhdeni.com/systems/</loc>
+  </url>
+  <url>
     <loc>https://lzhdeni.com/systems/daily-review-method</loc>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/systems/daily-review-system</loc>
   </url>
   <url>
     <loc>https://lzhdeni.com/systems/goal-setting-for-remote-work</loc>
@@ -38,6 +80,9 @@
   </url>
   <url>
     <loc>https://lzhdeni.com/systems/weekly-planning-system</loc>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/team-work/</loc>
   </url>
   <url>
     <loc>https://lzhdeni.com/team-work/async-communication-guide</loc>
@@ -50,6 +95,9 @@
   </url>
   <url>
     <loc>https://lzhdeni.com/team-work/remote-team-workflows</loc>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/tools/</loc>
   </url>
   <url>
     <loc>https://lzhdeni.com/tools/documentation-tools-guide</loc>
