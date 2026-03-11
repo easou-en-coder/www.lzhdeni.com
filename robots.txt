@@ -11,7 +11,7 @@ Disallow: /50x
 Disallow: /50x.html
 
 # Verification / server files
-Disallow: /googled6475cbd1dbfa286.html
+Disallow: /google8046203a47513e07.html
 Disallow: /.htaccess
 Disallow: /nginx.htaccess
 Disallow: /*.txt
