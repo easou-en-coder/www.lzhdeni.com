@@ -1,283 +1,108 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="google-adsense-account" content="ca-pub-4361497440384535">
 
-    <title>Notion vs Obsidian — Documentation & Knowledge Tools Comparison | Lzhdeni.com</title>
+    <title>Notion vs Obsidian: Which Knowledge Tool Fits Your Workflow? | Lzhdeni.com</title>
 
     <meta name="description"
-        content="A practical comparison of Notion vs Obsidian for documentation, personal knowledge management, and remote team workflows. Learn the strengths, tradeoffs, and when to use each tool." />
+        content="Compare Notion and Obsidian for team documentation, personal knowledge management, local-first notes, and remote work workflows so you can choose the tool that fits how you actually work." />
 
     <meta name="robots" content="index,follow" />
     <meta name="theme-color" content="#0d6efd" />
     <link rel="canonical" href="https://lzhdeni.com/tools/notion-vs-obsidian" />
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Notion vs Obsidian — Documentation & Knowledge Tools Comparison">
+    <meta property="og:title" content="Notion vs Obsidian: Which Knowledge Tool Fits Your Workflow?">
     <meta property="og:description"
-        content="Compare Notion and Obsidian for documentation systems, personal knowledge management, and remote team collaboration.">
+        content="A practical comparison of Notion and Obsidian for team docs, personal notes, linked thinking, and remote work knowledge systems.">
     <meta property="og:url" content="https://lzhdeni.com/tools/notion-vs-obsidian">
     <meta property="og:image" content="https://lzhdeni.com/assets/images/og-image.png">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Notion vs Obsidian — Documentation & Knowledge Tools Comparison">
+    <meta name="twitter:title" content="Notion vs Obsidian: Which Knowledge Tool Fits Your Workflow?">
     <meta name="twitter:description"
-        content="A practical guide to choosing between Notion and Obsidian for remote work documentation systems.">
+        content="Use this guide to choose between Notion and Obsidian based on collaboration, structure, note ownership, and workflow fit.">
     <meta name="twitter:image" content="https://lzhdeni.com/assets/images/og-image.png">
 
-    <!-- Icons -->
-    <!-- SVG favicon (modern browsers first) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Notion vs Obsidian: Which Knowledge Tool Fits Your Workflow?",
+          "description": "A practical comparison of Notion and Obsidian for team docs, personal notes, linked thinking, and remote work knowledge systems.",
+          "url": "https://lzhdeni.com/tools/notion-vs-obsidian",
+          "mainEntityOfPage": "https://lzhdeni.com/tools/notion-vs-obsidian",
+          "author": {
+            "@type": "Organization",
+            "name": "Lzhdeni.com"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Lzhdeni.com"
+          }
+        }
+    </script>
+
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-    <!-- PNG fallback -->
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/web-app-manifest-192x192.png">
-
-    <!-- ICO (Windows / older browsers / search engines) -->
     <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
     <link rel="icon" href="/assets/images/favicon-96x96.png" type="image/png">
-    <!-- iOS -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
-
-    <!-- PWA -->
     <link rel="manifest" href="/site.webmanifest">
     <meta http-equiv="Content-Language" content="en">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-
     <style>
-        :root {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-size: 17px;
-            line-height: 1.7;
-            background: #f8f9fa;
-        }
-
-        .nav-link {
-            border: 1px solid #999;
-            border-radius: 8px;
-            padding: 0.1rem 0.8rem;
-            margin-right: 10px;
-            margin-bottom: 5px;
-            margin-top: 5px;
-            font-size: 14px;
-        }
-
-        .nav-link:hover,
-        .nav-link:active,
-        .nav-link:focus {
-            border: 1px solid #f80000;
-            color: #f80000;
-        }
-
-        /* ===== Section spacing ===== */
-        section {
-            padding: 3.5rem 0;
-        }
-
-        /* ===== Hero ===== */
-        .hero-gradient {
-            background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%);
-            padding: 3.5rem 0;
-        }
-
-        h1.display-5 {
-            font-weight: 700;
-            line-height: 1.25;
-        }
-
-        /* Reduce hero density */
-        .hero-gradient .badge-soft {
-            font-size: .75rem;
-            padding: .5rem .9rem;
-        }
-
-        /* ===== Card Style ===== */
-        .card {
-            border-radius: 18px;
-            border: 1px solid rgba(0, 0, 0, .04);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, .04);
-        }
-
-        .card-body {
-            padding: 1.6rem;
-        }
-
-        .card-hover:hover {
-            transform: none;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
-        }
-
-        /* ===== Section Background Separation ===== */
-        #featured {
-            background: #ffffff;
-        }
-
-        section.bg-light {
-            background: #f3f5f7 !important;
-        }
-
-        /* ===== Buttons ===== */
-        .btn-lg {
-            padding: .9rem 1rem;
-            font-weight: 600;
-        }
-
-        /* ===== Suggested Path Better Spacing ===== */
-        .list-group {
-            gap: .75rem;
-        }
-
-        .list-group-item {
-            border-radius: 14px !important;
-            border: 1px solid rgba(0, 0, 0, .05);
-            padding: 1rem 1.2rem;
-        }
-
-        /* ===== Footer ===== */
-        footer {
-            background: #111 !important;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, .7);
-        }
-
-        .footer-links a:hover {
-            color: #fff;
-        }
-
-        /* ================= MOBILE OPTIMIZATION ================= */
+        :root { scroll-behavior: smooth; }
+        body { font-size: 17px; line-height: 1.7; background: #f8f9fa; }
+        .nav-link { border: 1px solid #999; border-radius: 8px; padding: 0.1rem 0.8rem; margin-right: 10px; margin-bottom: 5px; margin-top: 5px; font-size: 14px; }
+        .nav-link:hover, .nav-link:active, .nav-link:focus { border: 1px solid #f80000; color: #f80000; }
+        section { padding: 3.5rem 0; }
+        .hero-gradient { background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%); padding: 3.5rem 0; }
+        h1.display-5 { font-weight: 700; line-height: 1.25; }
+        .card { border-radius: 18px; border: 1px solid rgba(0, 0, 0, .04); box-shadow: 0 8px 24px rgba(0, 0, 0, .04); }
+        .card-body { padding: 1.6rem; }
+        .btn-lg { padding: .9rem 1rem; font-weight: 600; }
+        .list-group { gap: .75rem; }
+        .list-group-item { border-radius: 14px !important; border: 1px solid rgba(0, 0, 0, .05); padding: 1rem 1.2rem; }
+        .hero-top-badges { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
+        .section-kicker { letter-spacing: .08em; text-transform: uppercase; font-size: .78rem; color: #6c757d; font-weight: 700; }
+        footer { background: #111 !important; }
+        .footer-links a { color: rgba(255, 255, 255, .7); }
+        .footer-links a:hover { color: #fff; }
         @media (max-width: 991px) {
-
-            body {
-                font-size: 16px;
-            }
-
-            section {
-                padding: 2.8rem 0;
-            }
-
-            /* Hero vertical rhythm */
-            .hero-gradient {
-                padding: 2.8rem 0;
-            }
-
-            .hero-gradient .row {
-                flex-direction: column;
-            }
-
-            .hero-gradient .col-lg-5 {
-                margin-top: 2rem;
-            }
-
-            /* Headline scale */
-            h1.display-5 {
-                font-size: 1.85rem;
-            }
-
-            /* Buttons full width */
-            .btn-lg {
-                width: 100%;
-            }
-
-            .btn-lg+.btn-lg {
-                margin-top: .8rem;
-            }
-
-            /* Suggested path layout */
-            .list-group-item {
-                flex-direction: column !important;
-                align-items: flex-start !important;
-            }
-
-            .list-group-item .btn {
-                margin-top: .6rem;
-                width: 100%;
-            }
-
-            /* Category stacking */
-            .row-cols-lg-3>*,
-            #featured .row>*,
-            .row-cols-md-2>* {
-                flex: 0 0 100%;
-                max-width: 100%;
-            }
-
-            /* Add spacing between cards */
-            .card {
-                margin-bottom: 1.2rem;
-            }
-
-            /* Footer vertical spacing */
-            footer .col-lg-5,
-            footer .col-6,
-            footer .col-lg-3,
-            footer .col-lg-4 {
-                margin-bottom: 1.8rem;
-            }
-
-            footer .row {
-                text-align: center;
-            }
-
-        }
-
-        /* ===== Fix Hero Top Badge Layout ===== */
-        .hero-top-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: .6rem;
-            align-items: center;
-        }
-
-        @media (max-width:991px) {
-
-            .hero-top-badges {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .hero-top-badges span {
-                display: block;
-            }
-
-            .hero-gradient .row {
-                align-items: flex-start !important;
-            }
-
+            body { font-size: 16px; }
+            section { padding: 2.8rem 0; }
+            .hero-gradient { padding: 2.8rem 0; }
+            h1.display-5 { font-size: 1.85rem; }
+            .btn-lg { width: 100%; }
+            .card { margin-bottom: 1.2rem; }
+            footer .row { text-align: center; }
+            .hero-top-badges { flex-direction: column; align-items: flex-start; }
         }
     </style>
 </head>
 
 <body>
-
-
-    <!-- NAV -->
-
-    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
-
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top"
+        style="padding-left:10px;padding-right:10px;box-shadow:0 2px 5px rgba(16,24,40,.3);"
+        aria-label="Main navigation">
         <div class="container">
-
             <a class="navbar-brand fw-semibold" href="/">
-                <img src="/assets/images/logo.png" width="30" class="me-2">
+                <img src="/assets/images/logo.png" width="30" height="30" class="me-2" alt="Lzhdeni Logo">
                 Lzhdeni.com
             </a>
-
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMain">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navMain">
-
-                <ul class="navbar-nav ms-auto">
-
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
                     <li class="nav-item"><a class="nav-link" href="/start-here">Start Here</a></li>
                     <li class="nav-item"><a class="nav-link" href="/foundations/">Foundations</a></li>
                     <li class="nav-item"><a class="nav-link" href="/systems/">Systems</a></li>
@@ -285,294 +110,358 @@
                     <li class="nav-item"><a class="nav-link" href="/tools/">Tools</a></li>
                     <li class="nav-item"><a class="nav-link" href="/comparisons/">Comparisons</a></li>
                     <li class="nav-item"><a class="nav-link" href="/case-studies/">Case Studies</a></li>
-
                 </ul>
-
+                <div class="d-flex ms-lg-3 gap-2">
+                    <a class="btn btn-outline-primary btn-sm" href="/about">About</a>
+                    <a class="btn btn-primary btn-sm" href="/start-here">Get the Framework</a>
+                </div>
             </div>
-
         </div>
-
     </nav>
 
-
-    <!-- HERO -->
-
-    <header class="hero-gradient">
-
-        <div class="container" style="padding: 0 20px;">
-
-            <div class="row">
-
-                <div class="col-lg-8">
-
-                    <div class="hero-badges">
-
-                        <span class="badge bg-primary">Knowledge Systems</span>
-                        <span class="badge bg-secondary">Documentation</span>
-
+    <main>
+        <header class="hero-gradient border-bottom">
+            <div class="container" style="padding: 0 20px;">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <div class="hero-top-badges mb-3">
+                            <span class="badge bg-primary">Knowledge Tools</span>
+                            <span class="text-secondary small">Comparison after the stack question is already clear</span>
+                        </div>
+                        <h1 class="display-5 fw-semibold mb-3">Notion vs Obsidian: which one fits the way you work?</h1>
+                        <p class="lead text-secondary mb-4">
+                            Notion and Obsidian overlap just enough to create confusion, but they are not trying to do
+                            the same job in the same way. Notion is usually stronger as a shared workspace and team
+                            documentation system. Obsidian is usually stronger as a personal thinking environment and
+                            local-first knowledge base. The better choice depends less on features than on workflow fit.
+                        </p>
                     </div>
+                    <div class="col-lg-5">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h2 class="h5 fw-semibold mb-3">Use this comparison when...</h2>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item px-0">You already know you need a knowledge tool, but the role of that tool is still unclear.</li>
+                                    <li class="list-group-item px-0">You are choosing between team documentation and personal knowledge management priorities.</li>
+                                    <li class="list-group-item px-0">You want a workflow answer, not just a feature checklist.</li>
+                                    <li class="list-group-item px-0">You need to know whether one tool should be primary, or whether both should play different roles.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-                    <h1 class="hero-title">
-                        Notion vs Obsidian: Choosing the Right Knowledge Tool
-                    </h1>
+        <section>
+            <div class="container" style="padding: 0 20px;">
+                <div class="section-kicker mb-2">The Short Answer</div>
+                <h2 class="h3 fw-semibold mb-4">Most teams should not treat this as a purely head-to-head choice</h2>
+                <p class="text-secondary">
+                    If your main need is shared documentation, team visibility, project context, and structured
+                    collaboration, Notion usually fits better. If your main need is writing, private note ownership,
+                    linked thinking, and long-term personal knowledge, Obsidian usually fits better. That is the high
+                    level answer.
+                </p>
+                <p class="text-secondary">
+                    The nuance is that many remote workers do not need a single winner. They need a cleaner boundary.
+                    A team can use Notion for shared operating knowledge while individuals keep Obsidian as a personal
+                    research and drafting environment. The wrong move is forcing one tool to become everything.
+                </p>
+                <div class="row g-4 mt-2">
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 fw-semibold mb-3">Notion usually wins when...</h3>
+                                <ul class="mb-0">
+                                    <li>You need a shared workspace with team-readable structure.</li>
+                                    <li>You want pages, databases, and project context in one collaborative environment.</li>
+                                    <li>The priority is making knowledge visible and usable across a group.</li>
+                                    <li>You are building a company wiki, project hub, or operations system.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 fw-semibold mb-3">Obsidian usually wins when...</h3>
+                                <ul class="mb-0">
+                                    <li>You want local-first notes and stronger file ownership.</li>
+                                    <li>You think in linked notes, markdown files, and evolving idea maps.</li>
+                                    <li>The priority is personal knowledge development, writing, or research.</li>
+                                    <li>You want a tool that behaves more like a thinking environment than a shared workspace.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <p class="hero-text">
+        <section class="bg-light border-top border-bottom">
+            <div class="container" style="padding: 0 20px;">
+                <div class="section-kicker mb-2">What They Are Optimized For</div>
+                <h2 class="h3 fw-semibold mb-4">The comparison makes more sense when you compare their center of gravity</h2>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="h5 fw-semibold">Notion: structured, collaborative, workspace-first</h3>
+                                <p class="mb-0">
+                                    Notion is strongest when knowledge needs to be shared, organized, and connected to
+                                    team operations. Its center of gravity is the workspace: pages, projects, reference
+                                    docs, and databases that multiple people can understand without needing to know one
+                                    person's private note logic.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="h5 fw-semibold">Obsidian: local-first, writer-friendly, thought-first</h3>
+                                <p class="mb-0">
+                                    Obsidian is strongest when the user wants control, speed, markdown-based notes, and
+                                    a more personal knowledge graph. Its center of gravity is the note itself and the
+                                    web of connections between notes, not the shared team workspace.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-secondary mt-4 mb-0">
+                    This is why the tools can feel superficially similar while producing very different workflows. One
+                    helps a group navigate information. The other helps an individual build and revisit thinking.
+                </p>
+            </div>
+        </section>
 
-                        Notion and Obsidian are two popular tools for documentation and knowledge
-                        management. This guide explains their key differences and when each tool
-                        works best.
+        <section>
+            <div class="container" style="padding: 0 20px;">
+                <div class="section-kicker mb-2">Decision Criteria</div>
+                <h2 class="h3 fw-semibold mb-4">Choose based on the work, not on the popularity of the tool</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Question</th>
+                                        <th>Notion</th>
+                                        <th>Obsidian</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Where does it shine?</td>
+                                        <td>Shared docs, operations, project context, collaborative databases</td>
+                                        <td>Private notes, long-form thinking, research, local markdown workflow</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Default orientation</td>
+                                        <td>Team workspace</td>
+                                        <td>Personal knowledge environment</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Structure style</td>
+                                        <td>Pages, nested systems, databases</td>
+                                        <td>Linked markdown notes and folders</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Collaboration</td>
+                                        <td>Built in and central to the product</td>
+                                        <td>Possible, but not the primary design center</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ownership feel</td>
+                                        <td>Workspace-centric</td>
+                                        <td>File-centric and local-first</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Best decision rule</td>
+                                        <td>Choose if the knowledge must be shared and operational</td>
+                                        <td>Choose if the knowledge must support deeper individual thinking</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section class="bg-light border-top border-bottom">
+            <div class="container" style="padding: 0 20px;">
+                <div class="section-kicker mb-2">Where Teams Misjudge The Choice</div>
+                <h2 class="h3 fw-semibold mb-3">The biggest mistake is asking one tool to solve both the team layer and the private layer equally well</h2>
+                <p class="text-secondary">
+                    Teams often compare Notion and Obsidian as if they were substitutes across every use case. That
+                    framing usually leads to the wrong conclusion. If your team needs a readable shared documentation
+                    system, Obsidian may feel elegant but underpowered for the collaborative layer. If you need a
+                    personal knowledge tool for writing and long-term thinking, Notion may feel visible but too tied to
+                    workspace structure.
+                </p>
+                <p class="text-secondary mb-0">
+                    The cleaner way to ask the question is this: what should be public and operational, and what should
+                    remain personal and exploratory? Once that boundary is clear, the comparison becomes much easier.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container" style="padding: 0 20px;">
+                <div class="section-kicker mb-2">A Realistic Setup</div>
+                <h2 class="h3 fw-semibold mb-3">When using both tools actually makes sense</h2>
+                <p class="text-secondary">
+                    A common remote-work pattern is to use Notion as the team layer and Obsidian as the personal layer.
+                    In that model, Notion holds project documentation, team decisions, operating checklists, and shared
+                    reference material. Obsidian holds research notes, draft thinking, reading notes, idea development,
+                    and personal synthesis before anything is polished enough for the team.
+                </p>
+                <p class="text-secondary">
+                    This works well because the roles are different. Obsidian becomes a thinking space. Notion becomes
+                    the place where knowledge turns into a usable shared artifact. The setup fails only when people stop
+                    moving final decisions and durable information into the shared system.
+                </p>
+                <p class="text-secondary mb-0">
+                    If you are deciding for a team, ask whether you need one shared platform or one shared platform plus
+                    room for individual note ownership. That is usually a better question than asking which tool is superior.
+                </p>
+            </div>
+        </section>
+
+        <section class="bg-light border-top border-bottom">
+            <div class="container" style="padding: 0 20px;">
+                <div class="section-kicker mb-2">Simple Recommendation Path</div>
+                <h2 class="h3 fw-semibold mb-4">Use these rules if you want a practical default</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 fw-semibold">Choose Notion first</h3>
+                                <p class="text-secondary mb-0">
+                                    if the main priority is team collaboration, operating docs, project visibility, and
+                                    a shared place for work context.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 fw-semibold">Choose Obsidian first</h3>
+                                <p class="text-secondary mb-0">
+                                    if the main priority is private note ownership, linked thinking, writing, or a
+                                    local-first personal knowledge system.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 fw-semibold">Use both</h3>
+                                <p class="text-secondary mb-0">
+                                    if your workflow has a clear separation between personal thinking and shared team documentation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container" style="padding: 0 20px;">
+                <div class="section-kicker mb-2">Related Guides</div>
+                <h2 class="h4 fw-semibold mb-4">Read these if the comparison still feels too narrow</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h6 fw-semibold">Documentation Tools Guide</h3>
+                                <p class="text-secondary small">
+                                    Use this when you are still deciding what kind of documentation tool category you need.
+                                </p>
+                                <a class="stretched-link" href="/tools/documentation-tools-guide"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h6 fw-semibold">Remote Work Tool Stack</h3>
+                                <p class="text-secondary small">
+                                    Read this if the broader stack design is still unclear and the tool role has not been defined yet.
+                                </p>
+                                <a class="stretched-link" href="/tools/remote-work-tool-stack"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h6 fw-semibold">Tool Overload</h3>
+                                <p class="text-secondary small">
+                                    Go here if the real problem is software sprawl rather than this specific Notion versus Obsidian decision.
+                                </p>
+                                <a class="stretched-link" href="/tools/tool-overload-when-less-is-more"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="fw-semibold fs-5">Lzhdeni.com</div>
+                    <p class="text-white-50 mb-3">
+                        Practical guides and systems for remote work productivity, built to be implemented.
                     </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </header>
-
-
-    <!-- SUMMARY -->
-
-    <section>
-
-        <div class="container" style="padding: 0 20px;">
-
-            <h2 class="h4 fw-semibold mb-4">Quick Comparison</h2>
-
-            <div class="row g-4">
-
-                <div class="col-lg-6">
-
-                    <div class="card h-100">
-                        <div class="card-body">
-
-                            <h3 class="h6 fw-semibold mb-3">Notion</h3>
-
-                            <ul class="mb-0">
-
-                                <li>Cloud-first documentation platform</li>
-                                <li>Excellent team collaboration</li>
-                                <li>Database driven workspace</li>
-                                <li>Great for startup knowledge bases</li>
-
-                            </ul>
-
-                        </div>
+                    <div class="gap-4 footer-links small" style="text-align: center;">
+                        <a href="/privacy-policy">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="/terms">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="/contact">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="/about">About</a>
                     </div>
-
                 </div>
-
-
-                <div class="col-lg-6">
-
-                    <div class="card h-100">
-                        <div class="card-body">
-
-                            <h3 class="h6 fw-semibold mb-3">Obsidian</h3>
-
-                            <ul class="mb-0">
-
-                                <li>Local-first knowledge system</li>
-                                <li>Markdown based notes</li>
-                                <li>Powerful note linking</li>
-                                <li>Ideal for research and thinking</li>
-
-                            </ul>
-
-                        </div>
+                <div class="col-6 col-lg-3">
+                    <div class="text-uppercase text-white-50 small mb-2">Sections</div>
+                    <div class="footer-links d-flex flex-column gap-1 small">
+                        <a href="/foundations/">Foundations</a>
+                        <a href="/systems/">Systems</a>
+                        <a href="/tools/">Tools</a>
+                        <a href="/team-work/">Team Work</a>
+                        <a href="/comparisons/">Comparisons</a>
+                        <a href="/case-studies/">Case Studies</a>
                     </div>
-
                 </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- PHILOSOPHY -->
-
-    <section class="bg-light">
-
-        <div class="container" style="padding: 0 20px;">
-
-            <h2 class="h4 fw-semibold mb-4">Core Philosophy</h2>
-
-            <div class="row g-4">
-
-                <div class="col-lg-6">
-
-                    <div class="card">
-                        <div class="card-body">
-
-                            <h3 class="h6 fw-semibold">Notion: Structured Workspace</h3>
-
-                            <p class="mb-0">
-
-                                Notion works as a collaborative workspace where documents,
-                                databases, and projects are organized inside a shared system.
-                                It is commonly used by startups and remote teams.
-
-                            </p>
-
-                        </div>
+                <div class="col-6 col-lg-4">
+                    <div class="text-uppercase text-white-50 small mb-2">Start</div>
+                    <div class="footer-links d-flex flex-column gap-1 small">
+                        <a href="/start-here">Start Here</a>
+                        <a href="/resources">Resources</a>
+                        <a href="/sitemap.xml">Sitemap</a>
+                        <a href="/robots.txt">Robots</a>
                     </div>
-
-                </div>
-
-
-                <div class="col-lg-6">
-
-                    <div class="card">
-                        <div class="card-body">
-
-                            <h3 class="h6 fw-semibold">Obsidian: Networked Knowledge</h3>
-
-                            <p class="mb-0">
-
-                                Obsidian focuses on personal knowledge development.
-                                Notes connect through internal links, forming a network
-                                that supports long-term thinking and research.
-
-                            </p>
-
-                        </div>
+                    <div class="mt-3 text-white-50 small">
+                        &copy; <span id="year"></span> Lzhdeni.com. All rights reserved.
                     </div>
-
                 </div>
-
             </div>
-
         </div>
+    </footer>
 
-    </section>
-
-
-    <!-- FEATURE TABLE -->
-
-    <section>
-
-        <div class="container" style="padding: 0 20px;">
-
-            <h2 class="h4 fw-semibold mb-4">Feature Comparison</h2>
-
-            <div class="card">
-
-                <div class="card-body">
-
-                    <table class="table">
-
-                        <thead>
-
-                            <tr>
-                                <th>Feature</th>
-                                <th>Notion</th>
-                                <th>Obsidian</th>
-                            </tr>
-
-                        </thead>
-
-                        <tbody>
-
-                            <tr>
-                                <td>Storage</td>
-                                <td>Cloud workspace</td>
-                                <td>Local markdown files</td>
-                            </tr>
-
-                            <tr>
-                                <td>Main purpose</td>
-                                <td>Team documentation</td>
-                                <td>Personal knowledge</td>
-                            </tr>
-
-                            <tr>
-                                <td>Structure</td>
-                                <td>Pages + databases</td>
-                                <td>Linked notes</td>
-                            </tr>
-
-                            <tr>
-                                <td>Collaboration</td>
-                                <td>Strong</td>
-                                <td>Limited</td>
-                            </tr>
-
-                            <tr>
-                                <td>Offline use</td>
-                                <td>Partial</td>
-                                <td>Full</td>
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Footer -->
-  <footer class="bg-dark text-white py-5">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-5">
-          <div class="fw-semibold fs-5">Lzhdeni.com</div>
-          <p class="text-white-50 mb-3">
-            Practical guides and systems for remote work productivity, built to be implemented.
-          </p>
-          <div class="gap-4 footer-links small" style="text-align: center;">
-            <a href="/privacy-policy">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="/terms">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="/contact">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="/about">About</a>
-          </div>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <div class="text-uppercase text-white-50 small mb-2">Sections</div>
-          <div class="footer-links d-flex flex-column gap-1 small">
-            <a href="/foundations/">Foundations</a>
-            <a href="/systems/">Systems</a>
-            <a href="/tools/">Tools</a>
-            <a href="/team-work/">Team Work</a>
-            <a href="/comparisons/">Comparisons</a>
-            <a href="/case-studies/">Case Studies</a>
-          </div>
-        </div>
-
-        <div class="col-6 col-lg-4">
-          <div class="text-uppercase text-white-50 small mb-2">Start</div>
-          <div class="footer-links d-flex flex-column gap-1 small">
-            <a href="/start-here">Start Here</a>
-            <a href="/resources">Resources</a>
-            <a href="/sitemap.xml">Sitemap</a>
-            <a href="/robots.txt">Robots</a>
-          </div>
-          <div class="mt-3 text-white-50 small">
-            © <span id="year"></span> Lzhdeni.com. All rights reserved.
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
-
 </html>

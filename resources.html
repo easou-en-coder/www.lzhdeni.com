@@ -1,263 +1,87 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="google-adsense-account" content="ca-pub-4361497440384535">
 
-    <title>Resources — Remote Work Productivity Tools & Templates | Lzhdeni</title>
+    <title>Remote Work Productivity Resources: Guides, Frameworks, and Implementation Paths | Lzhdeni.com</title>
 
     <meta name="description"
-        content="Curated resources for remote work productivity: planning templates, async communication guides, workflow tools, and reference frameworks." />
+        content="Explore curated remote work productivity resources on Lzhdeni.com, including planning guides, async communication frameworks, tool decision paths, and practical starting points." />
 
     <meta name="robots" content="index,follow" />
-
     <link rel="canonical" href="https://lzhdeni.com/resources" />
 
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Remote Work Productivity Resources | Lzhdeni">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Remote Work Productivity Resources | Lzhdeni.com">
     <meta property="og:description"
-        content="Planning templates, async communication resources, productivity tools, and reference frameworks for remote work.">
+        content="A curated resource hub for remote work productivity guides, frameworks, implementation paths, and editorial starting points.">
     <meta property="og:url" content="https://lzhdeni.com/resources">
     <meta property="og:image" content="https://lzhdeni.com/assets/images/og-image.png">
 
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Remote Work Productivity Resources | Lzhdeni.com">
+    <meta name="twitter:description"
+        content="Use this resource hub to find the right remote work productivity guides, frameworks, and next-step reading paths.">
+    <meta name="twitter:image" content="https://lzhdeni.com/assets/images/og-image.png">
 
-    <!-- Icons -->
-    <!-- SVG favicon (modern browsers first) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Remote Work Productivity Resources",
+          "description": "A curated resource hub for remote work productivity guides, frameworks, implementation paths, and editorial starting points.",
+          "url": "https://lzhdeni.com/resources",
+          "isPartOf": "https://lzhdeni.com/"
+        }
+    </script>
+
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-    <!-- PNG fallback -->
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/web-app-manifest-192x192.png">
-
-    <!-- ICO (Windows / older browsers / search engines) -->
     <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
     <link rel="icon" href="/assets/images/favicon-96x96.png" type="image/png">
-    <!-- iOS -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
-
-    <!-- PWA -->
     <link rel="manifest" href="/site.webmanifest">
-
     <meta http-equiv="Content-Language" content="en">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        :root {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-size: 17px;
-            line-height: 1.7;
-            background: #f8f9fa;
-        }
-
-        .nav-link {
-            border: 1px solid #999;
-            border-radius: 8px;
-            padding: 0.1rem 0.8rem;
-            margin-right: 10px;
-            margin-bottom: 5px;
-            margin-top: 5px;
-            font-size: 14px;
-        }
-
-        .nav-link:hover,
-        .nav-link:active,
-        .nav-link:focus {
-            border: 1px solid #f80000;
-            color: #f80000;
-        }
-
-        /* ===== Section spacing ===== */
-        section {
-            padding: 3.5rem 0;
-        }
-
-        /* ===== Hero ===== */
-        .hero-gradient {
-            background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%);
-            padding: 3.5rem 0;
-        }
-
-        h1.display-5 {
-            font-weight: 700;
-            line-height: 1.25;
-        }
-
-        /* Reduce hero density */
-        .hero-gradient .badge-soft {
-            font-size: .75rem;
-            padding: .5rem .9rem;
-        }
-
-        /* ===== Card Style ===== */
-        .card {
-            border-radius: 18px;
-            border: 1px solid rgba(0, 0, 0, .04);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, .04);
-        }
-
-        .card-body {
-            padding: 1.6rem;
-        }
-
-        .card-hover:hover {
-            transform: none;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
-        }
-
-        /* ===== Section Background Separation ===== */
-        #featured {
-            background: #ffffff;
-        }
-
-        section.bg-light {
-            background: #f3f5f7 !important;
-        }
-
-        /* ===== Buttons ===== */
-        .btn-lg {
-            padding: .9rem 1rem;
-            font-weight: 600;
-        }
-
-        /* ===== Suggested Path Better Spacing ===== */
-        .list-group {
-            gap: .75rem;
-        }
-
-        .list-group-item {
-            border-radius: 14px !important;
-            border: 1px solid rgba(0, 0, 0, .05);
-            padding: 1rem 1.2rem;
-        }
-
-        /* ===== Footer ===== */
-        footer {
-            background: #111 !important;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, .7);
-        }
-
-        .footer-links a:hover {
-            color: #fff;
-        }
-
-        /* ================= MOBILE OPTIMIZATION ================= */
+        :root { scroll-behavior: smooth; }
+        body { font-size: 17px; line-height: 1.7; background: #f8f9fa; }
+        .nav-link { border: 1px solid #999; border-radius: 8px; padding: 0.1rem 0.8rem; margin-right: 10px; margin-bottom: 5px; margin-top: 5px; font-size: 14px; }
+        .nav-link:hover, .nav-link:active, .nav-link:focus { border: 1px solid #f80000; color: #f80000; }
+        section { padding: 3.5rem 0; }
+        .hero-gradient { background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%); padding: 3.5rem 0; }
+        h1.display-5 { font-weight: 700; line-height: 1.25; }
+        .card { border-radius: 18px; border: 1px solid rgba(0, 0, 0, .04); box-shadow: 0 8px 24px rgba(0, 0, 0, .04); }
+        .card-body { padding: 1.6rem; }
+        .btn-lg { padding: .9rem 1rem; font-weight: 600; }
+        .list-group { gap: .75rem; }
+        .list-group-item { border-radius: 14px !important; border: 1px solid rgba(0, 0, 0, .05); padding: 1rem 1.2rem; }
+        .hero-top-badges { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
+        .section-kicker { letter-spacing: .08em; text-transform: uppercase; font-size: .78rem; color: #6c757d; font-weight: 700; }
+        .surface-note { background: #ffffff; border: 1px solid rgba(0, 0, 0, .05); border-radius: 18px; padding: 1.35rem; }
+        footer { background: #111 !important; }
+        .footer-links a { color: rgba(255, 255, 255, .7); }
+        .footer-links a:hover { color: #fff; }
         @media (max-width: 991px) {
-
-            body {
-                font-size: 16px;
-            }
-
-            section {
-                padding: 2.8rem 0;
-            }
-
-            /* Hero vertical rhythm */
-            .hero-gradient {
-                padding: 2.8rem 0;
-            }
-
-            .hero-gradient .row {
-                flex-direction: column;
-            }
-
-            .hero-gradient .col-lg-5 {
-                margin-top: 2rem;
-            }
-
-            /* Headline scale */
-            h1.display-5 {
-                font-size: 1.85rem;
-            }
-
-            /* Buttons full width */
-            .btn-lg {
-                width: 100%;
-            }
-
-            .btn-lg+.btn-lg {
-                margin-top: .8rem;
-            }
-
-            /* Suggested path layout */
-            .list-group-item {
-                flex-direction: column !important;
-                align-items: flex-start !important;
-            }
-
-            .list-group-item .btn {
-                margin-top: .6rem;
-                width: 100%;
-            }
-
-            /* Category stacking */
-            .row-cols-lg-3>*,
-            #featured .row>*,
-            .row-cols-md-2>* {
-                flex: 0 0 100%;
-                max-width: 100%;
-            }
-
-            /* Add spacing between cards */
-            .card {
-                margin-bottom: 1.2rem;
-            }
-
-            /* Footer vertical spacing */
-            footer .col-lg-5,
-            footer .col-6,
-            footer .col-lg-3,
-            footer .col-lg-4 {
-                margin-bottom: 1.8rem;
-            }
-
-            footer .row {
-                text-align: center;
-            }
-
-        }
-
-        /* ===== Fix Hero Top Badge Layout ===== */
-        .hero-top-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: .6rem;
-            align-items: center;
-        }
-
-        @media (max-width:991px) {
-
-            .hero-top-badges {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .hero-top-badges span {
-                display: block;
-            }
-
-            .hero-gradient .row {
-                align-items: flex-start !important;
-            }
-
+            body { font-size: 16px; }
+            section { padding: 2.8rem 0; }
+            .hero-gradient { padding: 2.8rem 0; }
+            h1.display-5 { font-size: 1.85rem; }
+            .btn-lg { width: 100%; }
+            .card { margin-bottom: 1.2rem; }
+            footer .row { text-align: center; }
+            .hero-top-badges { flex-direction: column; align-items: flex-start; }
         }
     </style>
-
 </head>
 
 <body>
-
-    <!-- ================= NAV (copied directly from index.html) ================= -->
-
     <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top"
         style="padding-left: 10px; padding-right: 10px; box-shadow: 0 2px 5px rgba(16, 24, 40, .3);"
         aria-label="Main navigation">
@@ -272,7 +96,6 @@
 
             <div class="collapse navbar-collapse" id="navMain">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
-
                     <li class="nav-item"><a class="nav-link" href="/start-here">Start Here</a></li>
                     <li class="nav-item"><a class="nav-link" href="/foundations/">Foundations</a></li>
                     <li class="nav-item"><a class="nav-link" href="/systems/">Systems</a></li>
@@ -280,216 +103,258 @@
                     <li class="nav-item"><a class="nav-link" href="/tools/">Tools</a></li>
                     <li class="nav-item"><a class="nav-link" href="/comparisons/">Comparisons</a></li>
                     <li class="nav-item"><a class="nav-link" href="/case-studies/">Case Studies</a></li>
-
                 </ul>
 
                 <div class="d-flex ms-lg-3 gap-2">
                     <a class="btn btn-outline-primary btn-sm" href="/about">About</a>
                     <a class="btn btn-primary btn-sm" href="/start-here">Get the Framework</a>
                 </div>
-
             </div>
         </div>
     </nav>
 
-    <!-- HERO -->
-
-    <header class="hero border-bottom" style="padding: 25px 20px 0 20px;">
-        <div class="container">
-
-            <h1 class="display-6 fw-semibold mb-3">
-                Remote Work Productivity Resources
-            </h1>
-
-            <p class="text-secondary lead">
-
-                A curated collection of templates, tools, and reference frameworks
-                for building practical remote work systems.
-
-            </p>
-
-            <p class="text-secondary">
-
-                These resources complement the main guides on Lzhdeni and are designed
-                to help you implement productivity systems quickly.
-
-            </p>
-
-        </div>
-    </header>
-
-    <!-- RESOURCE CATEGORIES -->
-
-    <section>
-
-        <div class="container">
-
-            <div class="row g-4">
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-
-                            <h3 class="h5 fw-semibold">Planning Templates</h3>
-
-                            <p class="text-secondary">
-                                Weekly planning templates, daily review checklists,
-                                and productivity system worksheets.
-                            </p>
-
-                            <a href="/systems/" class="btn btn-outline-primary btn-sm">
-                                View planning systems
-                            </a>
-
+    <main>
+        <header class="hero-gradient border-bottom">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <div class="hero-top-badges mb-3">
+                            <span class="badge bg-primary">Resources</span>
+                            <span class="text-secondary small">Curated paths, not a random archive</span>
+                        </div>
+                        <h1 class="display-5 fw-semibold mb-3">Remote work productivity resources for readers who want to implement, not just browse</h1>
+                        <p class="lead text-secondary mb-3">
+                            This page is a curated map of the most useful guides, frameworks, and next-step reading
+                            paths across Lzhdeni.com. It is designed for readers who know their current bottleneck but
+                            do not want to hunt through the whole site to find the right starting point.
+                        </p>
+                        <p class="text-secondary mb-0">
+                            Instead of listing every page equally, this resource hub groups the site by implementation
+                            need: planning, focus, async collaboration, tool choices, comparison decisions, and case-based examples.
+                        </p>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h2 class="h5 fw-semibold mb-3">Use this page if...</h2>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item px-0">You are new to the site and want a faster path into the right section.</li>
+                                    <li class="list-group-item px-0">You know the problem you are trying to solve, but not which guide to read first.</li>
+                                    <li class="list-group-item px-0">You want an editorial shortlist instead of a full archive.</li>
+                                    <li class="list-group-item px-0">You are revisiting the site later and need a clean re-entry point.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-
-                            <h3 class="h5 fw-semibold">Async Communication</h3>
-
-                            <p class="text-secondary">
-                                Guides and frameworks for reducing meetings
-                                and improving written collaboration.
-                            </p>
-
-                            <a href="/team-work/" class="btn btn-outline-primary btn-sm">
-                                Open async guides
-                            </a>
-
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-
-                            <h3 class="h5 fw-semibold">Tool Evaluation</h3>
-
-                            <p class="text-secondary">
-                                Decision frameworks for choosing productivity tools
-                                without creating tool overload.
-                            </p>
-
-                            <a href="/tools/" class="btn btn-outline-primary btn-sm">
-                                Compare tools
-                            </a>
-
-                        </div>
-                    </div>
-                </div>
-
             </div>
+        </header>
 
-        </div>
+        <section>
+            <div class="container">
+                <div class="section-kicker mb-2">How To Use This Page</div>
+                <h2 class="h3 fw-semibold mb-3">Start with the problem, not with the section label</h2>
+                <p class="text-secondary">
+                    Readers often waste time by clicking into whatever section sounds most interesting instead of the
+                    section that best matches their current constraint. If your work feels noisy, you may need
+                    communication guidance, not another planning system. If your week feels unstable, you may need a
+                    systems page, not a tool comparison. This page is meant to reduce that mismatch.
+                </p>
+                <p class="text-secondary mb-0">
+                    Use the categories below as implementation paths. Each one points to a different type of problem and
+                    the section of the site most likely to help with it first.
+                </p>
+            </div>
+        </section>
 
-    </section>
-
-    <!-- EXTRA RESOURCES -->
-
-    <section class="bg-light border-top border-bottom">
-
-        <div class="container">
-
-            <h2 class="h4 fw-semibold mb-4" style="padding-left: 20px;">
-                Additional reference material
-            </h2>
-
-            <div class="row g-4">
-
-                <div class="col-md-6">
-
-                    <div class="card h-100">
-                        <div class="card-body">
-
-                            <h3 class="h6 fw-semibold">Focus & Deep Work References</h3>
-
-                            <p class="text-secondary">
-
-                                Background reading and models related to focus,
-                                attention management, and cognitive workload.
-
-                            </p>
-
+        <section>
+            <div class="container">
+                <div class="section-kicker mb-2">Resource Categories</div>
+                <h2 class="h3 fw-semibold mb-4">Choose a path based on the kind of work problem you need to solve</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 fw-semibold">Planning and execution</h3>
+                                <p class="text-secondary">
+                                    Start here if your week lacks shape, priorities keep drifting, or daily work feels reactive.
+                                </p>
+                                <a href="/systems/" class="btn btn-outline-primary btn-sm">Open Systems</a>
+                            </div>
                         </div>
                     </div>
-
-                </div>
-
-                <div class="col-md-6">
-
-                    <div class="card h-100">
-                        <div class="card-body">
-
-                            <h3 class="h6 fw-semibold">Remote Work Case Studies</h3>
-
-                            <p class="text-secondary">
-
-                                Examples of productivity systems applied
-                                in different remote team environments.
-
-                            </p>
-
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 fw-semibold">Focus and attention</h3>
+                                <p class="text-secondary">
+                                    Use these guides if the deeper problem is fragmented attention, shallow work, or confusing activity with progress.
+                                </p>
+                                <a href="/foundations/" class="btn btn-outline-primary btn-sm">Open Foundations</a>
+                            </div>
                         </div>
                     </div>
-
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 fw-semibold">Async communication and team clarity</h3>
+                                <p class="text-secondary">
+                                    Go here when meetings are expanding, updates are weak, or documentation is not carrying enough of the coordination load.
+                                </p>
+                                <a href="/team-work/" class="btn btn-outline-primary btn-sm">Open Team Work</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 fw-semibold">Tool decisions and stack design</h3>
+                                <p class="text-secondary">
+                                    Use this path if your software choices are creating friction, duplication, or unclear ownership across the workflow.
+                                </p>
+                                <a href="/tools/" class="btn btn-outline-primary btn-sm">Open Tools</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 fw-semibold">Comparison decisions</h3>
+                                <p class="text-secondary">
+                                    Start here when you are weighing tradeoffs between work models, communication styles, or role formats.
+                                </p>
+                                <a href="/comparisons/" class="btn btn-outline-primary btn-sm">Open Comparisons</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 fw-semibold">Real examples and adaptations</h3>
+                                <p class="text-secondary">
+                                    Use case studies when you want to see how these ideas change across founders, freelancers, developers, and distributed teams.
+                                </p>
+                                <a href="/case-studies/" class="btn btn-outline-primary btn-sm">Open Case Studies</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
             </div>
+        </section>
 
-        </div>
-
-    </section>
-
-    <!-- CTA -->
-
-    <section>
-
-        <div class="container">
-
-            <div class="card border-0 shadow-sm">
-
-                <div class="card-body p-4">
-
-                    <h2 class="h5 fw-semibold mb-2">
-                        Where to start
-                    </h2>
-
-                    <p class="text-secondary">
-
-                        If you’re new to the framework,
-                        begin with the core guide that explains
-                        how the system is structured.
-
-                    </p>
-
-                    <a class="btn btn-primary" href="/start-here">
-                        Start the framework
-                    </a>
-
+        <section class="bg-light border-top border-bottom">
+            <div class="container">
+                <div class="section-kicker mb-2">Recommended Starting Paths</div>
+                <h2 class="h3 fw-semibold mb-4">Editorial shortcuts for common situations</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="surface-note h-100">
+                            <h3 class="h5 fw-semibold">If your work feels scattered</h3>
+                            <p class="text-secondary mb-2">Start with principles, then move into a repeatable planning loop.</p>
+                            <div class="d-flex flex-column gap-2 small">
+                                <a href="/foundations/focus-vs-busyness">Focus vs Busyness</a>
+                                <a href="/foundations/deep-work-principles">Deep Work Principles</a>
+                                <a href="/systems/weekly-planning-system">Weekly Planning System</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="surface-note h-100">
+                            <h3 class="h5 fw-semibold">If your team is too meeting-heavy</h3>
+                            <p class="text-secondary mb-2">Start with clearer communication structure before trying to cut calls.</p>
+                            <div class="d-flex flex-column gap-2 small">
+                                <a href="/team-work/async-communication-guide">Async Communication Guide</a>
+                                <a href="/team-work/documentation-first-culture">Documentation-First Culture</a>
+                                <a href="/team-work/remote-meeting-reduction">Remote Meeting Reduction</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="surface-note h-100">
+                            <h3 class="h5 fw-semibold">If your tool stack is messy</h3>
+                            <p class="text-secondary mb-2">Diagnose overlap first, then design the stack with clearer layers.</p>
+                            <div class="d-flex flex-column gap-2 small">
+                                <a href="/tools/tool-overload-when-less-is-more">Tool Overload</a>
+                                <a href="/tools/remote-work-tool-stack">Remote Work Tool Stack</a>
+                                <a href="/tools/documentation-tools-guide">Documentation Tools Guide</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="surface-note h-100">
+                            <h3 class="h5 fw-semibold">If you need a realistic example</h3>
+                            <p class="text-secondary mb-2">Use a case study to see how the frameworks behave in actual contexts.</p>
+                            <div class="d-flex flex-column gap-2 small">
+                                <a href="/case-studies/startup-remote-process">Startup Remote Process</a>
+                                <a href="/case-studies/freelancer-productivity-system">Freelancer Productivity System</a>
+                                <a href="/case-studies/remote-developer-workflow">Remote Developer Workflow</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
             </div>
+        </section>
 
-        </div>
+        <section>
+            <div class="container">
+                <div class="section-kicker mb-2">What You Will Find Here</div>
+                <h2 class="h3 fw-semibold mb-3">This page is a curated layer above the archive</h2>
+                <p class="text-secondary">
+                    Not every useful page belongs on a resource shortlist. This hub is intentionally selective. It is
+                    meant to surface the pages that are most helpful when readers are trying to get oriented, solve a
+                    current problem, or re-enter the site without starting from scratch. That is why many of the links
+                    point into section hubs and a smaller number of foundational articles.
+                </p>
+                <p class="text-secondary mb-0">
+                    In other words, this is not a template dump or a long miscellaneous list. It is an editorial map of
+                    where implementation usually starts.
+                </p>
+            </div>
+        </section>
 
-    </section>
+        <section class="bg-light border-top border-bottom">
+            <div class="container">
+                <div class="section-kicker mb-2">Selection Logic</div>
+                <h2 class="h3 fw-semibold mb-3">Why these resources are grouped this way</h2>
+                <p class="text-secondary">
+                    Remote work advice becomes easier to use when it is grouped by decision type rather than by content
+                    format. That is why this page points readers toward paths like planning, focus, async
+                    communication, tool design, and comparison decisions. Those are the points where people usually get
+                    stuck. A shorter curated map is often more useful than a longer list that treats every page as
+                    equally important.
+                </p>
+                <p class="text-secondary mb-0">
+                    If your goal is implementation, the best resource is usually the one that clarifies the next
+                    decision, not the one with the broadest title.
+                </p>
+            </div>
+        </section>
 
-    <!-- ================= FOOTER (copied directly from index.html) ================= -->
+        <section class="bg-light border-top border-bottom">
+            <div class="container">
+                <div class="section-kicker mb-2">Best General Entry Point</div>
+                <h2 class="h3 fw-semibold mb-3">If you are unsure where to begin, use the guided path</h2>
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <p class="text-secondary mb-3">
+                            The most reliable first stop for new readers is still <a href="/start-here">Start Here</a>.
+                            It explains how the site is organized and helps you move from principles to systems, tools,
+                            team practices, and examples in a more deliberate order.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a class="btn btn-primary" href="/start-here">Start the framework</a>
+                            <a class="btn btn-outline-secondary" href="/">Back to homepage</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="bg-dark text-white py-5">
         <div class="container">
-
             <div class="row g-4">
-
                 <div class="col-lg-5">
-
                     <div class="fw-semibold fs-5">Lzhdeni.com</div>
 
                     <p class="text-white-50 mb-3">
@@ -502,14 +367,10 @@
                         <a href="/contact">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="/about">About</a>
                     </div>
-
                 </div>
 
-
                 <div class="col-6 col-lg-3">
-
                     <div class="text-uppercase text-white-50 small mb-2">Sections</div>
-
                     <div class="footer-links d-flex flex-column gap-1 small">
                         <a href="/foundations/">Foundations</a>
                         <a href="/systems/">Systems</a>
@@ -518,14 +379,10 @@
                         <a href="/comparisons/">Comparisons</a>
                         <a href="/case-studies/">Case Studies</a>
                     </div>
-
                 </div>
 
-
                 <div class="col-6 col-lg-4">
-
                     <div class="text-uppercase text-white-50 small mb-2">Start</div>
-
                     <div class="footer-links d-flex flex-column gap-1 small">
                         <a href="/start-here">Start Here</a>
                         <a href="/resources">Resources</a>
@@ -534,11 +391,9 @@
                     </div>
 
                     <div class="mt-3 text-white-50 small">
-                        © <span id="year"></span> Lzhdeni.com. All rights reserved.
+                        &copy; <span id="year"></span> Lzhdeni.com. All rights reserved.
                     </div>
-
                 </div>
-
             </div>
         </div>
     </footer>
@@ -548,7 +403,5 @@
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-
 </body>
-
 </html>

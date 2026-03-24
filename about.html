@@ -1,276 +1,103 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="google-adsense-account" content="ca-pub-4361497440384535">
 
-    <title>About — Lzhdeni.com</title>
+    <title>About Lzhdeni.com: Editorial Focus, Content Approach, and Site Purpose</title>
 
     <meta name="description"
-        content="About Lzhdeni.com — a structured knowledge hub focused on remote work productivity systems, planning frameworks, and practical implementation methods." />
+        content="Learn what Lzhdeni.com covers, why the site exists, how the content is organized, and the editorial approach behind its remote work productivity guides." />
 
     <meta name="robots" content="index,follow" />
     <meta name="theme-color" content="#0d6efd" />
+    <link rel="canonical" href="https://lzhdeni.com/about" />
 
-    <!-- Icons -->
-    <!-- SVG favicon (modern browsers first) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About Lzhdeni.com: Editorial Focus, Content Approach, and Site Purpose">
+    <meta property="og:description" content="Understand the editorial focus, content structure, and long-term purpose of Lzhdeni.com.">
+    <meta property="og:url" content="https://lzhdeni.com/about">
+    <meta property="og:image" content="https://lzhdeni.com/assets/images/og-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Lzhdeni.com: Editorial Focus, Content Approach, and Site Purpose">
+    <meta name="twitter:description" content="What Lzhdeni.com is for, how the site is organized, and the editorial principles behind its content.">
+    <meta name="twitter:image" content="https://lzhdeni.com/assets/images/og-image.png">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "name": "About Lzhdeni.com",
+          "description": "What Lzhdeni.com is for, how the site is organized, and the editorial principles behind its content.",
+          "url": "https://lzhdeni.com/about",
+          "isPartOf": {
+            "@type": "WebSite",
+            "name": "Lzhdeni.com",
+            "url": "https://lzhdeni.com/"
+          }
+        }
+    </script>
+
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-    <!-- PNG fallback -->
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/web-app-manifest-192x192.png">
-
-    <!-- ICO (Windows / older browsers / search engines) -->
     <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
     <link rel="icon" href="/assets/images/favicon-96x96.png" type="image/png">
-    <!-- iOS -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
-
-    <!-- PWA -->
     <link rel="manifest" href="/site.webmanifest">
     <meta http-equiv="Content-Language" content="en">
-    <link rel="canonical" href="https://lzhdeni.com/about" />
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        :root {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-size: 17px;
-            line-height: 1.7;
-            background: #f8f9fa;
-        }
-
-        .nav-link {
-            border: 1px solid #999;
-            border-radius: 8px;
-            padding: 0.1rem 0.8rem;
-            margin-right: 10px;
-            margin-bottom: 5px;
-            margin-top: 5px;
-            font-size: 14px;
-        }
-
-        .nav-link:hover,
-        .nav-link:active,
-        .nav-link:focus {
-            border: 1px solid #f80000;
-            color: #f80000;
-        }
-
-        /* ===== Section spacing ===== */
-        section {
-            padding: 3.5rem 0;
-        }
-
-        /* ===== Hero ===== */
-        .hero-gradient {
-            background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%);
-            padding: 3.5rem 0;
-        }
-
-        h1.display-5 {
-            font-weight: 700;
-            line-height: 1.25;
-        }
-
-        /* Reduce hero density */
-        .hero-gradient .badge-soft {
-            font-size: .75rem;
-            padding: .5rem .9rem;
-        }
-
-        /* ===== Card Style ===== */
-        .card {
-            border-radius: 18px;
-            border: 1px solid rgba(0, 0, 0, .04);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, .04);
-        }
-
-        .card-body {
-            padding: 1.6rem;
-        }
-
-        .card-hover:hover {
-            transform: none;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
-        }
-
-        /* ===== Section Background Separation ===== */
-        #featured {
-            background: #ffffff;
-        }
-
-        section.bg-light {
-            background: #f3f5f7 !important;
-        }
-
-        /* ===== Buttons ===== */
-        .btn-lg {
-            padding: .9rem 1rem;
-            font-weight: 600;
-        }
-
-        /* ===== Suggested Path Better Spacing ===== */
-        .list-group {
-            gap: .75rem;
-        }
-
-        .list-group-item {
-            border-radius: 14px !important;
-            border: 1px solid rgba(0, 0, 0, .05);
-            padding: 1rem 1.2rem;
-        }
-
-        /* ===== Footer ===== */
-        footer {
-            background: #111 !important;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, .7);
-        }
-
-        .footer-links a:hover {
-            color: #fff;
-        }
-
-        /* ================= MOBILE OPTIMIZATION ================= */
+        :root { scroll-behavior: smooth; }
+        body { font-size: 17px; line-height: 1.7; background: #f8f9fa; }
+        .nav-link { border: 1px solid #999; border-radius: 8px; padding: 0.1rem 0.8rem; margin-right: 10px; margin-bottom: 5px; margin-top: 5px; font-size: 14px; }
+        .nav-link:hover, .nav-link:active, .nav-link:focus { border: 1px solid #f80000; color: #f80000; }
+        section { padding: 3.5rem 0; }
+        .hero-gradient { background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%); padding: 3.5rem 0; }
+        h1.display-5 { font-weight: 700; line-height: 1.25; }
+        .card { border-radius: 18px; border: 1px solid rgba(0, 0, 0, .04); box-shadow: 0 8px 24px rgba(0, 0, 0, .04); }
+        .card-body { padding: 1.6rem; }
+        .btn-lg { padding: .9rem 1rem; font-weight: 600; }
+        .list-group { gap: .75rem; }
+        .list-group-item { border-radius: 14px !important; border: 1px solid rgba(0, 0, 0, .05); padding: 1rem 1.2rem; }
+        .hero-top-badges { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
+        .section-kicker { letter-spacing: .08em; text-transform: uppercase; font-size: .78rem; color: #6c757d; font-weight: 700; }
+        footer { background: #111 !important; }
+        .footer-links a { color: rgba(255, 255, 255, .7); }
+        .footer-links a:hover { color: #fff; }
         @media (max-width: 991px) {
-
-            body {
-                font-size: 16px;
-            }
-
-            section {
-                padding: 2.8rem 0;
-            }
-
-            /* Hero vertical rhythm */
-            .hero-gradient {
-                padding: 2.8rem 0;
-            }
-
-            .hero-gradient .row {
-                flex-direction: column;
-            }
-
-            .hero-gradient .col-lg-5 {
-                margin-top: 2rem;
-            }
-
-            /* Headline scale */
-            h1.display-5 {
-                font-size: 1.85rem;
-            }
-
-            /* Buttons full width */
-            .btn-lg {
-                width: 100%;
-            }
-
-            .btn-lg+.btn-lg {
-                margin-top: .8rem;
-            }
-
-            /* Suggested path layout */
-            .list-group-item {
-                flex-direction: column !important;
-                align-items: flex-start !important;
-            }
-
-            .list-group-item .btn {
-                margin-top: .6rem;
-                width: 100%;
-            }
-
-            /* Category stacking */
-            .row-cols-lg-3>*,
-            #featured .row>*,
-            .row-cols-md-2>* {
-                flex: 0 0 100%;
-                max-width: 100%;
-            }
-
-            /* Add spacing between cards */
-            .card {
-                margin-bottom: 1.2rem;
-            }
-
-            /* Footer vertical spacing */
-            footer .col-lg-5,
-            footer .col-6,
-            footer .col-lg-3,
-            footer .col-lg-4 {
-                margin-bottom: 1.8rem;
-            }
-
-            footer .row {
-                text-align: center;
-            }
-
-        }
-
-        /* ===== Fix Hero Top Badge Layout ===== */
-        .hero-top-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: .6rem;
-            align-items: center;
-        }
-
-        @media (max-width:991px) {
-
-            .hero-top-badges {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .hero-top-badges span {
-                display: block;
-            }
-
-            .hero-gradient .row {
-                align-items: flex-start !important;
-            }
-
+            body { font-size: 16px; }
+            section { padding: 2.8rem 0; }
+            .hero-gradient { padding: 2.8rem 0; }
+            h1.display-5 { font-size: 1.85rem; }
+            .btn-lg { width: 100%; }
+            .card { margin-bottom: 1.2rem; }
+            footer .row { text-align: center; }
+            .hero-top-badges { flex-direction: column; align-items: flex-start; }
         }
     </style>
-
-
 </head>
 
 <body class="bg-body">
-
-    <!-- NAV (copied directly from index.html) -->
-
     <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top"
         style="padding-left:10px;padding-right:10px;box-shadow:0 2px 5px rgba(16,24,40,.3);"
         aria-label="Main navigation">
-
         <div class="container">
-
             <a class="navbar-brand fw-semibold" href="/" aria-label="Lzhdeni Home">
                 <img src="/assets/images/logo.png" alt="Lzhdeni Logo" class="me-2" width="30" height="30">
                 Lzhdeni.com
             </a>
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
                 aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
-
                 <span class="navbar-toggler-icon"></span>
-
             </button>
-
             <div class="collapse navbar-collapse" id="navMain">
-
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
-
                     <li class="nav-item"><a class="nav-link" href="/start-here">Start Here</a></li>
                     <li class="nav-item"><a class="nav-link" href="/foundations/">Foundations</a></li>
                     <li class="nav-item"><a class="nav-link" href="/systems/">Systems</a></li>
@@ -278,318 +105,235 @@
                     <li class="nav-item"><a class="nav-link" href="/tools/">Tools</a></li>
                     <li class="nav-item"><a class="nav-link" href="/comparisons/">Comparisons</a></li>
                     <li class="nav-item"><a class="nav-link" href="/case-studies/">Case Studies</a></li>
-
                 </ul>
-
                 <div class="d-flex ms-lg-3 gap-2">
                     <a class="btn btn-outline-primary btn-sm" href="/about">About</a>
                     <a class="btn btn-primary btn-sm" href="/start-here">Get the Framework</a>
                 </div>
-
             </div>
         </div>
     </nav>
 
-
-    <!-- PAGE HEADER -->
-
-    <section class="border-bottom bg-white">
-
-        <div class="container">
-
-            <div class="row justify-content-center">
-
-                <div class="col-lg-8" style="padding-left: 20px; padding-right: 20px;">
-
-                    <h1 class="display-6 fw-semibold mb-3">
-                        About Lzhdeni.com
-                    </h1>
-
-                    <p class="lead text-secondary">
-
-                        Lzhdeni.com is a structured knowledge hub focused on practical productivity systems for remote
-                        work.
-                        The goal is simple: help individuals and teams build reliable workflows that actually work in
-                        real-world conditions.
-
-                    </p>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- MISSION -->
-
-    <section>
-
-        <div class="container">
-
-            <div class="row g-4 justify-content-center">
-
-                <div class="col-lg-8" style="padding-left: 20px; padding-right: 20px;">
-
-                    <h2 class="h4 fw-semibold mb-3">Why this site exists</h2>
-
-                    <p class="text-secondary">
-
-                        Remote work has changed how people organize their time, attention, and collaboration.
-                        However, most productivity advice online is fragmented, tool-focused, or built around generic
-                        tips.
-
-                    </p>
-
-                    <p class="text-secondary">
-
-                        Lzhdeni.com approaches productivity differently.
-                        Instead of short tips or listicles, the site focuses on structured systems — principles,
-                        frameworks, and decision models that can be adapted to different roles and environments.
-
-                    </p>
-
-                    <p class="text-secondary">
-
-                        The goal is not to provide endless hacks, but to offer clear frameworks that help readers build
-                        sustainable work habits.
-
-                    </p>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- CONTENT APPROACH -->
-
-    <section class="bg-light border-top border-bottom">
-
-        <div class="container">
-
-            <div class="row g-4 justify-content-center">
-
-                <div class="col-lg-8" style="padding-left: 20px; padding-right: 20px;">
-
-                    <h2 class="h4 fw-semibold mb-3">How the content is organized</h2>
-
-                    <p class="text-secondary">
-
-                        The content on Lzhdeni.com is organized as a system library.
-                        Each section addresses a different layer of remote productivity.
-
-                    </p>
-
-                    <ul class="list-group list-group-flush">
-
-                        <li class="list-group-item">
-
-                            <strong>Foundations</strong> — mental models for focus, attention, and work design.
-
-                        </li>
-
-                        <li class="list-group-item">
-
-                            <strong>Systems</strong> — practical planning frameworks such as weekly planning and daily
-                            review.
-
-                        </li>
-
-                        <li class="list-group-item">
-
-                            <strong>Team Work</strong> — async collaboration, documentation culture, and communication
-                            norms.
-
-                        </li>
-
-                        <li class="list-group-item">
-
-                            <strong>Tools</strong> — evaluation guides for choosing tools without unnecessary
-                            complexity.
-
-                        </li>
-
-                        <li class="list-group-item">
-
-                            <strong>Comparisons</strong> — role-based decisions between different approaches.
-
-                        </li>
-
-                        <li class="list-group-item">
-
-                            <strong>Case Studies</strong> — realistic examples of productivity systems in practice.
-
-                        </li>
-
-                    </ul>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- PRINCIPLES -->
-
-    <section>
-
-        <div class="container">
-
-            <div class="row g-4 justify-content-center">
-
-                <div class="col-lg-8" style="padding-left: 20px; padding-right: 20px;">
-
-                    <h2 class="h4 fw-semibold mb-3">Editorial principles</h2>
-
-                    <div class="card">
-
-                        <div class="card-body">
-
-                            <ul class="mb-0">
-
-                                <li class="mb-2">
-                                    Content focuses on frameworks and systems rather than quick tips.
-                                </li>
-
-                                <li class="mb-2">
-                                    Articles emphasize tradeoffs and decision criteria.
-                                </li>
-
-                                <li class="mb-2">
-                                    Content is written to remain useful over time rather than chasing short-term trends.
-                                </li>
-
-                                <li class="mb-2">
-                                    No paywalls, aggressive promotions, or misleading productivity claims.
-                                </li>
-
-                            </ul>
-
+    <main>
+        <header class="hero-gradient border-bottom">
+            <div class="container py-lg-4">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <div class="hero-top-badges mb-3">
+                            <span class="badge bg-primary">About</span>
+                            <span class="text-secondary small">Editorial project and knowledge base</span>
+                        </div>
+                        <h1 class="display-5 fw-semibold mb-3">About Lzhdeni.com</h1>
+                        <p class="lead text-secondary mb-3">
+                            Lzhdeni.com is an editorial project focused on remote work productivity systems, practical
+                            guides, and implementation logic. The site exists to organize useful ideas into a structure
+                            readers can actually apply.
+                        </p>
+                        <p class="text-secondary mb-0">
+                            The core theme is simple: remote work productivity gets better when focus, planning,
+                            communication, and tool decisions are treated as parts of one operating system instead of as
+                            isolated tips.
+                        </p>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h2 class="h5 fw-semibold mb-3">What this site tries to do</h2>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item px-0">Clarify principles before recommending routines or software.</li>
+                                    <li class="list-group-item px-0">Explain tradeoffs instead of pretending there is one right answer for every role.</li>
+                                    <li class="list-group-item px-0">Connect guides into reading paths that lead toward implementation.</li>
+                                    <li class="list-group-item px-0">Stay useful over time by focusing on systems rather than trend-driven hacks.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-        </div>
-    </section>
+        </header>
 
-
-
-    <!-- CONTACT -->
-
-    <section class="border-top">
-
-        <div class="container">
-
-            <div class="row justify-content-center">
-
-                <div class="col-lg-8 text-center">
-
-                    <h2 class="h4 fw-semibold mb-3">
-                        Contact
-                    </h2>
-
-                    <p class="text-secondary">
-
-                        If you have feedback, suggestions, or questions about the site,
-                        you can reach out through the contact page.
-
-                    </p>
-
-                    <a class="btn btn-primary" href="/contact">
-                        Contact Page
-                    </a>
-
-                </div>
-
+        <section>
+            <div class="container">
+                <div class="section-kicker mb-2">Why This Site Exists</div>
+                <h2 class="h3 fw-semibold mb-3">Most productivity advice gets fragmented long before it becomes useful</h2>
+                <p class="text-secondary">
+                    Remote work changed how people manage attention, collaboration, and planning, but much of the advice
+                    around it still arrives in disconnected pieces. One article focuses on deep work. Another focuses
+                    on a note-taking app. Another focuses on meetings. Readers are left to assemble the logic
+                    themselves, which often leads to mismatched decisions and fragile systems.
+                </p>
+                <p class="text-secondary mb-0">
+                    Lzhdeni.com exists to reduce that fragmentation. Instead of publishing around isolated tricks, the
+                    site is organized so ideas connect: principles lead into systems, systems interact with team
+                    practices, and tools are evaluated only after the workflow they need to support is clear.
+                </p>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <section class="bg-light border-top border-bottom">
+            <div class="container">
+                <div class="section-kicker mb-2">How The Content Is Organized</div>
+                <h2 class="h3 fw-semibold mb-3">Each section covers a different layer of the same remote work problem</h2>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <strong>Foundations</strong><br>
+                        <span class="text-secondary small">Focus, attention, time design, and the mental models beneath productive work.</span>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Systems</strong><br>
+                        <span class="text-secondary small">Weekly planning, daily review, goal setting, and priority structures.</span>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Team Work</strong><br>
+                        <span class="text-secondary small">Async communication, documentation-first habits, meeting reduction, and workflow handoffs.</span>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Tools</strong><br>
+                        <span class="text-secondary small">Stack design, tool overload, documentation tools, and narrower software decisions.</span>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Comparisons</strong><br>
+                        <span class="text-secondary small">Tradeoff-based decisions across work models, role types, and collaboration styles.</span>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Case Studies</strong><br>
+                        <span class="text-secondary small">Examples showing how the rest of the guidance changes under real constraints.</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
+        <section>
+            <div class="container">
+                <div class="section-kicker mb-2">Editorial Approach</div>
+                <h2 class="h3 fw-semibold mb-3">The site is written to help readers make decisions, not just collect advice</h2>
+                <p class="text-secondary">
+                    The editorial standard on Lzhdeni.com is not "publish more pages." It is "make the logic clearer."
+                    That means articles are written to explain what kind of problem they solve, where they fit in the
+                    wider system, and what tradeoffs readers should notice before applying the advice.
+                </p>
+                <ul class="text-secondary">
+                    <li>Pages favor durable frameworks over trend-based productivity claims.</li>
+                    <li>Comparisons emphasize context and tradeoffs rather than declaring universal winners.</li>
+                    <li>Tool guides are expected to start from workflow needs, not from brand loyalty.</li>
+                    <li>Case studies are used to test how ideas behave under different roles and constraints.</li>
+                    <li>Reading paths matter, because the order in which readers encounter ideas changes how useful they become.</li>
+                </ul>
+                <p class="text-secondary mb-0">
+                    The site is intentionally more structured than a general blog because the subject itself benefits
+                    from structure.
+                </p>
+            </div>
+        </section>
 
-    <!-- FOOTER (copied directly from index.html) -->
+        <section class="bg-light border-top border-bottom">
+            <div class="container">
+                <div class="section-kicker mb-2">Who The Site Is For</div>
+                <h2 class="h3 fw-semibold mb-3">The content is built for people doing real distributed work</h2>
+                <p class="text-secondary">
+                    Lzhdeni.com is most useful for readers working under real remote constraints: scattered calendars,
+                    distributed collaboration, tool decisions, shifting priorities, and the challenge of protecting
+                    focus in communication-heavy environments.
+                </p>
+                <ul class="text-secondary">
+                    <li>Individual contributors building a more reliable personal workflow</li>
+                    <li>Freelancers balancing client work, admin work, and deep work</li>
+                    <li>Managers trying to improve clarity without adding process for its own sake</li>
+                    <li>Small teams redesigning documentation, meeting habits, and software boundaries</li>
+                </ul>
+                <p class="text-secondary mb-0">
+                    The site is less useful if you want a one-size-fits-all productivity template, advice detached from
+                    context, or recommendations based only on which apps are popular right now.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-kicker mb-2">What This Site Does Not Try To Be</div>
+                <h2 class="h3 fw-semibold mb-3">A few boundaries make the content more honest</h2>
+                <p class="text-secondary">
+                    Lzhdeni.com is not a news site, not a software release tracker, and not a promise that every remote
+                    worker should use the same system. It does not try to win attention by publishing a new productivity
+                    trick every week. The more useful goal is to make the underlying structure of good remote work more visible.
+                </p>
+                <p class="text-secondary mb-0">
+                    Readers should expect frameworks, guided paths, and implementation logic. They should not expect
+                    miracle routines, endless app hype, or advice that ignores the differences between a freelancer, a
+                    founder, a manager, and an individual contributor.
+                </p>
+                <p class="text-secondary mt-3 mb-0">
+                    That boundary is intentional. A narrower promise usually produces more trustworthy content than a
+                    broader one.
+                </p>
+            </div>
+        </section>
+
+        <section class="border-top">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <div class="section-kicker mb-2">Contact</div>
+                        <h2 class="h3 fw-semibold mb-3">Questions, suggestions, or useful feedback</h2>
+                        <p class="text-secondary">
+                            If you have feedback about the site structure, the clarity of a guide, or a topic that
+                            would benefit from deeper treatment, the contact page is the best place to reach out.
+                        </p>
+                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                            <a class="btn btn-primary" href="/contact">Contact Page</a>
+                            <a class="btn btn-outline-secondary" href="/start-here">Start Here</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="bg-dark text-white py-5">
-
         <div class="container">
-
             <div class="row g-4">
-
                 <div class="col-lg-5">
-
                     <div class="fw-semibold fs-5">Lzhdeni.com</div>
-
                     <p class="text-white-50 mb-3">
                         Practical guides and systems for remote work productivity, built to be implemented.
                     </p>
-
                     <div class="gap-4 footer-links small" style="text-align:center;">
-
                         <a href="/privacy-policy">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="/terms">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="/contact">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="/about">About</a>
-
                     </div>
-
                 </div>
-
-
                 <div class="col-6 col-lg-3">
-
                     <div class="text-uppercase text-white-50 small mb-2">Sections</div>
-
                     <div class="footer-links d-flex flex-column gap-1 small">
-
                         <a href="/foundations/">Foundations</a>
                         <a href="/systems/">Systems</a>
                         <a href="/tools/">Tools</a>
                         <a href="/team-work/">Team Work</a>
                         <a href="/comparisons/">Comparisons</a>
                         <a href="/case-studies/">Case Studies</a>
-
                     </div>
-
                 </div>
-
-
                 <div class="col-6 col-lg-4">
-
                     <div class="text-uppercase text-white-50 small mb-2">Start</div>
-
                     <div class="footer-links d-flex flex-column gap-1 small">
-
                         <a href="/start-here">Start Here</a>
                         <a href="/resources">Resources</a>
                         <a href="/sitemap.xml">Sitemap</a>
                         <a href="/robots.txt">Robots</a>
-
                     </div>
-
                     <div class="mt-3 text-white-50 small">
-
-                        © <span id="year"></span> Lzhdeni.com. All rights reserved.
-
+                        &copy; <span id="year"></span> Lzhdeni.com. All rights reserved.
                     </div>
-
                 </div>
-
             </div>
         </div>
-
     </footer>
 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-
 </body>
-
 </html>
