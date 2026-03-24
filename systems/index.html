@@ -1,31 +1,61 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="google-adsense-account" content="ca-pub-4361497440384535">
 
-    <title>Productivity Systems for Remote Work | Lzhdeni.com</title>
+    <title>Remote Work Systems Hub: Planning, Review, and Execution | Lzhdeni.com</title>
 
     <meta name="description"
-        content="Explore practical productivity systems for remote work including weekly planning, daily review frameworks, and structured workflows for individuals and teams." />
+        content="Use the Lzhdeni.com systems hub to build better weekly planning, daily review, goal-setting, and prioritization routines for remote work that stays coherent under real pressure." />
 
     <meta name="robots" content="index,follow" />
-
     <link rel="canonical" href="https://lzhdeni.com/systems/" />
 
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Productivity Systems for Remote Work">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Remote Work Systems Hub | Lzhdeni.com">
     <meta property="og:description"
-        content="Structured productivity systems for planning, execution, and review in remote work environments.">
+        content="Practical systems for weekly planning, daily review, prioritization, and execution in remote work environments.">
     <meta property="og:url" content="https://lzhdeni.com/systems/">
     <meta property="og:image" content="https://lzhdeni.com/assets/images/og-image.png">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Productivity Systems for Remote Work">
-    <meta name="twitter:description" content="Frameworks for weekly planning, daily review, and execution systems.">
+    <meta name="twitter:title" content="Remote Work Systems Hub | Lzhdeni.com">
+    <meta name="twitter:description"
+        content="Build planning, review, goal-setting, and prioritization routines that hold up in real remote work.">
     <meta name="twitter:image" content="https://lzhdeni.com/assets/images/og-image.png">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Remote Work Systems Hub",
+          "description": "Practical systems for weekly planning, daily review, prioritization, and execution in remote work environments.",
+          "url": "https://lzhdeni.com/systems/",
+          "isPartOf": "https://lzhdeni.com/"
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://lzhdeni.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Systems",
+              "item": "https://lzhdeni.com/systems/"
+            }
+          ]
+        }
+    </script>
 
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
@@ -39,89 +69,49 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        :root {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-size: 17px;
-            line-height: 1.7;
-            background: #f8f9fa;
-        }
-
-        .nav-link {
-            border: 1px solid #999;
-            border-radius: 8px;
-            padding: .1rem .8rem;
-            margin-right: 10px;
-            margin-bottom: 5px;
-            margin-top: 5px;
-            font-size: 14px;
-        }
-
-        .nav-link:hover {
-            border: 1px solid #f80000;
-            color: #f80000;
-        }
-
-        section {
-            padding: 3.5rem 0;
-        }
-
-        .hero-gradient {
-            background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%);
-            padding: 3.5rem 0;
-        }
-
-        .card {
-            border-radius: 18px;
-            border: 1px solid rgba(0, 0, 0, .04);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, .04);
-        }
-
-        .card-body {
-            padding: 1.6rem;
-        }
-
-        footer {
-            background: #111 !important;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, .7);
-        }
-
-        .footer-links a:hover {
-            color: #fff;
+        :root { scroll-behavior: smooth; }
+        body { font-size: 17px; line-height: 1.7; background: #f8f9fa; }
+        .nav-link { border: 1px solid #999; border-radius: 8px; padding: .1rem .8rem; margin-right: 10px; margin-bottom: 5px; margin-top: 5px; font-size: 14px; }
+        .nav-link:hover, .nav-link:active, .nav-link:focus { border: 1px solid #f80000; color: #f80000; }
+        section { padding: 3.5rem 0; }
+        .hero-gradient { background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%); padding: 3.5rem 0; }
+        .card { border-radius: 18px; border: 1px solid rgba(0, 0, 0, .04); box-shadow: 0 8px 24px rgba(0, 0, 0, .04); }
+        .card-body { padding: 1.6rem; }
+        .btn-lg { padding: .9rem 1rem; font-weight: 600; }
+        .hero-top-badges { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
+        .section-kicker { letter-spacing: .08em; text-transform: uppercase; font-size: .78rem; color: #6c757d; font-weight: 700; }
+        .surface-note { background: #ffffff; border: 1px solid rgba(0, 0, 0, .05); border-radius: 18px; padding: 1.35rem; }
+        .mini-label { font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: #6c757d; font-weight: 700; }
+        footer { background: #111 !important; }
+        .footer-links a { color: rgba(255, 255, 255, .7); }
+        .footer-links a:hover { color: #fff; }
+        @media(max-width:991px) {
+            body { font-size: 16px; }
+            section { padding: 2.8rem 0; }
+            .hero-gradient { padding: 2.8rem 0; }
+            h1.display-5 { font-size: 1.9rem; }
+            .btn-lg { width: 100%; }
+            .card { margin-bottom: 1.2rem; }
+            footer .row { text-align: center; }
+            .hero-top-badges { flex-direction: column; align-items: flex-start; }
         }
     </style>
-
 </head>
 
 <body class="bg-body">
-
-    <!-- NAV (kept fully consistent) -->
-
     <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top"
-        style="padding-left:10px;padding-right:10px;box-shadow:0 2px 5px rgba(16,24,40,.3);">
-
+        style="padding-left:10px;padding-right:10px;box-shadow:0 2px 5px rgba(16,24,40,.3);"
+        aria-label="Main navigation">
         <div class="container">
-
-            <a class="navbar-brand fw-semibold" href="/">
+            <a class="navbar-brand fw-semibold" href="/" aria-label="Lzhdeni Home">
                 <img src="/assets/images/logo.png" alt="Lzhdeni Logo" class="me-2" width="30" height="30">
                 Lzhdeni.com
             </a>
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
-
                 <span class="navbar-toggler-icon"></span>
-
             </button>
-
             <div class="collapse navbar-collapse" id="navMain">
-
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
-
                     <li class="nav-item"><a class="nav-link" href="/start-here">Start Here</a></li>
                     <li class="nav-item"><a class="nav-link" href="/foundations/">Foundations</a></li>
                     <li class="nav-item"><a class="nav-link active" href="/systems/">Systems</a></li>
@@ -129,332 +119,360 @@
                     <li class="nav-item"><a class="nav-link" href="/tools/">Tools</a></li>
                     <li class="nav-item"><a class="nav-link" href="/comparisons/">Comparisons</a></li>
                     <li class="nav-item"><a class="nav-link" href="/case-studies/">Case Studies</a></li>
-
                 </ul>
-
                 <div class="d-flex ms-lg-3 gap-2">
-
                     <a class="btn btn-outline-primary btn-sm" href="/about">About</a>
                     <a class="btn btn-primary btn-sm" href="/start-here">Get the Framework</a>
-
                 </div>
-
             </div>
         </div>
     </nav>
 
-    <!-- HERO -->
-
-    <header class="hero-gradient border-bottom">
-
-        <div class="container">
-
-            <div class="row align-items-center g-4">
-
-                <div class="col-lg-8">
-
-                    <h1 class="display-5 fw-semibold mb-3">
-                        Productivity Systems for Remote Work
-                    </h1>
-
-                    <p class="lead text-secondary mb-4">
-                        Productivity systems translate abstract productivity advice into repeatable workflows.
-                        This section explores planning cycles, review frameworks, and execution routines designed
-                        for remote and async environments.
-                    </p>
-
+    <main>
+        <header class="hero-gradient border-bottom">
+            <div class="container py-lg-4">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7" style="padding-left:20px;padding-right:20px;">
+                        <div class="hero-top-badges mb-3">
+                            <span class="rounded-pill px-3 py-2">Remote Work Systems</span>
+                            <span class="text-secondary small">Planning, review, priorities, execution</span>
+                        </div>
+                        <h1 class="display-5 fw-semibold mb-3">Remote work systems that turn intentions into a repeatable operating rhythm</h1>
+                        <p class="lead text-secondary mb-3">
+                            This section is for people who already know what matters, but still lose the week to drift,
+                            context switching, and reactive work. The pages here focus on the routines that keep remote
+                            work coherent after motivation wears off.
+                        </p>
+                        <p class="text-secondary mb-4">
+                            Instead of treating planning as a one-time ritual, these guides break the system into parts:
+                            goal direction, weekly structure, daily review, and task prioritization. Used together,
+                            they help readers build a workflow that can absorb interruptions without collapsing.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a class="btn btn-primary btn-lg" href="#guides">Explore System Guides</a>
+                            <a class="btn btn-outline-secondary btn-lg" href="/systems/weekly-planning-system">Start with Weekly Planning</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h2 class="h5 fw-semibold mb-3">This section is for...</h2>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <strong>Remote professionals with unstable weeks</strong><br>
+                                        <span class="text-secondary small">Your priorities keep changing and your schedule keeps dissolving.</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Managers who need lighter planning loops</strong><br>
+                                        <span class="text-secondary small">You need structure without creating more overhead for yourself or your team.</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Independent workers building a reliable default</strong><br>
+                                        <span class="text-secondary small">You want a routine that survives travel, client work, meetings, and interruption-heavy days.</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Anyone rebuilding after planning fatigue</strong><br>
+                                        <span class="text-secondary small">Past systems felt too rigid, too vague, or too hard to maintain.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
             </div>
-        </div>
+        </header>
 
-    </header>
-
-    <!-- SYSTEM GUIDES -->
-
-    <section>
-
-        <div class="container">
-
-            <div class="row g-4">
-
-                <div class="col-lg-4">
-
-                    <div class="card h-100">
-
-                        <div class="card-body">
-
-                            <h3 class="h5 fw-semibold">Weekly Planning System</h3>
-
-                            <p class="text-secondary">
-                                A structured weekly planning cycle that clarifies priorities and prevents chaotic task
-                                switching.
-                            </p>
-
-                            <a class="btn btn-outline-primary btn-sm" href="/systems/weekly-planning-system">
-                                Read guide
-                            </a>
-
-                        </div>
-
+        <section>
+            <div class="container">
+                <div class="row g-4 align-items-start">
+                    <div class="col-lg-7" style="padding-left:20px;padding-right:20px;">
+                        <div class="section-kicker mb-2">What Problems This Section Solves</div>
+                        <h2 class="h3 fw-semibold mb-3">The problem is rarely a lack of advice. It is usually a weak operating loop.</h2>
+                        <p class="text-secondary">
+                            Many remote workers know they should set goals, plan the week, review progress, and choose
+                            priorities well. The breakdown happens in the handoffs between those activities. Goals stay
+                            abstract, weekly plans become wish lists, daily reviews become optional, and urgent tasks
+                            silently replace important ones.
+                        </p>
+                        <p class="text-secondary">
+                            This section is built to solve that chain reaction. It helps readers define a direction,
+                            convert that direction into a realistic week, adjust the plan without losing the larger
+                            thread, and decide what matters when everything feels time-sensitive. The emphasis is not
+                            on hyper-optimization. It is on coherence: making sure the week, the day, and the work
+                            queue relate to one another.
+                        </p>
+                        <p class="text-secondary mb-0">
+                            If your current workflow produces constant resets, fragmented attention, or a feeling that
+                            you are always restarting, these pages are meant to restore continuity.
+                        </p>
                     </div>
-
-                </div>
-
-                <div class="col-lg-4">
-
-                    <div class="card h-100">
-
-                        <div class="card-body">
-
-                            <h3 class="h5 fw-semibold">Daily Review Workflow</h3>
-
-                            <p class="text-secondary">
-                                A lightweight daily reflection system used to track progress and adapt plans quickly.
-                            </p>
-
-                            <a class="btn btn-outline-primary btn-sm" href="/systems/daily-review-system">
-                                Read guide
-                            </a>
-
+                    <div class="col-lg-5">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h2 class="h5 fw-semibold mb-3">How the pages in this section differ</h2>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <strong>Goal Setting for Remote Work</strong><br>
+                                        <span class="text-secondary small">Use this when the problem is direction, scope, or deciding what the next few weeks are actually for.</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Weekly Planning System</strong><br>
+                                        <span class="text-secondary small">Use this when you need a realistic weekly structure that connects priorities to time and capacity.</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Daily Review Method</strong><br>
+                                        <span class="text-secondary small">Use this when you want the thinking model behind daily review: what to check, what to question, and what to reset.</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Daily Review System</strong><br>
+                                        <span class="text-secondary small">Use this when you need the practical operating loop: when to review, what to capture, and how to carry the day forward.</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Task Priority Framework</strong><br>
+                                        <span class="text-secondary small">Use this when your list is full but your sense of sequence is weak.</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-
                     </div>
-
                 </div>
-
-                <div class="col-lg-4">
-
-                    <div class="card h-100">
-
-                        <div class="card-body">
-
-                            <h3 class="h5 fw-semibold">Task Priority Framework</h3>
-
-                            <p class="text-secondary">
-                                A practical model for deciding what matters first and keeping reactive work under
-                                control.
-                            </p>
-
-                            <a class="btn btn-outline-primary btn-sm" href="/systems/task-priority-framework">
-                                Read guide
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
             </div>
+        </section>
 
-        </div>
-
-    </section>
-
-    <!-- SYSTEM MODEL -->
-
-    <section class="bg-light">
-
-        <div class="container">
-
-            <div class="row g-4 align-items-center">
-
-                <div class="col-lg-7">
-
-                    <h2 class="h3 fw-semibold mb-3">
-                        The planning → execution → review cycle
-                    </h2>
-
+        <section id="guides">
+            <div class="container">
+                <div class="mb-4" style="padding-left:20px;padding-right:20px;">
+                    <div class="section-kicker mb-2">System Guides</div>
+                    <h2 class="h3 fw-semibold">Build the operating loop one layer at a time</h2>
                     <p class="text-secondary">
-
-                        Most effective productivity systems follow a simple loop:
-
+                        These pages cover direction, weekly structure, daily adjustment, and task-level prioritization.
                     </p>
-
-                    <ul>
-
-                        <li>Planning — defining priorities and outcomes</li>
-                        <li>Execution — completing focused work blocks</li>
-                        <li>Review — adjusting systems and constraints</li>
-
-                    </ul>
-
-                    <p class="text-secondary">
-
-                        This loop prevents reactive work patterns and creates a sustainable workflow over time.
-
-                    </p>
-
                 </div>
-
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 fw-semibold">Goal Setting for Remote Work</h3>
+                                <p class="text-secondary">Clarify what your current season of work is trying to accomplish before the calendar fills up.</p>
+                                <a class="stretched-link" href="/systems/goal-setting-for-remote-work"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 fw-semibold">Weekly Planning System</h3>
+                                <p class="text-secondary">Create a weekly rhythm that reflects capacity, not optimism.</p>
+                                <a class="stretched-link" href="/systems/weekly-planning-system"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 fw-semibold">Daily Review Method</h3>
+                                <p class="text-secondary">Understand the logic behind a good daily review before you turn it into a ritual.</p>
+                                <a class="stretched-link" href="/systems/daily-review-method"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 fw-semibold">Daily Review System</h3>
+                                <p class="text-secondary">Use a lightweight end-of-day or start-of-day loop to reconnect tasks with priorities.</p>
+                                <a class="stretched-link" href="/systems/daily-review-system"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 fw-semibold">Task Priority Framework</h3>
+                                <p class="text-secondary">Learn how to sequence work when urgency, importance, and attention do not point in the same direction.</p>
+                                <a class="stretched-link" href="/systems/task-priority-framework"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-        </div>
-
-    </section>
-
-    <!-- INTERNAL LINKS -->
-
-    <section>
-
-        <div class="container">
-
-            <h2 class="h3 fw-semibold mb-4">
-                Related sections
-            </h2>
-
-            <div class="row g-4">
-
-                <div class="col-md-4">
-
-                    <a href="/foundations/" class="text-decoration-none">
-
-                        <div class="card h-100">
-
-                            <div class="card-body">
-
-                                <h3 class="h5">Foundations</h3>
-
-                                <p class="text-secondary mb-0">
-                                    Mental models behind focus, constraints, and productivity decisions.
-                                </p>
-
+        <section class="bg-light border-top border-bottom">
+            <div class="container">
+                <div class="row g-4 align-items-start">
+                    <div class="col-lg-5" style="padding-left:20px;padding-right:20px;">
+                        <div class="section-kicker mb-2">Recommended Reading Path</div>
+                        <h2 class="h3 fw-semibold mb-3">Read from direction to execution.</h2>
+                        <p class="text-secondary mb-0">
+                            Good systems become easier to maintain when you start with the upper layer of the problem
+                            and move downward. A weak weekly plan cannot be fixed at the task level, and a confused day
+                            often reflects a confused week.
+                        </p>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="surface-note h-100">
+                                    <div class="mini-label mb-2">Path 1</div>
+                                    <h3 class="h5 fw-semibold">You have no clear direction</h3>
+                                    <p class="text-secondary small mb-0">Start with <a href="/systems/goal-setting-for-remote-work">Goal Setting</a>, then move to <a href="/systems/weekly-planning-system">Weekly Planning</a>.</p>
+                                </div>
                             </div>
-
-                        </div>
-
-                    </a>
-
-                </div>
-
-                <div class="col-md-4">
-
-                    <a href="/tools/" class="text-decoration-none">
-
-                        <div class="card h-100">
-
-                            <div class="card-body">
-
-                                <h3 class="h5">Tools</h3>
-
-                                <p class="text-secondary mb-0">
-                                    How to evaluate productivity tools without constant switching.
-                                </p>
-
+                            <div class="col-md-4">
+                                <div class="surface-note h-100">
+                                    <div class="mini-label mb-2">Path 2</div>
+                                    <h3 class="h5 fw-semibold">Your week collapses midstream</h3>
+                                    <p class="text-secondary small mb-0">Read <a href="/systems/weekly-planning-system">Weekly Planning</a>, then pair it with <a href="/systems/daily-review-system">Daily Review System</a>.</p>
+                                </div>
                             </div>
-
-                        </div>
-
-                    </a>
-
-                </div>
-
-                <div class="col-md-4">
-
-                    <a href="/team-work/" class="text-decoration-none">
-
-                        <div class="card h-100">
-
-                            <div class="card-body">
-
-                                <h3 class="h5">Team Work</h3>
-
-                                <p class="text-secondary mb-0">
-                                    Async collaboration systems and documentation-first teams.
-                                </p>
-
+                            <div class="col-md-4">
+                                <div class="surface-note h-100">
+                                    <div class="mini-label mb-2">Path 3</div>
+                                    <h3 class="h5 fw-semibold">Your list is noisy</h3>
+                                    <p class="text-secondary small mb-0">Start with <a href="/systems/task-priority-framework">Task Priority Framework</a>, then use the review pages to keep decisions current.</p>
+                                </div>
                             </div>
-
                         </div>
-
-                    </a>
-
+                    </div>
                 </div>
-
             </div>
+        </section>
 
-        </div>
+        <section>
+            <div class="container">
+                <div class="row g-4 align-items-start">
+                    <div class="col-lg-6" style="padding-left:20px;padding-right:20px;">
+                        <div class="section-kicker mb-2">Common Mistakes</div>
+                        <h2 class="h3 fw-semibold mb-3">Where productivity systems usually fail</h2>
+                        <ul class="text-secondary">
+                            <li>Building an elaborate routine before deciding what the work actually needs this month or quarter.</li>
+                            <li>Treating weekly planning as a motivational exercise instead of a capacity exercise.</li>
+                            <li>Running a daily review that only records what happened instead of changing what happens next.</li>
+                            <li>Using priority labels without forcing tradeoffs between deep work, admin work, and urgent work.</li>
+                            <li>Copying someone else's system whole, even though their role, meeting load, and decision surface are different.</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="section-kicker mb-2">Practical Example</div>
+                                <h2 class="h4 fw-semibold mb-3">A realistic remote work scenario</h2>
+                                <p class="text-secondary">
+                                    Imagine a product designer working across two time zones with constant Slack pings,
+                                    three standing meetings, and a backlog that keeps expanding. She is busy every day,
+                                    but by Friday she still feels unsure what actually moved forward.
+                                </p>
+                                <p class="text-secondary mb-0">
+                                    A better system does not begin with a color-coded task board. It starts by defining
+                                    the next two meaningful outcomes, translating those into a weekly plan with fewer
+                                    commitments, using a daily review to reset after interruptions, and applying a
+                                    simple priority rule when requests conflict. Each guide in this section addresses
+                                    one layer of that shift, so the workflow becomes more stable instead of more ornate.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    </section>
-
-    <!-- FOOTER (fully consistent) -->
+        <section class="bg-light border-top">
+            <div class="container">
+                <div class="row g-4 align-items-start">
+                    <div class="col-lg-8" style="padding-left:20px;padding-right:20px;">
+                        <div class="section-kicker mb-2">Related Internal Links</div>
+                        <h2 class="h3 fw-semibold mb-3">Use systems together with principles, tools, and team norms</h2>
+                        <p class="text-secondary mb-0">
+                            Planning systems work best when they are anchored to focus principles, collaboration
+                            expectations, and a tool stack that does not constantly pull attention sideways.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="btn btn-outline-primary" href="/start-here">Open Start Here</a>
+                    </div>
+                </div>
+                <div class="row g-4 mt-1">
+                    <div class="col-md-4">
+                        <a href="/foundations/" class="text-decoration-none">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h5 fw-semibold">Foundations</h3>
+                                    <p class="text-secondary mb-0">Visit this section when the real issue is attention, focus, or confusing activity with progress.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="/tools/" class="text-decoration-none">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h5 fw-semibold">Tools</h3>
+                                    <p class="text-secondary mb-0">Use these guides when weak planning is being amplified by a fragmented or overbuilt software stack.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="/team-work/" class="text-decoration-none">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h5 fw-semibold">Team Work</h3>
+                                    <p class="text-secondary mb-0">Read this section when your personal system keeps breaking because team communication is too noisy or unclear.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="bg-dark text-white py-5">
-
         <div class="container">
-
             <div class="row g-4">
-
                 <div class="col-lg-5">
-
                     <div class="fw-semibold fs-5">Lzhdeni.com</div>
-
                     <p class="text-white-50 mb-3">
-                        Practical guides and systems for remote work productivity.
+                        Practical guides and systems for remote work productivity, built to be implemented.
                     </p>
-
                     <div class="gap-4 footer-links small" style="text-align:center;">
-
                         <a href="/privacy-policy">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="/terms">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="/contact">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="/about">About</a>
-
                     </div>
-
                 </div>
-
                 <div class="col-6 col-lg-3">
-
                     <div class="text-uppercase text-white-50 small mb-2">Sections</div>
-
                     <div class="footer-links d-flex flex-column gap-1 small">
-
                         <a href="/foundations/">Foundations</a>
                         <a href="/systems/">Systems</a>
                         <a href="/tools/">Tools</a>
                         <a href="/team-work/">Team Work</a>
                         <a href="/comparisons/">Comparisons</a>
                         <a href="/case-studies/">Case Studies</a>
-
                     </div>
-
                 </div>
-
                 <div class="col-6 col-lg-4">
-
                     <div class="text-uppercase text-white-50 small mb-2">Start</div>
-
                     <div class="footer-links d-flex flex-column gap-1 small">
-
                         <a href="/start-here">Start Here</a>
                         <a href="/resources">Resources</a>
                         <a href="/sitemap.xml">Sitemap</a>
                         <a href="/robots.txt">Robots</a>
-
                     </div>
-
                     <div class="mt-3 text-white-50 small">
-
-                        © <span id="year"></span> Lzhdeni.com
-
+                        &copy; <span id="year"></span> Lzhdeni.com. All rights reserved.
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-
 </body>
-
 </html>
