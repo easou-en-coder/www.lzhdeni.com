@@ -1,691 +1,490 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="google-adsense-account" content="ca-pub-4361497440384535">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="google-adsense-account" content="ca-pub-4361497440384535">
 
-  <title>Case Studies | Lzhdeni.com</title>
+    <title>Remote Work Case Studies Hub: Realistic Examples and Implementation Patterns | Lzhdeni.com</title>
 
-  <meta name="description"
-    content="Explore practical remote work productivity case studies: startup processes, async communication, planning systems, and realistic workflow adaptations." />
+    <meta name="description"
+        content="Use the Lzhdeni.com case studies hub to explore realistic examples of remote work systems, async coordination, startup processes, and role-specific productivity setups." />
 
-  <meta name="robots" content="index,follow" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://lzhdeni.com/case-studies/" />
 
-  <link rel="canonical" href="https://lzhdeni.com/case-studies/" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Remote Work Case Studies Hub | Lzhdeni.com">
+    <meta property="og:description"
+        content="Practical case studies showing how remote work systems change across roles, team sizes, and coordination demands.">
+    <meta property="og:url" content="https://lzhdeni.com/case-studies/">
+    <meta property="og:image" content="https://lzhdeni.com/assets/images/og-image.png">
 
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="Case Studies | Lzhdeni.com">
-  <meta property="og:description"
-    content="Realistic case studies on remote work systems, async team workflows, planning structures, and process design.">
-  <meta property="og:url" content="https://lzhdeni.com/case-studies/">
-  <meta property="og:image" content="https://lzhdeni.com/assets/images/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Remote Work Case Studies Hub | Lzhdeni.com">
+    <meta name="twitter:description"
+        content="Browse realistic remote work case studies for founders, freelancers, remote developers, and async teams.">
+    <meta name="twitter:image" content="https://lzhdeni.com/assets/images/og-image.png">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Case Studies | Lzhdeni.com">
-  <meta name="twitter:description"
-    content="Browse practical case studies on remote work productivity systems and implementation.">
-  <meta name="twitter:image" content="https://lzhdeni.com/assets/images/og-image.png">
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Remote Work Case Studies Hub",
+          "description": "Practical case studies showing how remote work systems change across roles, team sizes, and coordination demands.",
+          "url": "https://lzhdeni.com/case-studies/",
+          "isPartOf": "https://lzhdeni.com/"
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://lzhdeni.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Case Studies",
+              "item": "https://lzhdeni.com/case-studies/"
+            }
+          ]
+        }
+    </script>
 
-  <!-- Icons -->
-  <!-- SVG favicon (modern browsers first) -->
-  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-  <!-- PNG fallback -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/web-app-manifest-192x192.png">
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/web-app-manifest-192x192.png">
+    <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
+    <link rel="icon" href="/assets/images/favicon-96x96.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
 
-  <!-- ICO (Windows / older browsers / search engines) -->
-  <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
-  <link rel="icon" href="/assets/images/favicon-96x96.png" type="image/png">
-  <!-- iOS -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    <meta http-equiv="Content-Language" content="en">
 
-  <!-- PWA -->
-  <link rel="manifest" href="/site.webmanifest">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <meta http-equiv="Content-Language" content="en">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <style>
-    :root {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-size: 17px;
-      line-height: 1.7;
-      background: #f8f9fa;
-    }
-
-    .nav-link {
-      border: 1px solid #999;
-      border-radius: 8px;
-      padding: 0.1rem 0.8rem;
-      margin-right: 10px;
-      margin-bottom: 5px;
-      margin-top: 5px;
-      font-size: 14px;
-    }
-
-    .nav-link:hover,
-    .nav-link:active,
-    .nav-link:focus {
-      border: 1px solid #f80000;
-      color: #f80000;
-    }
-
-    section {
-      padding: 3.5rem 0;
-    }
-
-    .hero-gradient {
-      background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%);
-      padding: 3.5rem 0;
-    }
-
-    h1.display-5 {
-      font-weight: 700;
-      line-height: 1.25;
-    }
-
-    .hero-gradient .badge-soft {
-      font-size: .75rem;
-      padding: .5rem .9rem;
-    }
-
-    .card {
-      border-radius: 18px;
-      border: 1px solid rgba(0, 0, 0, .04);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, .04);
-    }
-
-    .card-body {
-      padding: 1.6rem;
-    }
-
-    .card-hover:hover {
-      transform: none;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
-    }
-
-    #featured {
-      background: #ffffff;
-    }
-
-    section.bg-light {
-      background: #f3f5f7 !important;
-    }
-
-    .btn-lg {
-      padding: .9rem 1rem;
-      font-weight: 600;
-    }
-
-    .list-group {
-      gap: .75rem;
-    }
-
-    .list-group-item {
-      border-radius: 14px !important;
-      border: 1px solid rgba(0, 0, 0, .05);
-      padding: 1rem 1.2rem;
-    }
-
-    .hero-top-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .6rem;
-      align-items: center;
-    }
-
-    .section-intro {
-      max-width: 760px;
-    }
-
-    .case-card {
-      border-radius: 18px;
-      background: #fff;
-      border: 1px solid rgba(0, 0, 0, .05);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, .04);
-      height: 100%;
-      position: relative;
-    }
-
-    .case-card .badge {
-      font-weight: 500;
-    }
-
-    .case-card .meta {
-      font-size: .9rem;
-      color: #6c757d;
-    }
-
-    .pill-nav a {
-      text-decoration: none;
-    }
-
-    .pill-link {
-      display: inline-block;
-      padding: .55rem .95rem;
-      border: 1px solid rgba(0, 0, 0, .12);
-      border-radius: 999px;
-      background: #fff;
-      color: #212529;
-      font-size: .95rem;
-      transition: all .15s ease;
-    }
-
-    .pill-link:hover {
-      border-color: #0d6efd;
-      color: #0d6efd;
-    }
-
-    .feature-box {
-      border-radius: 16px;
-      border: 1px solid rgba(0, 0, 0, .05);
-      background: #fff;
-      padding: 1.2rem;
-      height: 100%;
-    }
-
-    footer {
-      background: #111 !important;
-    }
-
-    .footer-links a {
-      color: rgba(255, 255, 255, .7);
-    }
-
-    .footer-links a:hover {
-      color: #fff;
-    }
-
-    @media (max-width: 991px) {
-      body {
-        font-size: 16px;
-      }
-
-      section {
-        padding: 2.8rem 0;
-      }
-
-      .hero-gradient {
-        padding: 2.8rem 0;
-      }
-
-      .hero-gradient .row {
-        flex-direction: column;
-      }
-
-      .hero-gradient .col-lg-5 {
-        margin-top: 2rem;
-      }
-
-      h1.display-5 {
-        font-size: 1.85rem;
-      }
-
-      .btn-lg {
-        width: 100%;
-      }
-
-      .btn-lg+.btn-lg {
-        margin-top: .8rem;
-      }
-
-      .list-group-item {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-      }
-
-      .list-group-item .btn {
-        margin-top: .6rem;
-        width: 100%;
-      }
-
-      .row-cols-lg-3>*,
-      #featured .row>*,
-      .row-cols-md-2>* {
-        flex: 0 0 100%;
-        max-width: 100%;
-      }
-
-      .card,
-      .case-card {
-        margin-bottom: 1.2rem;
-      }
-
-      footer .col-lg-5,
-      footer .col-6,
-      footer .col-lg-3,
-      footer .col-lg-4 {
-        margin-bottom: 1.8rem;
-      }
-
-      footer .row {
-        text-align: center;
-      }
-
-      .hero-top-badges {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .hero-top-badges span {
-        display: block;
-      }
-
-      .hero-gradient .row {
-        align-items: flex-start !important;
-      }
-    }
-  </style>
+    <style>
+        :root { scroll-behavior: smooth; }
+        body { font-size: 17px; line-height: 1.7; background: #f8f9fa; }
+        .nav-link { border: 1px solid #999; border-radius: 8px; padding: 0.1rem 0.8rem; margin-right: 10px; margin-bottom: 5px; margin-top: 5px; font-size: 14px; }
+        .nav-link:hover, .nav-link:active, .nav-link:focus { border: 1px solid #f80000; color: #f80000; }
+        section { padding: 3.5rem 0; }
+        .hero-gradient { background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%); padding: 3.5rem 0; }
+        .card { border-radius: 18px; border: 1px solid rgba(0, 0, 0, .04); box-shadow: 0 8px 24px rgba(0, 0, 0, .04); }
+        .card-body { padding: 1.6rem; }
+        .btn-lg { padding: .9rem 1rem; font-weight: 600; }
+        .hero-top-badges { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
+        .section-kicker { letter-spacing: .08em; text-transform: uppercase; font-size: .78rem; color: #6c757d; font-weight: 700; }
+        .surface-note { background: #ffffff; border: 1px solid rgba(0, 0, 0, .05); border-radius: 18px; padding: 1.35rem; }
+        .mini-label { font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: #6c757d; font-weight: 700; }
+        .pill-link { display: inline-block; padding: .55rem .95rem; border: 1px solid rgba(0, 0, 0, .12); border-radius: 999px; background: #fff; color: #212529; font-size: .95rem; text-decoration: none; }
+        .pill-link:hover { border-color: #0d6efd; color: #0d6efd; }
+        footer { background: #111 !important; }
+        .footer-links a { color: rgba(255, 255, 255, .7); }
+        .footer-links a:hover { color: #fff; }
+        @media (max-width: 991px) {
+            body { font-size: 16px; }
+            section { padding: 2.8rem 0; }
+            .hero-gradient { padding: 2.8rem 0; }
+            h1.display-5 { font-size: 1.85rem; }
+            .btn-lg { width: 100%; }
+            .card { margin-bottom: 1.2rem; }
+            footer .row { text-align: center; }
+            .hero-top-badges { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
 </head>
 
 <body class="bg-body">
-
-  <!-- Top bar / Nav -->
-  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top"
-    style="padding-left: 10px; padding-right: 10px; box-shadow: 0 2px 5px rgba(16, 24, 40, .3);"
-    aria-label="Main navigation">
-    <div class="container">
-      <a class="navbar-brand fw-semibold" href="/" aria-label="Lzhdeni Home">
-        <img src="/assets/images/logo.png" alt="Lzhdeni Logo" class="me-2" width="30" height="30"> Lzhdeni.com
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
-        aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navMain">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
-          <li class="nav-item"><a class="nav-link" href="/start-here">Start Here</a></li>
-          <li class="nav-item"><a class="nav-link" href="/foundations/">Foundations</a></li>
-          <li class="nav-item"><a class="nav-link" href="/systems/">Systems</a></li>
-          <li class="nav-item"><a class="nav-link" href="/team-work/">Team Work</a></li>
-          <li class="nav-item"><a class="nav-link" href="/tools/">Tools</a></li>
-          <li class="nav-item"><a class="nav-link" href="/comparisons/">Comparisons</a></li>
-          <li class="nav-item"><a class="nav-link" href="/case-studies/">Case Studies</a></li>
-        </ul>
-
-        <div class="d-flex ms-lg-3 gap-2">
-          <a class="btn btn-outline-primary btn-sm" href="/about">About</a>
-          <a class="btn btn-primary btn-sm" href="/start-here">Get the Framework</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <header class="hero-gradient border-bottom">
-    <div class="container py-lg-4">
-      <div class="row align-items-center g-4">
-        <div class="col-lg-7" style="padding-left: 20px; padding-right: 20px;">
-          <div class="hero-top-badges mb-3">
-            <span class="rounded-pill px-3 py-2">Remote Work • Productivity Systems • Case Studies</span>
-            <span class="text-secondary small">Practical examples, not abstract advice.</span>
-          </div>
-
-          <h1 class="display-5 fw-semibold lh-1 text-balance mb-3">
-            Remote work case studies that show how systems work in real conditions
-          </h1>
-
-          <p class="lead text-secondary text-balance mb-4">
-            Explore realistic examples of startup workflows, async collaboration, planning rhythms, and process
-            decisions. These case studies connect principles to implementation.
-          </p>
-
-          <div class="d-flex flex-wrap gap-2">
-            <a class="btn btn-primary btn-lg" href="#featured">Browse Case Studies</a>
-            <a class="btn btn-outline-secondary btn-lg" href="/start-here">Start Here</a>
-          </div>
-
-          <div class="mt-4 small text-secondary">
-            Designed to help readers move from theory to execution.
-          </div>
-        </div>
-
-        <div class="col-lg-5" style="width: 100%;">
-          <div class="card shadow-sm border-0">
-            <div class="card-body p-4">
-              <h2 class="h5 fw-semibold mb-3">What you’ll find here</h2>
-
-              <ol class="list-group list-group-numbered">
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                    <div class="fw-semibold">Real team situations</div>
-                    Startup, freelancer, and small-team remote workflow examples.
-                  </div>
-                  <a class="btn btn-sm btn-outline-primary" href="#featured">Open</a>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                    <div class="fw-semibold">Process tradeoffs</div>
-                    Why certain systems work in one context but fail in another.
-                  </div>
-                  <a class="btn btn-sm btn-outline-primary" href="#by-theme">Open</a>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                    <div class="fw-semibold">Implementation patterns</div>
-                    Lightweight methods for planning, async work, and accountability.
-                  </div>
-                  <a class="btn btn-sm btn-outline-primary" href="#how-to-use">Open</a>
-                </li>
-              </ol>
-
-              <div class="mt-3 p-3 rounded-3" style="background:#f8fbff;">
-                <div class="fw-semibold">Tip:</div>
-                <div class="text-secondary small">
-                  Case studies work best when linked to foundational and systems pages, so readers can move from
-                  example → principle → reusable framework.
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top"
+        style="padding-left:10px;padding-right:10px;box-shadow:0 2px 5px rgba(16,24,40,.3);"
+        aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand fw-semibold" href="/" aria-label="Lzhdeni Home">
+                <img src="/assets/images/logo.png" alt="Lzhdeni Logo" class="me-2" width="30" height="30">
+                Lzhdeni.com
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMain">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
+                    <li class="nav-item"><a class="nav-link" href="/start-here">Start Here</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/foundations/">Foundations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/systems/">Systems</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/team-work/">Team Work</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/tools/">Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/comparisons/">Comparisons</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/case-studies/">Case Studies</a></li>
+                </ul>
+                <div class="d-flex ms-lg-3 gap-2">
+                    <a class="btn btn-outline-primary btn-sm" href="/about">About</a>
+                    <a class="btn btn-primary btn-sm" href="/start-here">Get the Framework</a>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
+    </nav>
 
-      </div>
-    </div>
-  </header>
-
-  <!-- Intro -->
-  <section class="py-5">
-    <div class="container">
-      <div class="row g-4 align-items-start">
-        <div class="col-lg-8" style="padding-left: 20px; padding-right: 20px;">
-          <h2 class="h3 fw-semibold mb-2">Why case studies matter here</h2>
-          <p class="text-secondary section-intro mb-0">
-            Principles are useful, but people usually implement systems under imperfect conditions: limited time,
-            ambiguous ownership, changing priorities, and uneven communication. This section shows how remote work
-            systems behave in practice.
-          </p>
-        </div>
-        <div class="col-lg-4">
-          <div class="card border-0 shadow-sm">
-            <div class="card-body p-4">
-              <h2 class="h5 fw-semibold mb-3">Best used with</h2>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item px-0">
-                  <span class="fw-semibold">Foundations:</span>
-                  <span class="text-secondary"> decision models and focus principles</span>
-                </li>
-                <li class="list-group-item px-0">
-                  <span class="fw-semibold">Systems:</span>
-                  <span class="text-secondary"> weekly planning and reviews</span>
-                </li>
-                <li class="list-group-item px-0">
-                  <span class="fw-semibold">Team Work:</span>
-                  <span class="text-secondary"> async communication and handoffs</span>
-                </li>
-              </ul>
-              <div class="mt-3">
-                <a class="btn btn-outline-primary w-100" href="/start-here">Open learning path</a>
-              </div>
+    <main>
+        <header class="hero-gradient border-bottom">
+            <div class="container py-lg-4">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7" style="padding-left:20px;padding-right:20px;">
+                        <div class="hero-top-badges mb-3">
+                            <span class="rounded-pill px-3 py-2">Remote Work Case Studies</span>
+                            <span class="text-secondary small">Examples, adaptations, implementation</span>
+                        </div>
+                        <h1 class="display-5 fw-semibold mb-3">See how remote work systems change in real contexts</h1>
+                        <p class="lead text-secondary mb-3">
+                            This section is for readers who understand the ideas but want to see how those ideas behave
+                            under actual constraints. Case studies turn frameworks into situations: a startup with weak
+                            process, a freelancer protecting focus, an async team improving handoffs, or a developer
+                            refining a sustainable daily workflow.
+                        </p>
+                        <p class="text-secondary mb-4">
+                            The point is not to give you a template to copy line for line. The point is to show what
+                            changes when role, team size, time zone spread, decision load, and communication pressure
+                            change. That makes the rest of the site easier to apply with judgment.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a class="btn btn-primary btn-lg" href="#cases">Explore Case Studies</a>
+                            <a class="btn btn-outline-secondary btn-lg" href="/case-studies/startup-remote-process">Start with Startup Remote Process</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h2 class="h5 fw-semibold mb-3">This section is for...</h2>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <strong>Readers who need realistic examples</strong><br>
+                                        <span class="text-secondary small">You understand the theory but want to see how it changes under real workload and team pressure.</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Managers adapting frameworks to teams</strong><br>
+                                        <span class="text-secondary small">You want examples of how process decisions interact with communication norms and operating cadence.</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Individuals borrowing parts of a system</strong><br>
+                                        <span class="text-secondary small">You need to know what to adapt, what to keep, and what only works in a specific context.</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Anyone trying to avoid generic advice</strong><br>
+                                        <span class="text-secondary small">You want implementation patterns, not just abstract principles.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </header>
 
-  <!-- Featured Case Studies -->
-  <section id="featured" class="py-5 bg-light border-top border-bottom">
-    <div class="container">
-      <div class="row align-items-end g-3 mb-3" style="padding-left: 20px; padding-right: 20px;">
-        <div class="col-lg-8">
-          <h2 class="h3 fw-semibold mb-1">Featured case studies</h2>
-          <p class="text-secondary mb-0">Start with realistic examples that illustrate common remote-work problems and
-            practical fixes.</p>
-        </div>
-        <div class="col-lg-4 text-lg-end">
-          <a class="btn btn-outline-primary" href="/start-here">See the full learning path</a>
-        </div>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <div class="case-card p-4">
-            <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
-              <span class="badge text-bg-primary">Startup</span>
-              <span class="meta">Process design</span>
+        <section>
+            <div class="container">
+                <div class="row g-4 align-items-start">
+                    <div class="col-lg-7" style="padding-left:20px;padding-right:20px;">
+                        <div class="section-kicker mb-2">What Problems This Section Solves</div>
+                        <h2 class="h3 fw-semibold mb-3">Frameworks become more useful when you can see their limits.</h2>
+                        <p class="text-secondary">
+                            Advice often sounds clean until it hits a real calendar, a real team, or a real set of
+                            tradeoffs. A founder cannot use the same planning rhythm as a freelancer. A documentation
+                            habit that works for a small engineering team may not transfer directly to a mixed product
+                            organization. A developer with long focus blocks needs a different daily structure than a
+                            manager whose work is interruption-heavy.
+                        </p>
+                        <p class="text-secondary">
+                            This section solves that translation problem. It shows how remote productivity systems
+                            behave when context changes. The case studies are meant to help readers identify stable
+                            patterns, notice where tradeoffs appear, and adapt ideas without pretending every situation
+                            can be solved with a single operating model.
+                        </p>
+                        <p class="text-secondary mb-0">
+                            If the rest of the site tells you what good systems look like, this section shows what they
+                            look like when they meet reality.
+                        </p>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h2 class="h5 fw-semibold mb-3">How the pages in this section differ</h2>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <strong>Startup Remote Process</strong><br>
+                                        <span class="text-secondary small">Use this when the question is how a growing team introduces structure without becoming bureaucratic.</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Freelancer Productivity System</strong><br>
+                                        <span class="text-secondary small">Use this when the core challenge is balancing client work, planning, and self-managed focus.</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Async Team Example</strong><br>
+                                        <span class="text-secondary small">Use this when you want to see how communication and documentation habits change inside a distributed team.</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Remote Developer Workflow</strong><br>
+                                        <span class="text-secondary small">Use this when the question is how an individual contributor protects technical focus while staying responsive.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h3 class="h5 fw-semibold">Startup Remote Process</h3>
-            <p class="text-secondary mb-3">
-              How a small remote startup reduces coordination chaos using simple planning rules, clearer ownership, and
-              written decision records.
-            </p>
-            <div class="small text-secondary">Focus: planning, async updates, ownership, review loop</div>
-            <a class="stretched-link" href="/case-studies/startup-remote-process"
-              aria-label="Open Startup Remote Process"></a>
-          </div>
-        </div>
+        </section>
 
-        <div class="col-md-6 col-lg-4">
-          <div class="case-card p-4">
-            <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
-              <span class="badge text-bg-success">Freelancer</span>
-              <span class="meta">Weekly rhythm</span>
+        <section id="cases">
+            <div class="container">
+                <div class="mb-4" style="padding-left:20px;padding-right:20px;">
+                    <div class="section-kicker mb-2">Case Studies</div>
+                    <h2 class="h3 fw-semibold">Browse by role, team shape, or implementation problem</h2>
+                    <p class="text-secondary">
+                        Each case study highlights a different set of constraints, so readers can find an example closer to their own situation.
+                    </p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 fw-semibold">Startup Remote Process</h3>
+                                <p class="text-secondary">See how a growing remote team can introduce written process, clearer ownership, and lighter coordination habits.</p>
+                                <a class="stretched-link" href="/case-studies/startup-remote-process"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 fw-semibold">Freelancer Productivity System</h3>
+                                <p class="text-secondary">Explore a solo operating model for balancing client delivery, planning, admin work, and deep focus.</p>
+                                <a class="stretched-link" href="/case-studies/freelancer-productivity-system"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 fw-semibold">Async Team Example</h3>
+                                <p class="text-secondary">Follow how a distributed team can reduce meetings by improving update quality and documentation habits.</p>
+                                <a class="stretched-link" href="/case-studies/async-team-example"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 fw-semibold">Remote Developer Workflow</h3>
+                                <p class="text-secondary">See how an individual contributor can combine deep work protection with async responsiveness.</p>
+                                <a class="stretched-link" href="/case-studies/remote-developer-workflow"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h3 class="h5 fw-semibold">Freelancer Productivity System</h3>
-            <p class="text-secondary mb-3">
-              A solo operator case showing how planning rituals, client visibility, and task triage keep freelance work
-              sustainable.
-            </p>
-            <div class="small text-secondary">Focus: planning cadence, boundaries, client delivery</div>
-            <a class="stretched-link" href="/case-studies/freelancer-productivity-system"
-              aria-label="Open Freelancer Productivity System"></a>
-          </div>
-        </div>
+        </section>
 
-        <div class="col-md-6 col-lg-4">
-          <div class="case-card p-4">
-            <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
-              <span class="badge text-bg-dark">Team Work</span>
-              <span class="meta">Async workflow</span>
+        <section class="bg-light border-top border-bottom">
+            <div class="container">
+                <div class="row g-4 align-items-start">
+                    <div class="col-lg-5" style="padding-left:20px;padding-right:20px;">
+                        <div class="section-kicker mb-2">Recommended Reading Path</div>
+                        <h2 class="h3 fw-semibold mb-3">Pick the example closest to your operating reality.</h2>
+                        <p class="text-secondary mb-0">
+                            Case studies work best when you read for structural similarity, not exact identity. Look
+                            for a role, team size, or coordination problem that resembles your own, then borrow the
+                            underlying logic rather than the visible ritual.
+                        </p>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="surface-note h-100">
+                                    <div class="mini-label mb-2">Path 1</div>
+                                    <h3 class="h5 fw-semibold">You lead a growing team</h3>
+                                    <p class="text-secondary small mb-0">Start with <a href="/case-studies/startup-remote-process">Startup Remote Process</a>, then move into <a href="/team-work/">Team Work</a> for the underlying practices.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="surface-note h-100">
+                                    <div class="mini-label mb-2">Path 2</div>
+                                    <h3 class="h5 fw-semibold">You work solo</h3>
+                                    <p class="text-secondary small mb-0">Read <a href="/case-studies/freelancer-productivity-system">Freelancer Productivity System</a>, then connect it to <a href="/systems/">Systems</a> and <a href="/foundations/">Foundations</a>.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="surface-note h-100">
+                                    <div class="mini-label mb-2">Path 3</div>
+                                    <h3 class="h5 fw-semibold">You need better team coordination</h3>
+                                    <p class="text-secondary small mb-0">Start with <a href="/case-studies/async-team-example">Async Team Example</a>, then deepen the model in <a href="/team-work/">Team Work</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h3 class="h5 fw-semibold">Async Team Workflow Example</h3>
-            <p class="text-secondary mb-3">
-              A realistic example of how a remote team structures updates, handoffs, and coordination without relying
-              on constant meetings.
-            </p>
-            <div class="small text-secondary">Focus: async norms, visibility, written coordination</div>
-            <a class="stretched-link" href="/case-studies/async-team-example"
-              aria-label="Open Async Team Workflow Example"></a>
-          </div>
-        </div>
+        </section>
 
-        <div class="col-md-6 col-lg-6">
-          <div class="case-card p-4">
-            <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
-              <span class="badge text-bg-warning">Developer</span>
-              <span class="meta">Execution rhythm</span>
+        <section>
+            <div class="container">
+                <div class="row g-4 align-items-start">
+                    <div class="col-lg-6" style="padding-left:20px;padding-right:20px;">
+                        <div class="section-kicker mb-2">Common Mistakes</div>
+                        <h2 class="h3 fw-semibold mb-3">How case studies get misread</h2>
+                        <ul class="text-secondary">
+                            <li>Treating an example as a template instead of as a model shaped by specific constraints.</li>
+                            <li>Copying visible routines while ignoring the role, workload, or coordination pressure that made those routines necessary.</li>
+                            <li>Assuming a successful setup is simple because the final process looks clean on the page.</li>
+                            <li>Borrowing too many elements at once rather than adapting one structural improvement at a time.</li>
+                            <li>Reading the story without linking it back to the principles and systems that make it work.</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="section-kicker mb-2">Practical Example</div>
+                                <h2 class="h4 fw-semibold mb-3">A realistic reader scenario</h2>
+                                <p class="text-secondary">
+                                    Imagine a newly remote operations manager who likes the structure in the startup
+                                    case study but works in a mature company with many cross-functional dependencies.
+                                    If she copies the process exactly, it may feel too light in some places and too
+                                    rigid in others.
+                                </p>
+                                <p class="text-secondary mb-0">
+                                    The better move is to read for transferable pieces: how decisions are documented,
+                                    how weekly review creates visibility, how async updates reduce reactive meetings,
+                                    and where ownership is made explicit. That is the purpose of this section: helping
+                                    readers adapt the architecture of a system rather than imitate its surface.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h3 class="h5 fw-semibold">Remote Developer Workflow</h3>
-            <p class="text-secondary mb-3">
-              A developer-focused case on balancing deep work, issue tracking, code review, and async handoffs in a
-              distributed team.
-            </p>
-            <div class="small text-secondary">Focus: deep work, handoffs, review loops</div>
-            <a class="stretched-link" href="/case-studies/remote-developer-workflow"
-              aria-label="Open Remote Developer Workflow"></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </section>
 
-  <!-- Browse by theme -->
-  <section id="by-theme" class="py-5">
-    <div class="container">
-      <div class="mb-4" style="padding-left: 20px; padding-right: 20px;">
-        <h2 class="h3 fw-semibold mb-1">Browse by theme</h2>
-        <p class="text-secondary mb-0">Use themes to navigate the kinds of implementation problems you want to solve.
-        </p>
-      </div>
-
-      <div class="pill-nav d-flex flex-wrap gap-2" style="padding-left: 20px; padding-right: 20px;">
-        <a class="pill-link" href="/case-studies/startup-remote-process">Startup process</a>
-        <a class="pill-link" href="/team-work/">Async communication</a>
-        <a class="pill-link" href="/systems/">Planning systems</a>
-        <a class="pill-link" href="/tools/">Tool simplification</a>
-        <a class="pill-link" href="/comparisons/">Role-based differences</a>
-        <a class="pill-link" href="/foundations/">Decision principles</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- How to use -->
-  <section id="how-to-use" class="py-5 bg-light border-top border-bottom">
-    <div class="container">
-      <div class="row g-4 align-items-start">
-        <div class="col-lg-7" style="padding-left: 20px; padding-right: 20px;">
-          <h2 class="h3 fw-semibold mb-2">How to use these case studies</h2>
-          <p class="text-secondary mb-4">
-            These pages are not meant to be copied blindly. They are meant to help readers understand which parts of a
-            system are stable, which parts depend on context, and which tradeoffs appear when a team tries to
-            implement change.
-          </p>
-
-          <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col-md-6">
-              <div class="feature-box">
-                <div class="fw-semibold mb-2">Read for patterns</div>
-                <div class="text-secondary small">Look for recurring problems: unclear ownership, tool sprawl, weak
-                  handoffs, or planning drift.</div>
-              </div>
+        <section class="py-5">
+            <div class="container">
+                <div class="mb-4" style="padding-left:20px;padding-right:20px;">
+                    <div class="section-kicker mb-2">Browse by Theme</div>
+                    <h2 class="h3 fw-semibold mb-2">Navigate by implementation problem</h2>
+                    <p class="text-secondary mb-0">Use themes to move from the example back into the broader library of principles, systems, and collaboration guides.</p>
+                </div>
+                <div class="d-flex flex-wrap gap-2" style="padding-left:20px;padding-right:20px;">
+                    <a class="pill-link" href="/systems/">Planning systems</a>
+                    <a class="pill-link" href="/team-work/">Async coordination</a>
+                    <a class="pill-link" href="/tools/">Tool simplification</a>
+                    <a class="pill-link" href="/foundations/">Focus principles</a>
+                    <a class="pill-link" href="/comparisons/">Tradeoff decisions</a>
+                    <a class="pill-link" href="/start-here">Guided path</a>
+                </div>
             </div>
-            <div class="col-md-6">
-              <div class="feature-box">
-                <div class="fw-semibold mb-2">Compare contexts</div>
-                <div class="text-secondary small">A system that works for a founder may not work for a freelancer or a
-                  documentation-heavy team.</div>
-              </div>
+        </section>
+
+        <section class="bg-light border-top">
+            <div class="container">
+                <div class="row g-4 align-items-start">
+                    <div class="col-lg-8" style="padding-left:20px;padding-right:20px;">
+                        <div class="section-kicker mb-2">Related Internal Links</div>
+                        <h2 class="h3 fw-semibold mb-3">Use case studies with the rest of the site</h2>
+                        <p class="text-secondary mb-0">
+                            Examples are most useful when they connect back to the principles, systems, and team
+                            practices that explain why they work.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="btn btn-outline-primary" href="/start-here">Open Start Here</a>
+                    </div>
+                </div>
+                <div class="row g-4 mt-1">
+                    <div class="col-md-4">
+                        <a href="/foundations/" class="text-decoration-none">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h5 fw-semibold">Foundations</h3>
+                                    <p class="text-secondary mb-0">Return here when you want the deeper principles behind focus, attention, and work quality in each example.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="/systems/" class="text-decoration-none">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h5 fw-semibold">Systems</h3>
+                                    <p class="text-secondary mb-0">Use these pages when you want to extract the planning, review, and prioritization loops behind a case study.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="/team-work/" class="text-decoration-none">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h5 fw-semibold">Team Work</h3>
+                                    <p class="text-secondary mb-0">Move here when the most useful part of a case study is the communication, documentation, or meeting design.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6">
-              <div class="feature-box">
-                <div class="fw-semibold mb-2">Reuse selectively</div>
-                <div class="text-secondary small">Adapt the underlying structure, not the exact surface ritual.</div>
-              </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="fw-semibold fs-5">Lzhdeni.com</div>
+                    <p class="text-white-50 mb-3">
+                        Practical guides and systems for remote work productivity, built to be implemented.
+                    </p>
+                    <div class="gap-4 footer-links small" style="text-align:center;">
+                        <a href="/privacy-policy">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="/terms">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="/contact">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="/about">About</a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="text-uppercase text-white-50 small mb-2">Sections</div>
+                    <div class="footer-links d-flex flex-column gap-1 small">
+                        <a href="/foundations/">Foundations</a>
+                        <a href="/systems/">Systems</a>
+                        <a href="/tools/">Tools</a>
+                        <a href="/team-work/">Team Work</a>
+                        <a href="/comparisons/">Comparisons</a>
+                        <a href="/case-studies/">Case Studies</a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <div class="text-uppercase text-white-50 small mb-2">Start</div>
+                    <div class="footer-links d-flex flex-column gap-1 small">
+                        <a href="/start-here">Start Here</a>
+                        <a href="/resources">Resources</a>
+                        <a href="/sitemap.xml">Sitemap</a>
+                        <a href="/robots.txt">Robots</a>
+                    </div>
+                    <div class="mt-3 text-white-50 small">
+                        &copy; <span id="year"></span> Lzhdeni.com. All rights reserved.
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6">
-              <div class="feature-box">
-                <div class="fw-semibold mb-2">Link back to principles</div>
-                <div class="text-secondary small">Use the case studies with Foundations, Systems, and Team Work pages
-                  for deeper transfer.</div>
-              </div>
-            </div>
-          </div>
         </div>
+    </footer>
 
-        <div class="col-lg-5">
-          <div class="card border-0 shadow-sm">
-            <div class="card-body p-4">
-              <h2 class="h5 fw-semibold mb-3">Best next steps</h2>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item px-0">
-                  <span class="fw-semibold">New readers:</span>
-                  <span class="text-secondary"> start with Start Here</span>
-                </li>
-                <li class="list-group-item px-0">
-                  <span class="fw-semibold">Need frameworks:</span>
-                  <span class="text-secondary"> go to Systems</span>
-                </li>
-                <li class="list-group-item px-0">
-                  <span class="fw-semibold">Need team norms:</span>
-                  <span class="text-secondary"> go to Team Work</span>
-                </li>
-                <li class="list-group-item px-0">
-                  <span class="fw-semibold">Need tradeoffs:</span>
-                  <span class="text-secondary"> go to Comparisons</span>
-                </li>
-              </ul>
-
-              <div class="mt-3 d-grid gap-2">
-                <a class="btn btn-primary" href="/start-here">Start Here</a>
-                <a class="btn btn-outline-secondary" href="/systems/">Explore Systems</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="py-5">
-    <div class="container">
-      <div class="card border-0 shadow-sm">
-        <div class="card-body p-4 p-lg-5 text-center">
-          <h2 class="h3 fw-semibold mb-3">Move from theory to implementation</h2>
-          <p class="text-secondary mb-4 mx-auto" style="max-width: 760px;">
-            These case studies are designed to make remote productivity systems concrete. Start with an example, then
-            move outward into frameworks, principles, and role-based decisions.
-          </p>
-          <div class="d-flex flex-wrap justify-content-center gap-2">
-            <a class="btn btn-primary btn-lg" href="/start-here">Start Here</a>
-            <a class="btn btn-outline-secondary btn-lg" href="/case-studies/startup-remote-process">Read a case study</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-dark text-white py-5">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-5">
-          <div class="fw-semibold fs-5">Lzhdeni.com</div>
-          <p class="text-white-50 mb-3">
-            Practical guides and systems for remote work productivity, built to be implemented.
-          </p>
-          <div class="gap-4 footer-links small" style="text-align: center;">
-            <a href="/privacy-policy">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="/terms">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="/contact">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="/about">About</a>
-          </div>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <div class="text-uppercase text-white-50 small mb-2">Sections</div>
-          <div class="footer-links d-flex flex-column gap-1 small">
-            <a href="/foundations/">Foundations</a>
-            <a href="/systems/">Systems</a>
-            <a href="/tools/">Tools</a>
-            <a href="/team-work/">Team Work</a>
-            <a href="/comparisons/">Comparisons</a>
-            <a href="/case-studies/">Case Studies</a>
-          </div>
-        </div>
-
-        <div class="col-6 col-lg-4">
-          <div class="text-uppercase text-white-50 small mb-2">Start</div>
-          <div class="footer-links d-flex flex-column gap-1 small">
-            <a href="/start-here">Start Here</a>
-            <a href="/resources">Resources</a>
-            <a href="/sitemap.xml">Sitemap</a>
-            <a href="/robots.txt">Robots</a>
-          </div>
-          <div class="mt-3 text-white-50 small">
-            © <span id="year"></span> Lzhdeni.com. All rights reserved.
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
-
 </html>
