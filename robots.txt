@@ -11,14 +11,9 @@ Disallow: /50x
 Disallow: /50x.html
 
 # Verification / server files
-Disallow: /google8046203a47513e07.html
 Disallow: /.htaccess
 Disallow: /nginx.htaccess
 Disallow: /*.txt
-
-# Optional: block internal/system paths if any exist
-Disallow: /assets/js/
-Disallow: /assets/css/
 
 # Sitemaps
 Sitemap: https://lzhdeni.com/sitemap.xml
