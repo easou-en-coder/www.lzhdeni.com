@@ -2,101 +2,154 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lzhdeni.com/</loc>
+    <lastmod>2026-04-01</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/about</loc>
+    <lastmod>2026-04-01</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/contact</loc>
+    <lastmod>2026-04-01</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/editorial-policy</loc>
+    <lastmod>2026-04-01</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/privacy-policy</loc>
+    <lastmod>2026-03-24</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/resources</loc>
+    <lastmod>2026-03-24</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/start-here</loc>
+    <lastmod>2026-03-24</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/terms</loc>
+    <lastmod>2026-03-24</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/case-studies/</loc>
+    <lastmod>2026-04-01</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/case-studies/async-team-example</loc>
+    <lastmod>2026-04-01</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/case-studies/freelancer-productivity-system</loc>
+    <lastmod>2026-04-01</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/case-studies/remote-developer-workflow</loc>
+    <lastmod>2026-04-01</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/case-studies/startup-remote-process</loc>
+    <lastmod>2026-03-20</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/comparisons/</loc>
+    <lastmod>2026-03-24</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/comparisons/async-vs-synchronous-communication</loc>
+    <lastmod>2026-03-20</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/comparisons/freelancer-vs-full-time-remote</loc>
+    <lastmod>2026-03-20</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/comparisons/remote-vs-office-work</loc>
+    <lastmod>2026-03-20</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/foundations/</loc>
+    <lastmod>2026-03-24</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/foundations/attention-management</loc>
+    <lastmod>2026-04-01</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/foundations/deep-work-principles</loc>
+    <lastmod>2026-03-20</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/foundations/focus-vs-busyness</loc>
+    <lastmod>2026-03-20</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/foundations/time-blocking-vs-task-batching</loc>
+    <lastmod>2026-03-20</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/systems/</loc>
+    <lastmod>2026-03-24</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/systems/daily-review-method</loc>
+    <lastmod>2026-03-24</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/systems/daily-review-system</loc>
+    <lastmod>2026-03-24</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/systems/goal-setting-for-remote-work</loc>
+    <lastmod>2026-04-01</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/systems/task-priority-framework</loc>
+    <lastmod>2026-03-20</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/systems/weekly-planning-system</loc>
+    <lastmod>2026-03-20</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/team-work/</loc>
+    <lastmod>2026-03-24</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/team-work/async-communication-guide</loc>
+    <lastmod>2026-03-20</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/team-work/documentation-first-culture</loc>
+    <lastmod>2026-03-20</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/team-work/remote-meeting-reduction</loc>
+    <lastmod>2026-03-20</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/team-work/remote-team-workflows</loc>
+    <lastmod>2026-03-20</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/tools/</loc>
+    <lastmod>2026-03-24</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/tools/documentation-tools-guide</loc>
+    <lastmod>2026-03-20</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/tools/notion-vs-obsidian</loc>
+    <lastmod>2026-03-24</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/tools/remote-work-tool-stack</loc>
+    <lastmod>2026-03-24</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/tools/tool-overload-when-less-is-more</loc>
+    <lastmod>2026-03-24</lastmod>
   </url>
 </urlset>

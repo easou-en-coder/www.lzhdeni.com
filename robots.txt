@@ -1,8 +1,9 @@
 # robots.txt for lzhdeni.com
-# Updated: 2026-03
+# Updated: 2026-04
 
 User-agent: *
 Allow: /
+Allow: /ads.txt
 
 # Error & fallback pages (no SEO value)
 Disallow: /404
@@ -10,10 +11,9 @@ Disallow: /404.html
 Disallow: /50x
 Disallow: /50x.html
 
-# Verification / server files
+# Server files
 Disallow: /.htaccess
 Disallow: /nginx.htaccess
-Disallow: /*.txt
 
 # Sitemaps
 Sitemap: https://lzhdeni.com/sitemap.xml
