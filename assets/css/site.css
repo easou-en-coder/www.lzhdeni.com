@@ -1,0 +1,292 @@
+/* ==========================================================================
+   Lzhdeni.com shared article styles
+   Loaded after Bootstrap. Provides depth components used across guides:
+   breadcrumbs, article meta, callouts, framework diagrams, data tables,
+   table of contents, checklists, FAQ, and key-takeaway boxes.
+   ========================================================================== */
+
+:root {
+  --brand: #0d6efd;
+  --brand-dark: #0a58ca;
+  --ink: #1f2733;
+  --muted: #5b6675;
+  --line: rgba(15, 23, 42, .10);
+  --soft: #f5f8ff;
+}
+
+/* ---------- Breadcrumbs ---------- */
+.crumbs {
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+}
+.crumbs .breadcrumb {
+  margin: 0;
+  padding: .7rem 0;
+  font-size: .85rem;
+}
+.crumbs a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.crumbs a:hover { color: var(--brand); text-decoration: underline; }
+.crumbs .breadcrumb-item.active { color: var(--ink); font-weight: 600; }
+
+/* ---------- Article meta (byline row) ---------- */
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .35rem 1rem;
+  font-size: .88rem;
+  color: var(--muted);
+  margin-top: 1rem;
+}
+.article-meta .meta-item { display: inline-flex; align-items: center; gap: .4rem; }
+.article-meta .author {
+  font-weight: 600;
+  color: var(--ink);
+}
+.article-meta .avatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand), #6ea8fe);
+  color: #fff; font-weight: 700; font-size: .85rem;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.article-meta .dot { color: var(--line); }
+
+/* ---------- Article body typography ---------- */
+.article-body { max-width: 46rem; }
+.article-body h2 {
+  font-weight: 700;
+  margin-top: 2.6rem;
+  margin-bottom: 1rem;
+  scroll-margin-top: 90px;
+}
+.article-body h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 1.8rem;
+  margin-bottom: .75rem;
+}
+.article-body p { color: #333b47; }
+.article-body ul li, .article-body ol li { margin-bottom: .45rem; }
+.article-body figure { margin: 1.8rem 0; }
+.article-body figcaption {
+  font-size: .82rem; color: var(--muted); text-align: center; margin-top: .5rem;
+}
+
+/* ---------- Lead / summary box ("What you'll learn") ---------- */
+.summary-box {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.3rem 1.5rem;
+  margin: 1.75rem 0 2rem;
+}
+.summary-box .summary-title {
+  font-weight: 700;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--brand-dark);
+  margin-bottom: .6rem;
+}
+.summary-box ul { margin: 0; padding-left: 1.1rem; }
+.summary-box li { margin-bottom: .35rem; }
+
+/* ---------- Callouts ---------- */
+.callout {
+  border-radius: 14px;
+  padding: 1.1rem 1.25rem;
+  margin: 1.6rem 0;
+  border: 1px solid var(--line);
+  border-left-width: 4px;
+  background: #fff;
+}
+.callout .callout-label {
+  font-weight: 700;
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: .35rem;
+  display: block;
+}
+.callout p:last-child { margin-bottom: 0; }
+.callout-tip { border-left-color: #198754; }
+.callout-tip .callout-label { color: #198754; }
+.callout-note { border-left-color: var(--brand); }
+.callout-note .callout-label { color: var(--brand-dark); }
+.callout-warn { border-left-color: #fd7e14; background: #fffaf4; }
+.callout-warn .callout-label { color: #c05600; }
+
+/* ---------- Framework / model diagram ---------- */
+.framework {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+  padding: 1.5rem;
+  margin: 1.8rem 0;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, .04);
+}
+.framework .framework-title {
+  font-weight: 700;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+.framework .layer {
+  display: flex;
+  gap: .9rem;
+  align-items: flex-start;
+  padding: .85rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  margin-bottom: .7rem;
+}
+.framework .layer:last-child { margin-bottom: 0; }
+.framework .layer .step {
+  flex: 0 0 auto;
+  width: 30px; height: 30px; border-radius: 8px;
+  background: var(--brand); color: #fff;
+  font-weight: 700; font-size: .9rem;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.framework .layer .layer-body { flex: 1 1 auto; }
+.framework .layer .layer-body strong { display: block; }
+.framework .layer .layer-body span { font-size: .9rem; color: var(--muted); }
+.framework .arrow { text-align: center; color: var(--line); font-size: 1.1rem; line-height: 1; margin: -.2rem 0 .5rem; }
+
+/* ---------- Data tables ---------- */
+.table-wrap { overflow-x: auto; margin: 1.6rem 0; border-radius: 14px; border: 1px solid var(--line); }
+table.data-table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  font-size: .95rem;
+  background: #fff;
+}
+table.data-table th, table.data-table td {
+  padding: .8rem 1rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+table.data-table thead th {
+  background: #f3f6fb;
+  font-weight: 700;
+  color: var(--ink);
+  border-bottom: 2px solid var(--line);
+}
+table.data-table tbody tr:last-child td { border-bottom: none; }
+table.data-table tbody tr:nth-child(even) td { background: #fbfcfe; }
+
+/* ---------- Checklist ---------- */
+.checklist { list-style: none; padding-left: 0; margin: 1.4rem 0; }
+.checklist li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: .7rem;
+}
+.checklist li::before {
+  content: "✓";
+  position: absolute;
+  left: 0; top: 0;
+  width: 1.4rem; height: 1.4rem;
+  background: #e7f6ee; color: #198754;
+  border-radius: 6px;
+  font-size: .85rem; font-weight: 700;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+
+/* ---------- Table of contents ---------- */
+.toc {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  padding: 1.25rem 1.4rem;
+}
+.toc .toc-title {
+  font-weight: 700; font-size: .8rem; text-transform: uppercase;
+  letter-spacing: .06em; color: var(--muted); margin-bottom: .7rem;
+}
+.toc ol { margin: 0; padding-left: 1.1rem; }
+.toc li { margin-bottom: .45rem; font-size: .92rem; }
+.toc a { color: var(--ink); text-decoration: none; }
+.toc a:hover { color: var(--brand); text-decoration: underline; }
+
+/* ---------- Key takeaways ---------- */
+.takeaways {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #0f172a;
+  color: #e6ebf5;
+  padding: 1.5rem 1.6rem;
+  margin: 2.2rem 0 1rem;
+}
+.takeaways .takeaways-title {
+  font-weight: 700; font-size: .82rem; text-transform: uppercase;
+  letter-spacing: .07em; color: #7fb0ff; margin-bottom: .8rem;
+}
+.takeaways ul { margin: 0; padding-left: 1.1rem; }
+.takeaways li { margin-bottom: .5rem; }
+.takeaways li::marker { color: #7fb0ff; }
+
+/* ---------- FAQ ---------- */
+.faq { margin: 1.4rem 0; }
+.faq details {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0 1.1rem;
+  margin-bottom: .75rem;
+  background: #fff;
+}
+.faq details[open] { box-shadow: 0 6px 18px rgba(15, 23, 42, .05); }
+.faq summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 1rem 0;
+  list-style: none;
+  position: relative;
+  padding-right: 1.8rem;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "+";
+  position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+  font-size: 1.3rem; color: var(--muted); line-height: 1;
+}
+.faq details[open] summary::after { content: "\2212"; }
+.faq .faq-answer { padding: 0 0 1rem; color: #333b47; }
+.faq .faq-answer p:last-child { margin-bottom: 0; }
+
+/* ---------- Author box ---------- */
+.author-box {
+  display: flex; gap: 1rem; align-items: flex-start;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  padding: 1.3rem 1.4rem;
+  margin-top: 2.4rem;
+}
+.author-box .avatar-lg {
+  flex: 0 0 auto;
+  width: 52px; height: 52px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand), #6ea8fe);
+  color: #fff; font-weight: 700;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.author-box .author-name { font-weight: 700; }
+.author-box .author-bio { font-size: .9rem; color: var(--muted); margin: .2rem 0 0; }
+
+/* ---------- Related / next steps ---------- */
+.next-steps a { text-decoration: none; }
+.next-steps .card { transition: box-shadow .15s ease; }
+.next-steps .card:hover { box-shadow: 0 10px 26px rgba(15, 23, 42, .08); }
+
+@media (max-width: 991px) {
+  .article-body h2 { margin-top: 2rem; }
+  .toc { margin-bottom: 1.5rem; }
+}

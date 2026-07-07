@@ -1,449 +1,485 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="google-adsense-account" content="ca-pub-4361497440384535">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="google-adsense-account" content="ca-pub-4361497440384535">
 
-    <title>Daily Review System for Remote Work: Routine, Checklist, and Carry-Forward | Lzhdeni.com</title>
+<title>Daily Review System for Remote Work: Routine, Checklist, and Carry-Forward | Lzhdeni.com</title>
 
-    <meta name="description"
-        content="Build a daily review system for remote work with a clear trigger, short checklist, capture location, and carry-forward rule that keeps priorities current." />
+<meta name="description" content="A ready-to-use daily review system: an exact end-of-day checklist, carry-forward rules for unfinished work, timing, tools, and how it rolls up into weekly planning."/>
+<meta name="robots" content="index,follow"/>
+<meta name="author" content="Lzhdeni Editorial Team">
+<link rel="canonical" href="https://lzhdeni.com/systems/daily-review-system"/>
 
-    <meta name="robots" content="index,follow" />
-    <link rel="canonical" href="https://lzhdeni.com/systems/daily-review-system" />
+<meta property="og:type" content="article">
+<meta property="og:title" content="Daily Review System for Remote Work: Routine, Checklist, and Carry-Forward">
+<meta property="og:description" content="A ready-to-use daily review system: an exact end-of-day checklist, carry-forward rules for unfinished work, timing, tools, and how it rolls up into weekly planning.">
+<meta property="og:url" content="https://lzhdeni.com/systems/daily-review-system">
+<meta property="og:image" content="https://lzhdeni.com/assets/images/og-image.png">
+<meta property="article:published_time" content="2026-03-17">
+<meta property="article:modified_time" content="2026-06-29">
+<meta property="article:section" content="Systems">
 
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Daily Review System for Remote Work: Routine, Checklist, and Carry-Forward">
-    <meta property="og:description"
-        content="A repeatable daily review system for remote work with timing options, a checklist, and better next-day setup.">
-    <meta property="og:url" content="https://lzhdeni.com/systems/daily-review-system">
-    <meta property="og:image" content="https://lzhdeni.com/assets/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Daily Review System for Remote Work: Routine, Checklist, and Carry-Forward">
+<meta name="twitter:description" content="A ready-to-use daily review system: an exact end-of-day checklist, carry-forward rules for unfinished work, timing, tools, and how it rolls up into weekly planning.">
+<meta name="twitter:image" content="https://lzhdeni.com/assets/images/og-image.png">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Daily Review System for Remote Work: Routine, Checklist, and Carry-Forward">
-    <meta name="twitter:description"
-        content="Use this daily review system to turn reflection into a repeatable operating loop for remote work.">
-    <meta name="twitter:image" content="https://lzhdeni.com/assets/images/og-image.png">
+<link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/web-app-manifest-192x192.png">
+<link rel="icon" href="/assets/images/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/images/favicon-96x96.png" type="image/png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta http-equiv="Content-Language" content="en">
 
-    <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": "Daily Review System for Remote Work: Routine, Checklist, and Carry-Forward",
-          "description": "A repeatable daily review system for remote work with timing options, a checklist, and better next-day setup.",
-          "url": "https://lzhdeni.com/systems/daily-review-system",
-          "mainEntityOfPage": "https://lzhdeni.com/systems/daily-review-system",
-          "author": {
-            "@type": "Organization",
-            "name": "Lzhdeni.com"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Lzhdeni.com"
-          }
-        }
-    </script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/assets/css/site.css" rel="stylesheet">
 
-    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/web-app-manifest-192x192.png">
-    <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
-    <link rel="icon" href="/assets/images/favicon-96x96.png" type="image/png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
+<style>
+:root { scroll-behavior: smooth; }
+body { font-size: 17px; line-height: 1.7; background: #f8f9fa; }
+.nav-link { border: 1px solid #999; border-radius: 8px; padding: .1rem .8rem; margin-right: 10px; margin-bottom: 5px; margin-top: 5px; font-size: 14px; }
+.nav-link:hover, .nav-link:active, .nav-link:focus { border: 1px solid #f80000; color: #f80000; }
+.hero-gradient { background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%); padding: 2.6rem 0; }
+.card { border-radius: 18px; border: 1px solid rgba(0,0,0,.04); box-shadow: 0 8px 24px rgba(0,0,0,.04); }
+section { padding: 2.4rem 0; }
+footer { background: #111 !important; }
+.footer-links a { color: rgba(255,255,255,.7); }
+.footer-links a:hover { color: #fff; }
+</style>
 
-    <meta http-equiv="Content-Language" content="en">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lzhdeni.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Systems",
+      "item": "https://lzhdeni.com/systems/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Daily Review System",
+      "item": "https://lzhdeni.com/systems/daily-review-system"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Daily Review System for Remote Work: Routine, Checklist, and Carry-Forward",
+  "description": "A ready-to-use daily review system: an exact end-of-day checklist, carry-forward rules for unfinished work, timing, tools, and how it rolls up into weekly planning.",
+  "image": "https://lzhdeni.com/assets/images/og-image.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Lzhdeni Editorial Team",
+    "url": "https://lzhdeni.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lzhdeni.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lzhdeni.com/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2026-03-17",
+  "dateModified": "2026-06-29",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lzhdeni.com/systems/daily-review-system"
+  },
+  "articleSection": "Systems"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What should a daily review checklist include?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A practical daily review checklist has five steps: record what you moved forward, capture open and waiting-on items, note anything you're blocked on, decide tomorrow's single anchor task, and clear your workspace and inbox to a defined state. Keeping it to five steps means it fits in under ten minutes and actually gets done every day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a carry-forward rule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A carry-forward rule is a predefined decision about what happens to unfinished tasks at the end of the day, so you don't re-litigate each one. For example: a task carried more than three days must be rescheduled, delegated, shrunk, or dropped. Carry-forward rules stop stale tasks from silently accumulating and keep your list honest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long should the daily review system take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Between five and ten minutes once it's a habit. The checklist is deliberately short and the carry-forward rules are decided in advance precisely so the review stays fast. If yours regularly runs longer, you are probably re-planning your week inside a daily review, which is a sign the two horizons have blurred."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need special software for a daily review system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The system works in any task manager or a plain notes file, and simpler is usually more durable. What matters is that the checklist and your carry-forward list live somewhere you already trust and open every day, not that the tool has special review features. Use what you already have."
+      }
+    }
+  ]
+}
+</script>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        :root { scroll-behavior: smooth; }
-        body { font-size: 17px; line-height: 1.7; background: #f8f9fa; }
-        .nav-link { border: 1px solid #999; border-radius: 8px; padding: 0.1rem 0.8rem; margin-right: 10px; margin-bottom: 5px; margin-top: 5px; font-size: 14px; }
-        .nav-link:hover, .nav-link:active, .nav-link:focus { border: 1px solid #f80000; color: #f80000; }
-        section { padding: 3.5rem 0; }
-        .hero-gradient { background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%); padding: 3.5rem 0; }
-        .card { border-radius: 18px; border: 1px solid rgba(0, 0, 0, .04); box-shadow: 0 8px 24px rgba(0, 0, 0, .04); }
-        .card-body { padding: 1.6rem; }
-        .hero-top-badges { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
-        .section-kicker { letter-spacing: .08em; text-transform: uppercase; font-size: .78rem; color: #6c757d; font-weight: 700; }
-        .list-group-item { border-radius: 14px !important; border: 1px solid rgba(0, 0, 0, .05); padding: 1rem 1.2rem; }
-        footer { background: #111 !important; }
-        .footer-links a { color: rgba(255, 255, 255, .7); }
-        .footer-links a:hover { color: #fff; }
-        @media (max-width: 991px) {
-            body { font-size: 16px; }
-            section { padding: 2.8rem 0; }
-            .hero-gradient { padding: 2.8rem 0; }
-            h1.display-5 { font-size: 1.85rem; }
-            .card { margin-bottom: 1.2rem; }
-            footer .row { text-align: center; }
-            .hero-top-badges { flex-direction: column; align-items: flex-start; }
-        }
-    </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4361497440384535"
-     crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4361497440384535" crossorigin="anonymous"></script>
 </head>
 
 <body class="bg-body">
-    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top"
-        style="padding-left:10px;padding-right:10px;box-shadow:0 2px 5px rgba(16,24,40,.3);"
-        aria-label="Main navigation">
-        <div class="container">
-            <a class="navbar-brand fw-semibold" href="/" aria-label="Lzhdeni Home">
-                <img src="/assets/images/logo.png" alt="Lzhdeni Logo" class="me-2" width="30" height="30">
-                Lzhdeni.com
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navMain">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
-                    <li class="nav-item"><a class="nav-link" href="/start-here">Start Here</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/foundations/">Foundations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/systems/">Systems</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/team-work/">Team Work</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/tools/">Tools</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/comparisons/">Comparisons</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/case-studies/">Case Studies</a></li>
-                </ul>
-                <div class="d-flex ms-lg-3 gap-2">
-                    <a class="btn btn-outline-primary btn-sm" href="/about">About</a>
-                    <a class="btn btn-primary btn-sm" href="/start-here">Get the Framework</a>
-                </div>
-            </div>
-        </div>
-    </nav>
 
-    <main>
-        <header class="hero-gradient border-bottom">
-            <div class="container py-lg-4">
-                <div class="row g-4 align-items-center">
-                    <div class="col-lg-7">
-                        <div class="hero-top-badges mb-3">
-                            <span class="rounded-pill px-3 py-2">Daily Review System</span>
-                            <span class="text-secondary small">Routine, trigger, checklist, carry-forward</span>
-                        </div>
-                        <h1 class="display-5 fw-semibold mb-3">Daily Review System for Remote Work: turn reflection into a repeatable operating loop</h1>
-                        <p class="lead text-secondary mb-4">
-                            This page is about implementation. It shows how to run a daily review in practice: when to
-                            do it, where to capture it, what to check, and how to translate the review into a better
-                            next day.
-                        </p>
-                        <div class="d-flex gap-2 flex-wrap">
-                            <a class="btn btn-primary btn-lg" href="/systems/">Back to Systems</a>
-                            <a class="btn btn-outline-secondary btn-lg" href="/systems/daily-review-method">Need the thinking model first?</a>
-                        </div>
-                    </div>
+<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top" style="padding-left:10px;padding-right:10px;box-shadow:0 2px 5px rgba(16,24,40,.3);" aria-label="Main navigation">
+<div class="container">
+<a class="navbar-brand fw-semibold" href="/" aria-label="Lzhdeni Home"><img src="/assets/images/logo.png" alt="Lzhdeni Logo" class="me-2" width="30" height="30"> Lzhdeni.com</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="navMain">
+<ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
+<li class="nav-item"><a class="nav-link" href="/start-here">Start Here</a></li>
+<li class="nav-item"><a class="nav-link" href="/foundations/">Foundations</a></li>
+<li class="nav-item"><a class="nav-link" href="/systems/">Systems</a></li>
+<li class="nav-item"><a class="nav-link" href="/team-work/">Team Work</a></li>
+<li class="nav-item"><a class="nav-link" href="/tools/">Tools</a></li>
+<li class="nav-item"><a class="nav-link" href="/comparisons/">Comparisons</a></li>
+<li class="nav-item"><a class="nav-link" href="/case-studies/">Case Studies</a></li>
+</ul>
+<div class="d-flex ms-lg-3 gap-2">
+<a class="btn btn-outline-primary btn-sm" href="/about">About</a>
+<a class="btn btn-primary btn-sm" href="/start-here">Get the Framework</a>
+</div>
+</div>
+</div>
+</nav>
 
-                    <div class="col-lg-5">
-                        <div class="card shadow-sm border-0">
-                            <div class="card-body">
-                                <h2 class="h5 fw-semibold mb-3">System snapshot</h2>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item px-0">
-                                        <span class="fw-semibold">Time needed:</span>
-                                        <span class="text-secondary">8 to 15 minutes</span>
-                                    </li>
-                                    <li class="list-group-item px-0">
-                                        <span class="fw-semibold">Best trigger:</span>
-                                        <span class="text-secondary">End of day or start of next work block</span>
-                                    </li>
-                                    <li class="list-group-item px-0">
-                                        <span class="fw-semibold">Primary output:</span>
-                                        <span class="text-secondary">A cleaned task list and a defined next focus</span>
-                                    </li>
-                                    <li class="list-group-item px-0">
-                                        <span class="fw-semibold">Pairs with:</span>
-                                        <span class="text-secondary">Weekly planning and the daily review method</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+<div class="crumbs">
+<div class="container">
+<nav aria-label="Breadcrumb">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/systems/">Systems</a></li>
+<li class="breadcrumb-item active" aria-current="page">Daily Review System</li>
+</ol>
+</nav>
+</div>
+</div>
 
-        <section>
-            <div class="container">
-                <div class="section-kicker mb-2">Why Build A System</div>
-                <h2 class="h3 fw-semibold mb-3">Reflection gets skipped when it has no place in the workflow</h2>
-                <p class="text-secondary">
-                    Many people agree that daily review is useful, then stop doing it after a few days. The usual
-                    reason is not lack of discipline. It is lack of system design. If the review has no trigger, no
-                    capture location, no standard checklist, and no clear output, it depends on memory and good mood.
-                </p>
-                <p class="text-secondary">
-                    A daily review system fixes that by making the review operational. It tells you when the review
-                    begins, what you look at, where you write decisions, and how those decisions shape tomorrow. This
-                    moves the practice out of the category of "good idea" and into the category of "normal work step."
-                </p>
-            </div>
-        </section>
+<header class="hero-gradient border-bottom">
+<div class="container">
+<div class="row">
+<div class="col-lg-9">
+<span class="badge text-bg-light border mb-2">System • Implementation</span>
+<h1 class="display-6 fw-bold mb-3">Daily Review System for Remote Work: Routine, Checklist, and Carry-Forward</h1>
+<p class="lead text-secondary mb-0">
+This is the hands-on companion to the daily review method &mdash; the exact checklist, timing, and carry-forward rules you can copy today. If the method explains why, this system tells you precisely what to write, in what order, and what to do with what's left unfinished.
+</p>
+<div class="article-meta">
+<span class="meta-item"><span class="avatar">LE</span> <span class="author">Lzhdeni Editorial Team</span></span>
+<span class="dot">&bull;</span>
+<span class="meta-item">Published <time datetime="2026-03-17">Mar 17, 2026</time></span>
+<span class="dot">&bull;</span>
+<span class="meta-item">Updated <time datetime="2026-06-29">Jun 29, 2026</time></span>
+<span class="dot">&bull;</span>
+<span class="meta-item">9 min read</span>
+</div>
+</div>
+</div>
+</div>
+</header>
 
-        <section class="bg-light border-top border-bottom">
-            <div class="container">
-                <div class="section-kicker mb-2">The Four Parts Of The System</div>
-                <h2 class="h3 fw-semibold mb-3">Keep the routine simple enough to survive real weeks</h2>
-                <div class="row g-4 mt-1">
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h3 class="h5 fw-semibold">1. Trigger</h3>
-                                <p class="text-secondary mb-0">
-                                    Decide when the review happens: end of workday, after your last deep work block, or
-                                    at the start of the next morning.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h3 class="h5 fw-semibold">2. One capture location</h3>
-                                <p class="text-secondary mb-0">
-                                    Use a single notebook, note, or task manager section so the review does not
-                                    scatter across several tools.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h3 class="h5 fw-semibold">3. Short checklist</h3>
-                                <p class="text-secondary mb-0">
-                                    A system works better with a stable set of prompts than with improvisation every day.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h3 class="h5 fw-semibold">4. Carry-forward rule</h3>
-                                <p class="text-secondary mb-0">
-                                    Decide how unfinished work moves into tomorrow so nothing important gets carried
-                                    forward automatically without thought.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section>
+<div class="container">
+<div class="row g-5">
+<div class="col-lg-8">
+<div class="article-body">
 
-        <section>
-            <div class="container">
-                <div class="section-kicker mb-2">The Routine</div>
-                <h2 class="h3 fw-semibold mb-3">A practical daily review checklist</h2>
-                <p class="text-secondary">
-                    Once the system is in place, the routine itself should stay short. The point is not to produce a
-                    polished journal entry. The point is to leave your work in a cleaner state than you found it.
-                </p>
-                <ol class="mt-4">
-                    <li class="mb-3">
-                        <strong>Gather open loops.</strong> Pull together your task list, notes, calendar leftovers, and
-                        any loose follow-ups from chat or email.
-                    </li>
-                    <li class="mb-3">
-                        <strong>Confirm what was completed.</strong> Mark finished work clearly so progress is visible
-                        and the next day does not start from uncertainty.
-                    </li>
-                    <li class="mb-3">
-                        <strong>Clean unfinished items.</strong> Decide whether each task should be rescheduled,
-                        clarified, delegated, or dropped.
-                    </li>
-                    <li class="mb-3">
-                        <strong>Set the next focus.</strong> Identify the first meaningful work target for tomorrow or
-                        the next session.
-                    </li>
-                    <li class="mb-0">
-                        <strong>Leave setup notes.</strong> Add any context your future self will need, especially if
-                        the next task has a high restart cost.
-                    </li>
-                </ol>
-            </div>
-        </section>
 
-        <section class="bg-light border-top border-bottom">
-            <div class="container">
-                <div class="section-kicker mb-2">System Boundaries</div>
-                <h2 class="h3 fw-semibold mb-3">How this page differs from the method page and the weekly review</h2>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h3 class="h5 fw-semibold">Daily Review Method</h3>
-                                <p class="text-secondary mb-0">
-                                    Explains what to notice and how to interpret the day. It is the decision framework.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h3 class="h5 fw-semibold">Daily Review System</h3>
-                                <p class="text-secondary mb-0">
-                                    Explains how to run the review reliably with a trigger, checklist, and output.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h3 class="h5 fw-semibold">Weekly Review</h3>
-                                <p class="text-secondary mb-0">
-                                    Operates at a higher level by adjusting workload, goals, and the larger system design.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <p class="text-secondary mt-4 mb-0">
-                    A useful rule is simple: daily review keeps execution aligned; weekly review redesigns the plan when
-                    the pattern itself needs to change.
-                </p>
-            </div>
-        </section>
+<div class="summary-box">
+<div class="summary-title">What you'll learn</div>
+<ul>
+<li>A copy-ready five-step end-of-day checklist</li>
+<li>Carry-forward rules that stop unfinished work from piling up invisibly</li>
+<li>When to run the review and what tools it needs (almost none)</li>
+<li>How daily reviews roll up into a cleaner weekly plan</li>
+</ul>
+</div>
 
-        <section>
-            <div class="container">
-                <div class="section-kicker mb-2">Common Failure Points</div>
-                <h2 class="h3 fw-semibold mb-3">Why daily review systems stop working</h2>
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <strong>The checklist is too long.</strong> If the review feels like admin work, it will be skipped on hard days.
-                    </li>
-                    <li class="list-group-item">
-                        <strong>The output is unclear.</strong> If the review does not change tomorrow's setup, it starts to feel ceremonial.
-                    </li>
-                    <li class="list-group-item">
-                        <strong>The capture location is fragmented.</strong> Several tools create more review work, not less.
-                    </li>
-                    <li class="list-group-item">
-                        <strong>Unfinished tasks get copied blindly.</strong> The system should force decisions, not duplicate yesterday's list.
-                    </li>
-                </ul>
-            </div>
-        </section>
+<p>
+This page is the practical half of a pair. The <a href="/systems/daily-review-method">Daily Review Method</a>
+explains why a daily review works and the three questions at its core. Here you get the implementation: the exact
+checklist, the rules for handling unfinished work, and the routine that makes it survive busy days. Read the
+method for understanding; use this page to actually run the practice tomorrow.
+</p>
 
-        <section class="bg-light border-top border-bottom">
-            <div class="container">
-                <div class="section-kicker mb-2">A Practical Example</div>
-                <h2 class="h3 fw-semibold mb-3">What a good system looks like in practice</h2>
-                <p class="text-secondary">
-                    Imagine a remote engineer ending the day with one completed bug fix, two partially started tasks,
-                    a code review request, and several notes from Slack. Without a system, tomorrow starts with
-                    uncertainty and task sprawl.
-                </p>
-                <p class="text-secondary">
-                    With a daily review system, the engineer spends ten minutes gathering loose ends into one place,
-                    marking the bug fix complete, deciding which partial task deserves to continue, scheduling the code
-                    review follow-up, and leaving a short setup note for the next morning's first focus block.
-                </p>
-                <p class="text-secondary mb-0">
-                    The day does not end with a cleaner feeling only. It ends with a cleaner starting point. That is
-                    what makes the system valuable.
-                </p>
-            </div>
-        </section>
+<h2 id="overview">System overview</h2>
 
-        <section>
-            <div class="container">
-                <h2 class="h3 fw-semibold mb-4">Related systems</h2>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <a href="/systems/daily-review-method" class="text-decoration-none">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h3 class="h5">Daily Review Method</h3>
-                                    <p class="text-secondary mb-0">
-                                        Read this if you want the underlying judgment model before you formalize the routine.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="/systems/weekly-planning-system" class="text-decoration-none">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h3 class="h5">Weekly Planning System</h3>
-                                    <p class="text-secondary mb-0">
-                                        Use weekly planning to define the larger direction that daily review keeps on track.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="/systems/task-priority-framework" class="text-decoration-none">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h3 class="h5">Task Priority Framework</h3>
-                                    <p class="text-secondary mb-0">
-                                        Use this when the review shows too many open tasks and too little ranking clarity.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+<p>
+The system has three moving parts. Keep all three lightweight &mdash; the whole point is a routine so small it
+never gets skipped.
+</p>
 
-    <footer class="bg-dark text-white py-5">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-5">
-                    <div class="fw-semibold fs-5">Lzhdeni.com</div>
-                    <p class="text-white-50 mb-3">
-                        Practical guides and systems for remote work productivity, built to be implemented.
-                    </p>
-                    <div class="gap-4 footer-links small" style="text-align:center;">
-                        <a href="/privacy-policy">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="/terms">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="/contact">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="/about">About</a>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-3">
-                    <div class="text-uppercase text-white-50 small mb-2">Sections</div>
-                    <div class="footer-links d-flex flex-column gap-1 small">
-                        <a href="/foundations/">Foundations</a>
-                        <a href="/systems/">Systems</a>
-                        <a href="/tools/">Tools</a>
-                        <a href="/team-work/">Team Work</a>
-                        <a href="/comparisons/">Comparisons</a>
-                        <a href="/case-studies/">Case Studies</a>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-4">
-                    <div class="text-uppercase text-white-50 small mb-2">Start</div>
-                    <div class="footer-links d-flex flex-column gap-1 small">
-                        <a href="/start-here">Start Here</a>
-                        <a href="/resources">Resources</a>
-                        <a href="/sitemap.xml">Sitemap</a>
-                        <a href="/robots.txt">Robots</a>
-                    </div>
-                    <div class="mt-3 text-white-50 small">
-                        &copy; <span id="year"></span> Lzhdeni.com. All rights reserved.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+<ul>
+<li><strong>A fixed checklist</strong> you run in the same order every day.</li>
+<li><strong>Carry-forward rules</strong> that decide, in advance, what happens to unfinished tasks.</li>
+<li><strong>A weekly roll-up</strong> that turns five daily reviews into planning material.</li>
+</ul>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+<h2 id="checklist">The end-of-day checklist</h2>
+
+<p>
+Run these five steps, in order, in whatever task tool you already use. The order matters: you close today before
+you open tomorrow.
+</p>
+
+<figure>
+<div class="framework">
+<div class="framework-title">The five-step daily review checklist</div>
+<div class="layer"><span class="step">1</span><div class="layer-body"><strong>Log what moved</strong><span>Write the real outcomes you advanced today &mdash; not activity, results.</span></div></div>
+<div class="layer"><span class="step">2</span><div class="layer-body"><strong>Capture open loops</strong><span>List unfinished tasks, waiting-on items, and undecided questions.</span></div></div>
+<div class="layer"><span class="step">3</span><div class="layer-body"><strong>Flag blockers</strong><span>Note anything you're stuck on and who or what would unblock it.</span></div></div>
+<div class="layer"><span class="step">4</span><div class="layer-body"><strong>Set tomorrow's anchor</strong><span>Choose the one task that would make tomorrow a success and schedule it.</span></div></div>
+<div class="layer"><span class="step">5</span><div class="layer-body"><strong>Reset the workspace</strong><span>Clear the inbox to a known state, close tabs, tidy the desk. Signal the day is over.</span></div></div>
+</div>
+<figcaption>Five steps, under ten minutes. Steps 1&ndash;3 close today; step 4 sets tomorrow; step 5 makes the ending real.</figcaption>
+</figure>
+
+<h2 id="carry">Carry-forward rules</h2>
+
+<p>
+The hardest part of any review isn't logging progress &mdash; it's deciding what to do with what you didn't
+finish. Left to daily judgment, unfinished tasks quietly pile up and rot at the bottom of the list. Carry-forward
+rules make the decision once, in advance:
+</p>
+
+<div class="table-wrap">
+<table class="data-table">
+<thead>
+<tr><th>Situation</th><th>Carry-forward rule</th></tr>
+</thead>
+<tbody>
+<tr><td>Task carried 1&ndash;2 days</td><td>Reschedule it to a specific day; that's normal slippage.</td></tr>
+<tr><td>Task carried 3+ days</td><td>Force a decision: reschedule with a real slot, shrink it, delegate it, or drop it.</td></tr>
+<tr><td>Task keeps getting deprioritized</td><td>It probably isn't important. Delete it honestly instead of guiltily re-listing it.</td></tr>
+<tr><td>Waiting on someone else</td><td>Move to a separate "waiting" list with a follow-up date, so it stops cluttering today.</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="callout callout-warn">
+<span class="callout-label">Watch for this</span>
+<p>A task you've rewritten onto your list five times isn't a productivity problem &mdash; it's a decision you keep
+avoiding. The carry-forward rule for 3+ days exists to force that decision instead of letting it haunt you
+indefinitely.</p>
+</div>
+
+<h2 id="timing">Timing and tools</h2>
+
+<ul>
+<li><strong>Timing:</strong> the last ten minutes of your workday, anchored to a shutdown cue so it becomes automatic.</li>
+<li><strong>Tools:</strong> your existing task manager or a plain notes file. Keep a persistent "waiting" list and a place for tomorrow's anchor. Nothing specialized required.</li>
+<li><strong>Friction:</strong> if any step feels heavy, cut it. A five-minute review you always do beats a fifteen-minute one you abandon in week two.</li>
+</ul>
+
+<h2 id="weekly">Rolling up to weekly planning</h2>
+
+<p>
+Because each daily review already recorded what moved and what stalled, your weekly reset has honest data instead
+of hazy memory. On your weekly planning day, skim the week's reviews and look for signals: which anchors got
+done, which tasks kept slipping, where blockers recurred. Feed those into the
+<a href="/systems/weekly-planning-system">weekly planning system</a> so the next week corrects for what actually
+happened.
+</p>
+
+<h2 id="example">A filled-in example</h2>
+
+<p>
+Here's one engineer's actual review, to show how brief it is:
+</p>
+
+<ul>
+<li><strong>Moved:</strong> shipped the auth bugfix; unblocked the API review.</li>
+<li><strong>Open:</strong> migration script half-written; docs update owed.</li>
+<li><strong>Blocked:</strong> deploy pipeline &mdash; waiting on infra team (pinged, follow up Thu).</li>
+<li><strong>Tomorrow's anchor:</strong> finish and test the migration script (9:00 block).</li>
+<li><strong>Reset:</strong> inbox to zero, branches pushed, desk cleared.</li>
+</ul>
+
+<p>
+Six lines, about seven minutes. But the migration now has a protected slot, the infra dependency is tracked
+instead of forgotten, and the evening is genuinely free because nothing is left silently running.
+</p>
+
+<h2 id="mistakes">Common mistakes to avoid</h2>
+
+<ul>
+<li><strong>No carry-forward rules.</strong> Without them, stale tasks accumulate until the list is untrustworthy.</li>
+<li><strong>Skipping the reset step.</strong> Leaving a messy inbox and open tabs blurs the boundary between work and rest.</li>
+<li><strong>Over-engineering the tooling.</strong> A fancy review template you dread is worse than five plain lines you'll actually write.</li>
+<li><strong>Re-planning the week nightly.</strong> That's the weekly system's job. Keep the daily review to closing today and anchoring tomorrow.</li>
+</ul>
+
+<div class="takeaways">
+<div class="takeaways-title">Key takeaways</div>
+<ul>
+<li>Run a fixed five-step checklist: log what moved, capture loops, flag blockers, set tomorrow's anchor, reset the space.</li>
+<li>Decide carry-forward rules in advance so unfinished work never piles up silently.</li>
+<li>Keep it under ten minutes with tools you already use.</li>
+<li>Roll the week's reviews into your weekly plan for decisions based on reality, not memory.</li>
+</ul>
+</div>
+
+
+<h2 id="faq">Frequently asked questions</h2>
+<div class="faq">
+<details><summary>What should a daily review checklist include?</summary><div class="faq-answer"><p>A practical daily review checklist has five steps: record what you moved forward, capture open and waiting-on items, note anything you're blocked on, decide tomorrow's single anchor task, and clear your workspace and inbox to a defined state. Keeping it to five steps means it fits in under ten minutes and actually gets done every day.</p></div></details>
+<details><summary>What is a carry-forward rule?</summary><div class="faq-answer"><p>A carry-forward rule is a predefined decision about what happens to unfinished tasks at the end of the day, so you don't re-litigate each one. For example: a task carried more than three days must be rescheduled, delegated, shrunk, or dropped. Carry-forward rules stop stale tasks from silently accumulating and keep your list honest.</p></div></details>
+<details><summary>How long should the daily review system take?</summary><div class="faq-answer"><p>Between five and ten minutes once it's a habit. The checklist is deliberately short and the carry-forward rules are decided in advance precisely so the review stays fast. If yours regularly runs longer, you are probably re-planning your week inside a daily review, which is a sign the two horizons have blurred.</p></div></details>
+<details><summary>Do I need special software for a daily review system?</summary><div class="faq-answer"><p>No. The system works in any task manager or a plain notes file, and simpler is usually more durable. What matters is that the checklist and your carry-forward list live somewhere you already trust and open every day, not that the tool has special review features. Use what you already have.</p></div></details>
+</div>
+
+<div class="author-box">
+<span class="avatar-lg">LE</span>
+<div>
+<div class="author-name">Lzhdeni Editorial Team</div>
+<p class="author-bio">We write practical, system-oriented guides for remote professionals &mdash; focused on durable frameworks over trend-driven hacks. Every guide is reviewed for clarity and real-world applicability. Learn more on our <a href="/about">About</a> and <a href="/editorial-policy">Editorial Policy</a> pages.</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="position-lg-sticky" style="top:90px;">
+<div class="toc mb-4">
+<div class="toc-title">In this guide</div>
+<ol>
+<li><a href="#overview">System overview</a></li>
+<li><a href="#checklist">The end-of-day checklist</a></li>
+<li><a href="#carry">Carry-forward rules</a></li>
+<li><a href="#timing">Timing and tools</a></li>
+<li><a href="#weekly">Rolling up to weekly</a></li>
+<li><a href="#example">A filled-in example</a></li>
+<li><a href="#mistakes">Common mistakes</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</div>
+<div class="card p-4 mb-4">
+<h3 class="h6 fw-semibold mb-3">Related guides</h3>
+<ul class="list-unstyled small mb-0">
+<li class="mb-2"><a href="/systems/daily-review-method">Daily Review Method (the why)</a></li>
+<li class="mb-2"><a href="/systems/weekly-planning-system">Weekly Planning System</a></li>
+<li class="mb-2"><a href="/systems/task-priority-framework">Task Priority Framework</a></li>
+<li class="mb-0"><a href="/foundations/attention-management">Attention Management</a></li>
+</ul>
+</div>
+<div class="card p-4">
+<h3 class="h6 fw-semibold mb-2">Quick takeaway</h3>
+<p class="small text-secondary mb-0">A copy-ready end-of-day checklist plus clear carry-forward rules, so nothing important silently falls through the cracks.</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="bg-light border-top border-bottom next-steps">
+<div class="container">
+<div class="section-kicker mb-2" style="letter-spacing:.08em;text-transform:uppercase;font-size:.78rem;color:#6c757d;font-weight:700;">Keep building your system</div>
+<h2 class="h4 fw-semibold mb-4">Where to go next</h2>
+<div class="row g-4">
+<div class="col-md-4">
+<a class="text-decoration-none" href="/systems/daily-review-method">
+<div class="card h-100 border-0 shadow-sm"><div class="card-body p-4">
+<span class="badge text-bg-light border mb-2">Systems</span>
+<h3 class="h6 fw-semibold">Daily Review Method</h3>
+<p class="text-secondary small mb-0">Understand the reasoning behind each checklist step.</p>
+</div></div></a>
+</div>
+<div class="col-md-4">
+<a class="text-decoration-none" href="/systems/weekly-planning-system">
+<div class="card h-100 border-0 shadow-sm"><div class="card-body p-4">
+<span class="badge text-bg-light border mb-2">Systems</span>
+<h3 class="h6 fw-semibold">Weekly Planning System</h3>
+<p class="text-secondary small mb-0">Aggregate your daily reviews into a weekly reset.</p>
+</div></div></a>
+</div>
+<div class="col-md-4">
+<a class="text-decoration-none" href="/systems/task-priority-framework">
+<div class="card h-100 border-0 shadow-sm"><div class="card-body p-4">
+<span class="badge text-bg-light border mb-2">Systems</span>
+<h3 class="h6 fw-semibold">Task Priority Framework</h3>
+<p class="text-secondary small mb-0">Choose tomorrow's anchor with a repeatable method.</p>
+</div></div></a>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="bg-dark text-white py-5">
+<div class="container">
+<div class="row g-4">
+<div class="col-lg-5">
+<div class="fw-semibold fs-5">Lzhdeni.com</div>
+<p class="text-white-50 mb-3">Practical guides and systems for remote work productivity, built to be implemented.</p>
+<div class="gap-4 footer-links small" style="text-align:center;">
+<a href="/privacy-policy">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/terms">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/contact">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/about">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/editorial-policy">Editorial Policy</a>
+</div>
+</div>
+<div class="col-6 col-lg-3">
+<div class="text-uppercase text-white-50 small mb-2">Sections</div>
+<div class="footer-links d-flex flex-column gap-1 small">
+<a href="/foundations/">Foundations</a>
+<a href="/systems/">Systems</a>
+<a href="/tools/">Tools</a>
+<a href="/team-work/">Team Work</a>
+<a href="/comparisons/">Comparisons</a>
+<a href="/case-studies/">Case Studies</a>
+</div>
+</div>
+<div class="col-6 col-lg-4">
+<div class="text-uppercase text-white-50 small mb-2">Start</div>
+<div class="footer-links d-flex flex-column gap-1 small">
+<a href="/start-here">Start Here</a>
+<a href="/resources">Resources</a>
+<a href="/sitemap.xml">Sitemap</a>
+<a href="/robots.txt">Robots</a>
+</div>
+<div class="mt-3 text-white-50 small">&copy; <span id="year"></span> Lzhdeni.com. All rights reserved.</div>
+</div>
+</div>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
