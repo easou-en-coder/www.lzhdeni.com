@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# 如果请求的不是一个真实存在的文件或目录，
+# 且加上 .html 后能找到对应文件，则内部重写到该 .html 文件。
+# 例如：/tools/tool-overload-when-less-is-more -> /tools/tool-overload-when-less-is-more.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
