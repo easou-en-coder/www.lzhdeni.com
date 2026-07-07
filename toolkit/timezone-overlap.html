@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="google-adsense-account" content="ca-pub-4361497440384535">
+<title>Team Time Zone Overlap Finder (Free) for Remote Teams | Lzhdeni.com</title>
+<meta name="description" content="A free time zone overlap finder for distributed teams. Add each teammate's UTC offset and working hours to see the hours everyone is online at once."/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://lzhdeni.com/toolkit/timezone-overlap"/>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Team Time Zone Overlap Finder (Free) for Remote Teams">
+<meta property="og:description" content="A free time zone overlap finder for distributed teams. Add each teammate's UTC offset and working hours to see the hours everyone is online at once.">
+<meta property="og:url" content="https://lzhdeni.com/toolkit/timezone-overlap">
+<meta property="og:image" content="https://lzhdeni.com/assets/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Team Time Zone Overlap Finder (Free) for Remote Teams">
+<meta name="twitter:description" content="A free time zone overlap finder for distributed teams. Add each teammate's UTC offset and working hours to see the hours everyone is online at once.">
+<meta name="twitter:image" content="https://lzhdeni.com/assets/images/og-image.png">
+<link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/web-app-manifest-192x192.png">
+<link rel="icon" href="/assets/images/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta http-equiv="Content-Language" content="en">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/assets/css/site.css" rel="stylesheet">
+<style>
+:root { scroll-behavior: smooth; }
+body { font-size: 17px; line-height: 1.7; background: #f8f9fa; }
+.nav-link { border: 1px solid #999; border-radius: 8px; padding: .1rem .8rem; margin-right: 10px; margin-bottom: 5px; margin-top: 5px; font-size: 14px; }
+.nav-link:hover, .nav-link:active, .nav-link:focus { border: 1px solid #f80000; color: #f80000; }
+.hero-gradient { background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%); padding: 2.4rem 0; }
+.card { border-radius: 18px; border: 1px solid rgba(0,0,0,.04); box-shadow: 0 8px 24px rgba(0,0,0,.04); }
+section { padding: 2.2rem 0; }
+footer { background: #111 !important; }
+.footer-links a { color: rgba(255,255,255,.7); }
+.footer-links a:hover { color: #fff; }
+.tz-grid{display:grid;grid-template-columns:repeat(24,1fr);gap:2px;}.tz-cell{height:34px;border-radius:4px;background:#eef1f6;font-size:.6rem;display:flex;align-items:center;justify-content:center;color:#94a0b0;}.tz-cell.on{background:#198754;color:#fff;font-weight:700;}.tz-hours{display:grid;grid-template-columns:repeat(24,1fr);gap:2px;margin-top:2px;}.tz-hours span{font-size:.55rem;text-align:center;color:#94a0b0;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lzhdeni.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Toolkit",
+      "item": "https://lzhdeni.com/toolkit/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Time Zone Overlap Finder",
+      "item": "https://lzhdeni.com/toolkit/timezone-overlap"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Time Zone Overlap Finder",
+  "description": "A free time zone overlap finder for distributed teams. Add each teammate's UTC offset and working hours to see the hours everyone is online at once.",
+  "url": "https://lzhdeni.com/toolkit/timezone-overlap",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Any (web browser)",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lzhdeni.com"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I find overlapping working hours across time zones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Convert each person's local working hours into a common reference like UTC, then look for the hours that fall inside everyone's window at once. This tool does that automatically: you enter each teammate's UTC offset and working hours, and it highlights the shared hours when the whole team is online simultaneously."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my team has little or no overlap?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Little or no overlap is common on globally distributed teams and is a strong reason to work asynchronously. Instead of forcing everyone into an inconvenient call, rely on written updates, recorded walkthroughs, and decision documents with comment deadlines, and reserve any rare live meeting for the small overlap you do have."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my team's data saved or shared?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your team list is stored only in your own browser using local storage, and nothing is uploaded or shared with anyone. The tool runs entirely in your browser and works offline. Clearing your browser data or switching devices will remove the saved list."
+      }
+    }
+  ]
+}
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4361497440384535" crossorigin="anonymous"></script>
+</head>
+<body class="bg-body">
+<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top" style="padding-left:10px;padding-right:10px;box-shadow:0 2px 5px rgba(16,24,40,.3);" aria-label="Main navigation">
+<div class="container">
+<a class="navbar-brand fw-semibold" href="/" aria-label="Lzhdeni Home"><img src="/assets/images/logo.png" alt="Lzhdeni Logo" class="me-2" width="30" height="30"> Lzhdeni.com</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="navMain">
+<ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
+<li class="nav-item"><a class="nav-link" href="/start-here">Start Here</a></li>
+<li class="nav-item"><a class="nav-link" href="/foundations/">Foundations</a></li>
+<li class="nav-item"><a class="nav-link" href="/systems/">Systems</a></li>
+<li class="nav-item"><a class="nav-link" href="/team-work/">Team Work</a></li>
+<li class="nav-item"><a class="nav-link" href="/tools/">Tools</a></li>
+<li class="nav-item"><a class="nav-link" href="/comparisons/">Comparisons</a></li>
+<li class="nav-item"><a class="nav-link" href="/case-studies/">Case Studies</a></li>
+<li class="nav-item"><a class="nav-link" href="/toolkit/">Toolkit</a></li>
+</ul>
+<div class="d-flex ms-lg-3 gap-2">
+<a class="btn btn-outline-primary btn-sm" href="/about">About</a>
+<a class="btn btn-primary btn-sm" href="/start-here">Get the Framework</a>
+</div>
+</div>
+</div>
+</nav>
+<div class="crumbs">
+<div class="container">
+<nav aria-label="Breadcrumb"><ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/toolkit/">Toolkit</a></li>
+<li class="breadcrumb-item active" aria-current="page">Time Zone Overlap Finder</li>
+</ol></nav>
+</div>
+</div>
+<header class="hero-gradient border-bottom">
+<div class="container">
+<div class="row"><div class="col-lg-9">
+<span class="badge text-bg-light border mb-2">Async · Time zones</span>
+<h1 class="display-6 fw-bold mb-3">🌍 Time Zone Overlap Finder</h1>
+<p class="lead text-secondary mb-2">Add each teammate's time zone and working hours to instantly see the window when everyone is online at the same time &mdash; so you can schedule the few real-time moments that matter and push everything else to async.</p>
+<div class="d-flex flex-wrap gap-3 small text-secondary">
+<span>&#10003; Free</span><span>&#10003; Runs in your browser</span><span>&#10003; No sign-up</span><span>&#10003; Nothing leaves your device</span>
+</div>
+</div></div>
+</div>
+</header>
+<main>
+<section>
+<div class="container">
+<div class="row justify-content-center"><div class="col-lg-9">
+<div class="tool-panel mb-4">
+<div class="row g-2 align-items-end">
+<div class="col-12 col-md-4"><label class="form-label small mb-1">Teammate / location</label><input type="text" class="form-control" id="tzName" placeholder="e.g. Ana (Berlin)"></div>
+<div class="col-4 col-md-3"><label class="form-label small mb-1">UTC offset</label><select class="form-select" id="tzOff"></select></div>
+<div class="col-4 col-md-2"><label class="form-label small mb-1">Work start</label><input type="number" class="form-control" id="tzStart" value="9" min="0" max="23"></div>
+<div class="col-4 col-md-2"><label class="form-label small mb-1">Work end</label><input type="number" class="form-control" id="tzEnd" value="17" min="1" max="24"></div>
+<div class="col-12 col-md-1 d-grid"><button class="btn btn-primary" id="tzAdd">Add</button></div>
+</div>
+<div class="chip-list mt-3" id="tzList"></div>
+</div>
+<div class="tool-panel">
+<div class="d-flex justify-content-between align-items-center mb-2"><h2 class="h6 fw-bold mb-0">Overlap (UTC)</h2><span class="text-secondary small">green = everyone online</span></div>
+<div class="tz-grid" id="tzGrid"></div>
+<div class="tz-hours" id="tzHours"></div>
+<div class="tool-result mt-3" id="tzSummary">Add teammates to see your overlap.</div>
+</div>
+</div></div>
+</div>
+</section>
+<section class="bg-light border-top border-bottom">
+<div class="container">
+<div class="row justify-content-center"><div class="col-lg-9">
+<div class="article-body" style="max-width:none;">
+<h2 class="h4 fw-bold mb-3">Find the overlap, protect the rest for async</h2>
+<p>On a distributed team, shared online hours are a scarce resource. If you scatter meetings across the day, people in less-overlapping zones end up permanently blocked or stuck in awkward late-night calls. The fix is to find the genuine overlap window, reserve it for the handful of interactions that truly need real time, and move everything else to <a href="/team-work/async-communication-guide">asynchronous communication</a>.</p>
+<p>This tool converts each teammate's local working hours into UTC and highlights the hours when everyone is available at once. Add your team members below and the overlap bar updates instantly. If the overlap is small &mdash; or zero &mdash; that's a strong signal to lean even harder on written updates, recorded video, and decision documents rather than live meetings.</p>
+<h2 class="h4 fw-bold mt-5 mb-3">How to use it</h2>
+<ol>
+<li>Add each teammate with their UTC offset and their local working start and end hours.</li>
+<li>The 24-hour bar highlights the UTC hours when everyone is working at the same time.</li>
+<li>Read the summary to see the overlap window and how many shared hours you have.</li>
+<li>Schedule real-time meetings only inside the overlap; handle the rest async.</li>
+<li>Your team list is saved in your browser for next time.</li>
+</ol>
+<div class="callout callout-note mt-4">
+<span class="callout-label">Related guide</span>
+<p>Want the thinking behind this tool? Read <a href="/team-work/async-communication-guide">Async Communication Guide for Remote Teams</a> for the full framework and examples.</p>
+</div>
+<h2 id="faq" class="h4 fw-bold mt-5 mb-3">Frequently asked questions</h2>
+<div class="faq">
+<details><summary>How do I find overlapping working hours across time zones?</summary><div class="faq-answer"><p>Convert each person's local working hours into a common reference like UTC, then look for the hours that fall inside everyone's window at once. This tool does that automatically: you enter each teammate's UTC offset and working hours, and it highlights the shared hours when the whole team is online simultaneously.</p></div></details>
+<details><summary>What if my team has little or no overlap?</summary><div class="faq-answer"><p>Little or no overlap is common on globally distributed teams and is a strong reason to work asynchronously. Instead of forcing everyone into an inconvenient call, rely on written updates, recorded walkthroughs, and decision documents with comment deadlines, and reserve any rare live meeting for the small overlap you do have.</p></div></details>
+<details><summary>Is my team's data saved or shared?</summary><div class="faq-answer"><p>Your team list is stored only in your own browser using local storage, and nothing is uploaded or shared with anyone. The tool runs entirely in your browser and works offline. Clearing your browser data or switching devices will remove the saved list.</p></div></details>
+</div>
+</div>
+</div></div>
+</div>
+</section>
+</main>
+<section class="next-steps">
+<div class="container">
+<div class="section-kicker mb-2" style="letter-spacing:.08em;text-transform:uppercase;font-size:.78rem;color:#6c757d;font-weight:700;">Keep going</div>
+<h2 class="h4 fw-semibold mb-4">More tools &amp; guides</h2>
+<div class="row g-4">
+<div class="col-md-4">
+<a class="text-decoration-none" href="/team-work/async-communication-guide">
+<div class="card h-100 border-0 shadow-sm"><div class="card-body p-4">
+<span class="badge text-bg-light border mb-2">Guide</span>
+<h3 class="h6 fw-semibold">Async Communication Guide</h3>
+<p class="text-secondary small mb-0">Coordinate across zones without live meetings.</p>
+</div></div></a>
+</div>
+<div class="col-md-4">
+<a class="text-decoration-none" href="/toolkit/async-or-sync">
+<div class="card h-100 border-0 shadow-sm"><div class="card-body p-4">
+<span class="badge text-bg-light border mb-2">Tool</span>
+<h3 class="h6 fw-semibold">Async or Sync?</h3>
+<p class="text-secondary small mb-0">Decide what actually needs real time.</p>
+</div></div></a>
+</div>
+<div class="col-md-4">
+<a class="text-decoration-none" href="/team-work/remote-team-workflows">
+<div class="card h-100 border-0 shadow-sm"><div class="card-body p-4">
+<span class="badge text-bg-light border mb-2">Guide</span>
+<h3 class="h6 fw-semibold">Remote Team Workflows</h3>
+<p class="text-secondary small mb-0">Design handoffs that survive time-zone gaps.</p>
+</div></div></a>
+</div>
+</div>
+<div class="mt-4"><a class="btn btn-outline-primary" href="/toolkit/">&larr; Back to all free tools</a></div>
+</div>
+</section>
+<footer class="bg-dark text-white py-5">
+<div class="container">
+<div class="row g-4">
+<div class="col-lg-5">
+<div class="fw-semibold fs-5">Lzhdeni.com</div>
+<p class="text-white-50 mb-3">Practical guides and systems for remote work productivity, built to be implemented.</p>
+<div class="gap-4 footer-links small" style="text-align:center;">
+<a href="/privacy-policy">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/terms">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/contact">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/about">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/editorial-policy">Editorial Policy</a>
+</div>
+</div>
+<div class="col-6 col-lg-3">
+<div class="text-uppercase text-white-50 small mb-2">Sections</div>
+<div class="footer-links d-flex flex-column gap-1 small">
+<a href="/foundations/">Foundations</a>
+<a href="/systems/">Systems</a>
+<a href="/tools/">Tools</a>
+<a href="/team-work/">Team Work</a>
+<a href="/comparisons/">Comparisons</a>
+<a href="/case-studies/">Case Studies</a>
+</div>
+</div>
+<div class="col-6 col-lg-4">
+<div class="text-uppercase text-white-50 small mb-2">Start</div>
+<div class="footer-links d-flex flex-column gap-1 small">
+<a href="/start-here">Start Here</a>
+<a href="/toolkit/">Free Tools</a>
+<a href="/resources">Resources</a>
+<a href="/sitemap.xml">Sitemap</a>
+<a href="/robots.txt">Robots</a>
+</div>
+<div class="mt-3 text-white-50 small">&copy; <span id="year"></span> Lzhdeni.com. All rights reserved.</div>
+</div>
+</div>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script>
+
+(function(){
+  var $=function(id){return document.getElementById(id);};
+  var sel=$('tzOff');
+  for(var o=-12;o<=14;o++){var op=document.createElement('option');op.value=o;op.textContent='UTC'+(o>=0?'+':'')+o;if(o===0)op.selected=true;sel.appendChild(op);}
+  var hours=$('tzHours');for(var h=0;h<24;h++){var s=document.createElement('span');s.textContent=h;hours.appendChild(s);}
+  var KEY='tz_team';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY)||'[]');}catch(e){return [];}}
+  function save(t){localStorage.setItem(KEY,JSON.stringify(t));}
+  var team=load();
+  function esc(s){return s.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function working(m,uh){ // is member m working at UTC hour uh?
+    var local=((uh+m.off)%24+24)%24; var s=m.start,e=m.end;
+    if(e<=s)e+=24; var l2=local<s?local+24:local; return l2>=s&&l2<e || local>=s&&local<e;
+  }
+  function fmtLocal(m,uh){return (((uh+m.off)%24+24)%24);}
+  function render(){
+    var list=$('tzList');list.innerHTML='';
+    team.forEach(function(m,i){var d=document.createElement('div');d.className='chip-row';
+      d.innerHTML='<span class="grow"><strong>'+esc(m.name||'Teammate')+'</strong> &middot; UTC'+(m.off>=0?'+':'')+m.off+' &middot; '+m.start+':00&ndash;'+m.end+':00 local</span><button class="rm" data-i="'+i+'">&times;</button>';
+      list.appendChild(d);});
+    document.querySelectorAll('#tzList .rm').forEach(function(b){b.onclick=function(){team.splice(+b.getAttribute('data-i'),1);save(team);render();};});
+    var grid=$('tzGrid');grid.innerHTML='';var overlap=[];
+    for(var uh=0;uh<24;uh++){
+      var all=team.length>0 && team.every(function(m){return working(m,uh);});
+      if(all)overlap.push(uh);
+      var c=document.createElement('div');c.className='tz-cell'+(all?' on':'');c.textContent=uh;grid.appendChild(c);
+    }
+    var sum=$('tzSummary');
+    if(team.length===0){sum.className='tool-result is-empty';sum.textContent='Add teammates to see your overlap.';return;}
+    sum.className='tool-result';
+    if(overlap.length===0){sum.innerHTML='<strong>No shared working hours.</strong> This team should lean heavily on asynchronous communication &mdash; written updates and recorded video rather than live meetings.';return;}
+    var start=overlap[0],end=overlap[overlap.length-1]+1;
+    var per=team.map(function(m){var ls=fmtLocal(m,overlap[0]),le=fmtLocal(m,overlap[overlap.length-1]+1);return esc(m.name||'Teammate')+': '+ls+':00&ndash;'+le+':00';}).join(' &middot; ');
+    sum.innerHTML='<strong>'+overlap.length+' shared hour'+(overlap.length>1?'s':'')+'</strong> &mdash; roughly '+start+':00&ndash;'+end+':00 UTC. Local times: '+per+'.';
+  }
+  $('tzAdd').onclick=function(){team.push({name:$('tzName').value.trim(),off:+sel.value,start:+$('tzStart').value||9,end:+$('tzEnd').value||17});save(team);$('tzName').value='';render();};
+  if(team.length===0){team=[{name:'You',off:0,start:9,end:17}];}
+  render();
+})();
+
+</script>
+</body>
+</html>

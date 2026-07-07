@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="google-adsense-account" content="ca-pub-4361497440384535">
+
+<title>Small Agency Remote Operations: A Case Study in Distributed Service Work | Lzhdeni.com</title>
+
+<meta name="description" content="A case study of a 12-person creative agency that moved fully remote. What they changed, what broke, and the systems that let them ship client work across four time zones without burning out."/>
+<meta name="robots" content="index,follow"/>
+<meta name="author" content="Lzhdeni Editorial Team">
+
+<link rel="canonical" href="https://lzhdeni.com/case-studies/small-agency-remote-operations"/>
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Small Agency Remote Operations: A Case Study in Distributed Service Work">
+<meta property="og:description" content="A case study of a 12-person creative agency that moved fully remote. What they changed, what broke, and the systems that worked.">
+<meta property="og:url" content="https://lzhdeni.com/case-studies/small-agency-remote-operations">
+<meta property="og:image" content="https://lzhdeni.com/assets/images/og-image.png">
+<meta property="article:published_time" content="2026-07-07">
+<meta property="article:modified_time" content="2026-07-07">
+<meta property="article:section" content="Case Studies">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Small Agency Remote Operations: A Case Study in Distributed Service Work">
+<meta name="twitter:description" content="A case study of a 12-person creative agency that moved fully remote. What they changed, what broke, and the systems that worked.">
+<meta name="twitter:image" content="https://lzhdeni.com/assets/images/og-image.png">
+
+<link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/web-app-manifest-192x192.png">
+<link rel="icon" href="/assets/images/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/images/favicon-96x96.png" type="image/png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<meta http-equiv="Content-Language" content="en">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/assets/css/site.css" rel="stylesheet">
+
+<style>
+:root { scroll-behavior: smooth; }
+body { font-size: 17px; line-height: 1.7; background: #f8f9fa; }
+.nav-link { border: 1px solid #999; border-radius: 8px; padding: .1rem .8rem; margin-right: 10px; margin-bottom: 5px; margin-top: 5px; font-size: 14px; }
+.nav-link:hover, .nav-link:active, .nav-link:focus { border: 1px solid #f80000; color: #f80000; }
+.hero-gradient { background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%); padding: 3rem 0; }
+.summary-box { background:#eef4ff; border:1px solid #d6e4ff; border-radius:14px; padding:1.25rem 1.4rem; margin:1.6rem 0 2rem; }
+.summary-title { font-weight:700; margin-bottom:.5rem; }
+.framework { background:#fff; border:1px solid #e6e8eb; border-radius:14px; padding:1.5rem; margin:1.8rem 0; }
+.framework-title { font-weight:700; margin-bottom:1rem; }
+.layer { display:flex; align-items:flex-start; gap:1rem; padding:.85rem 0; border-bottom:1px solid #f1f3f5; }
+.layer:last-child { border-bottom:0; }
+.step { background:#0d6efd; color:#fff; border-radius:50%; width:28px; height:28px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.85rem; flex-shrink:0; }
+.layer-body { flex:1; }
+.layer-body strong { display:block; margin-bottom:.15rem; }
+.layer-body span { color:#495057; font-size:.95rem; }
+.arrow { text-align:center; color:#adb5bd; font-size:1.2rem; }
+.callout { border-left:3px solid #0d6efd; background:#f8f9ff; padding:1rem 1.2rem; border-radius:6px; margin:1.4rem 0; }
+.callout-note { border-left-color:#6f42c1; background:#faf8ff; }
+.callout-warn { border-left-color:#dc3545; background:#fff5f5; }
+.takeaways { background:#fff8e1; border:1px solid #ffe082; border-radius:12px; padding:1.2rem 1.4rem; margin:1.8rem 0; }
+.takeaways-title { font-weight:700; margin-bottom:.5rem; }
+.checklist { list-style:none; padding-left:0; }
+.checklist li { position:relative; padding-left:1.8rem; margin-bottom:.6rem; }
+.checklist li:before { content:"\2713"; position:absolute; left:0; color:#198754; font-weight:700; }
+.faq { margin-top:1.5rem; }
+.faq details { background:#fff; border:1px solid #e6e8eb; border-radius:10px; padding:1rem 1.2rem; margin-bottom:.7rem; }
+.faq summary { font-weight:600; cursor:pointer; }
+.faq-answer { margin-top:.6rem; color:#495057; }
+.author-box { display:flex; gap:1rem; align-items:flex-start; margin-top:2rem; padding-top:1.5rem; border-top:1px solid #e6e8eb; }
+.avatar, .avatar-lg { background:#0d6efd; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0; }
+.avatar { width:28px; height:28px; font-size:.72rem; }
+.avatar-lg { width:48px; height:48px; font-size:1rem; }
+.article-meta { font-size:.9rem; color:#6c757d; margin-top:1rem; }
+.article-meta .meta-item { margin-right:.4rem; }
+.article-meta .dot { color:#adb5bd; }
+.author-name { font-weight:600; }
+.toc { background:#fff; border:1px solid #e6e8eb; border-radius:12px; padding:1.2rem 1.3rem; }
+.toc-title { font-weight:700; margin-bottom:.6rem; }
+.toc ol { padding-left:1.2rem; margin:0; }
+.toc li { margin-bottom:.4rem; font-size:.92rem; }
+.next-steps .card { transition:transform .15s; }
+.next-steps .card:hover { transform:translateY(-2px); }
+.crumbs { padding:.6rem 0; background:#fff; border-bottom:1px solid #f1f3f5; }
+.breadcrumb { margin:0; font-size:.88rem; }
+footer { background:#111 !important; }
+.footer-links a { color: rgba(255,255,255,.7); }
+.footer-links a:hover { color:#fff; }
+.case-stat { background:#fff; border:1px solid #e6e8eb; border-radius:12px; padding:1.2rem; text-align:center; }
+.case-stat .stat-num { font-size:1.6rem; font-weight:700; color:#0d6efd; }
+.case-stat .stat-label { font-size:.85rem; color:#6c757d; }
+@media(max-width:991px) {
+    body { font-size: 16px; }
+    .hero-gradient { padding: 2rem 0; }
+    h1.display-6 { font-size: 1.7rem; }
+    .position-lg-sticky { position:static !important; }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Small Agency Remote Operations: A Case Study in Distributed Service Work",
+  "description": "A case study of a 12-person creative agency that moved fully remote. What they changed, what broke, and the systems that let them ship client work across four time zones.",
+  "author": {
+    "@type": "Organization",
+    "name": "Lzhdeni Editorial Team",
+    "url": "https://lzhdeni.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lzhdeni.com",
+    "url": "https://lzhdeni.com/"
+  },
+  "datePublished": "2026-07-07",
+  "dateModified": "2026-07-07",
+  "mainEntityOfPage": "https://lzhdeni.com/case-studies/small-agency-remote-operations"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can a small creative agency work fully remote without losing quality?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, but only if the work itself is reorganized around async defaults. The agency in this case study kept quality high by moving reviews to written documents, reserving real-time overlap for creative direction, and building an onboarding system that transferred context instead of just tasks. Agencies that try to run an in-office workflow remotely usually struggle." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the biggest risk for a small agency going remote?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Client communication. In an office, client context is implicit. Remotely, it has to be explicit and documented. The most common failure is a client feeling out of the loop because the agency has not designed a predictable upward flow of information to the client, not just within the team." }
+    },
+    {
+      "@type": "Question",
+      "name": "How many time zones can a 12-person agency realistically span?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Three to four time zones is manageable with explicit handoff design. Beyond that, the overlap becomes too thin and the handoffs become too frequent. The agency in this case study spans four time zones, but they deliberately hired into a band of hours rather than spreading randomly." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does going remote save a small agency money?",
+      "acceptedAnswer": { "@type": "Answer", "text": "On office space, yes. On tools and onboarding time, often no in the first year. The real financial benefit is access to a wider talent pool, which tends to improve quality and reduce hiring cost over time. Treating remote purely as a cost-cutting move usually underestimates the investment needed in systems." }
+    }
+  ]
+}
+</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4361497440384535" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-body">
+
+<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top" style="padding-left:10px;padding-right:10px;box-shadow:0 2px 5px rgba(16,24,40,.3);" aria-label="Main navigation">
+<div class="container">
+<a class="navbar-brand fw-semibold" href="/" aria-label="Lzhdeni Home"><img src="/assets/images/logo.png" alt="Lzhdeni Logo" class="me-2" width="30" height="30"> Lzhdeni.com</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="navMain">
+<ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
+<li class="nav-item"><a class="nav-link" href="/start-here">Start Here</a></li>
+<li class="nav-item"><a class="nav-link" href="/foundations/">Foundations</a></li>
+<li class="nav-item"><a class="nav-link" href="/systems/">Systems</a></li>
+<li class="nav-item"><a class="nav-link" href="/team-work/">Team Work</a></li>
+<li class="nav-item"><a class="nav-link" href="/tools/">Tools</a></li>
+<li class="nav-item"><a class="nav-link" href="/comparisons/">Comparisons</a></li>
+<li class="nav-item"><a class="nav-link active" href="/case-studies/">Case Studies</a></li>
+<li class="nav-item"><a class="nav-link" href="/toolkit/">Toolkit</a></li>
+</ul>
+<div class="d-flex ms-lg-3 gap-2">
+<a class="btn btn-outline-primary btn-sm" href="/about">About</a>
+<a class="btn btn-primary btn-sm" href="/start-here">Get the Framework</a>
+</div>
+</div>
+</div>
+</nav>
+
+<div class="crumbs">
+<div class="container">
+<nav aria-label="Breadcrumb">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/case-studies/">Case Studies</a></li>
+<li class="breadcrumb-item active" aria-current="page">Small Agency Remote Operations</li>
+</ol>
+</nav>
+</div>
+</div>
+
+<header class="hero-gradient border-bottom">
+<div class="container">
+<div class="row">
+<div class="col-lg-9">
+<span class="badge text-bg-light border mb-2">Case Studies &bull; Agency Operations</span>
+<h1 class="display-6 fw-bold mb-3">Small Agency Remote Operations: A Case Study in Distributed Service Work</h1>
+<p class="lead text-secondary mb-0">
+A 12-person creative agency moved fully remote over 18 months. This case study walks through what they
+changed, what broke first, and the systems that let them ship client work across four time zones without
+the late-night calls and quiet burnout that usually come with it.
+</p>
+<div class="article-meta">
+<span class="meta-item"><span class="avatar">LE</span> <span class="author">Lzhdeni Editorial Team</span></span>
+<span class="dot">&bull;</span>
+<span class="meta-item">Published <time datetime="2026-07-07">Jul 07, 2026</time></span>
+<span class="dot">&bull;</span>
+<span class="meta-item">13 min read</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<section>
+<div class="container">
+<div class="row g-5">
+<div class="col-lg-8">
+<div class="article-body">
+
+<div class="summary-box">
+<div class="summary-title">What you'll learn</div>
+<ul>
+<li>Why service businesses are harder to remote than product businesses, and what changes</li>
+<li>The three systems that did the heavy lifting: async reviews, the client-facing flow, and onboarding</li>
+<li>The specific failure that almost killed the transition in month four</li>
+<li>How they handled client communication without an office to bring clients into</li>
+<li>What the numbers looked like one year in</li>
+</ul>
+</div>
+
+<p>
+Most remote work writing focuses on product teams. Service businesses &mdash; agencies, consultancies, firms
+that sell their work as discrete projects &mdash; face a different and harder problem. Their work is produced
+for a client who is paying attention to every milestone, often on a timeline set by the client rather than
+the team. Moving that work remote is not just a matter of changing where people sit. It changes how the work
+itself is structured.
+</p>
+
+<p>
+This case study looks at a 12-person creative agency that moved fully remote over 18 months. The agency, which
+we will call Northbound, does brand and digital work for mid-sized B2B clients. Before the move, they worked
+out of a single office. After the move, they spanned four time zones across two continents. The story of how
+they got there is more useful than the outcome, because the failures are the parts most agencies repeat.
+</p>
+
+<h2 id="context">The starting point: why service work is harder to remote</h2>
+
+<p>
+A product team owns its roadmap. An agency owns someone else's roadmap, on someone else's timeline, with
+someone else reviewing the work at every milestone. That difference shapes everything. In an office, the
+client-facing rhythm is implicit: the client emails the account lead, the account lead walks over to the
+designer, the designer shows the work, the account lead walks back and replies. Remote work removes the
+walking-over step, which sounds trivial until you realize it was carrying half the context.
+</p>
+
+<p>
+Northbound's first attempt at remote work was, in the founder's words, &ldquo;the office, but on Zoom.&rdquo;
+They kept the same meetings, the same review cycles, the same default to synchronous communication. Within six
+weeks, two things broke. The designers in the inconvenient time zones started missing reviews because the
+reviews were scheduled at their dinner time. And the account leads started forwarding client emails directly to
+designers with no context, because the walk-over conversation no longer happened.
+</p>
+
+<div class="row g-3 mb-4">
+<div class="col-md-3"><div class="case-stat"><div class="stat-num">12</div><div class="stat-label">Team members</div></div></div>
+<div class="col-md-3"><div class="case-stat"><div class="stat-num">4</div><div class="stat-label">Time zones</div></div></div>
+<div class="col-md-3"><div class="case-stat"><div class="stat-num">18</div><div class="stat-label">Months to transition</div></div></div>
+<div class="col-md-3"><div class="case-stat"><div class="stat-num">2-3h</div><div class="stat-label">Daily overlap</div></div></div>
+</div>
+
+<p>
+The pattern is common. The lesson is that an agency cannot remote its way around an office workflow. The
+workflow itself has to change.
+</p>
+
+<h2 id="three-systems">The three systems that did the heavy lifting</h2>
+
+<p>
+Once Northbound accepted that the workflow had to change, they built three systems that carried most of the
+weight. Each one replaced something the office used to do implicitly.
+</p>
+
+<figure>
+<div class="framework">
+<div class="framework-title">The three systems</div>
+<div class="layer"><span class="step">1</span><div class="layer-body"><strong>Async review system</strong><span>Replaced the walk-up review with a written review document. Designers post work for review at a predictable time; reviewers leave structured written feedback within a window; live review is reserved for creative direction that genuinely needs discussion.</span></div></div>
+<div class="arrow">&darr;</div>
+<div class="layer"><span class="step">2</span><div class="layer-body"><strong>Client-facing information flow</strong><span>Replaced the implicit client context with a deliberate upward flow: a weekly client update, proactive flags when scope or timeline shifts, and a shared project view the client can check without asking.</span></div></div>
+<div class="arrow">&darr;</div>
+<div class="layer"><span class="step">3</span><div class="layer-body"><strong>Onboarding as context transfer</strong><span>Replaced the osmosis of office learning with a written onboarding system: a project wiki, a documented review process, and a buddy system that pairs new hires with a senior for the first month.</span></div></div>
+</div>
+<figcaption>Each system replaces something the office did for free. Remotely, you have to build it on purpose.</figcaption>
+</figure>
+
+<p>
+The systems are not novel. What made them work was that Northbound treated them as the work, not as overhead.
+The async review was not a temporary pandemic measure; it was how reviews happened from then on. The client
+update was not an extra task; it was part of the account lead's job, scheduled into the week.
+</p>
+
+<h2 id="async-reviews">System one: async reviews replaced walk-up reviews</h2>
+
+<p>
+The biggest single change was killing the walk-up review. In the office, a designer could turn their monitor
+toward a creative director and get feedback in two minutes. Remotely, the equivalent was a video call, and
+video calls do not scale across time zones. The first failure was scheduling reviews at times that worked for
+the creative director but not for the designers in other time zones.
+</p>
+
+<p>
+The fix was a written review system with a predictable cadence:
+</p>
+
+<ul class="checklist">
+<li><strong>Designers post work for review by 10am in the creative director's time zone.</strong> The post includes the goal of the work, the constraints, and the specific questions the designer has.</li>
+<li><strong>The creative director leaves written feedback by end of day.</strong> Structured: what is working, what is not, what to change next. No vague &ldquo;make it pop.&rdquo;</li>
+<li><strong>Live review is reserved for creative direction.</strong> Decisions about direction, tone, or major pivots happen in a 30-minute call, not in writing. Everything else is async.</li>
+</ul>
+
+<p>
+The system took three weeks to feel normal. The creative director initially hated it, because written feedback
+felt slower than talking. By week four, the team realized the written record meant feedback was no longer
+forgotten, misremembered, or inconsistently applied across designers. The slowness was a feature.
+</p>
+
+<div class="callout callout-note">
+<p><strong>What changed about the work:</strong> The async review system did not just move reviews online.
+It changed what designers posted for review. Because the post had to carry context (the goal, the constraints,
+the questions), designers started thinking about the review as a communication artifact, not just a status
+check. The work itself got clearer.</p>
+</div>
+
+<h2 id="client-flow">System two: the client-facing information flow</h2>
+
+<p>
+The second failure was the one most agencies miss. In an office, the client feels informed because they can
+walk in, or because the account lead can give them a quick verbal update. Remotely, the client only knows what
+they are explicitly told. Northbound lost a client in month three of the transition because the client felt
+out of the loop, even though the work was on track.
+</p>
+
+<p>
+The fix was a deliberate client-facing information flow that mirrored the internal one:
+</p>
+
+<ul>
+<li><strong>A weekly client update.</strong> Same structure as the internal status update: what moved, what is next, what risks or decisions need client input. Sent Friday morning, client time zone.</li>
+<li><strong>Proactive flags when something changes.</strong> Scope shifts, timeline shifts, anything that changes the agreed plan. Sent the day the change is visible, not buried in the weekly update.</li>
+<li><strong>A shared project view.</strong> The client can see the current state of the project without asking. Status, milestones, open questions. Not a live dashboard that updates every minute &mdash; a stable view that reflects reality.</li>
+</ul>
+
+<p>
+The shared project view was the most contentious internally. The account team worried it would replace them.
+It did the opposite: it removed the status-update meetings, which freed the account team to do the actual
+relationship work that no dashboard can do.
+</p>
+
+<h2 id="onboarding">System three: onboarding as context transfer</h2>
+
+<p>
+The third system was the one Northbound wished they had built first. In the office, new hires learned by
+osmosis: they overheard reviews, watched how the account team talked to clients, picked up the unwritten
+conventions of the work. Remotely, none of that happens. A new hire knows exactly what they are told and
+nothing more.
+</p>
+
+<p>
+The onboarding system Northbound eventually built had three parts:
+</p>
+
+<ul>
+<li><strong>A project wiki.</strong> Every active project has a page: the goal, the client, the constraints, the current state, the open questions. New hires read the wiki for their first week instead of being thrown into work.</li>
+<li><strong>A documented review process.</strong> The async review system is written down, with examples. New hires know what a good review post looks like before they post one.</li>
+<li><strong>A buddy system.</strong> Each new hire is paired with a senior team member for the first month. The buddy's job is to answer the questions that are too small to feel worth asking in a team channel.</li>
+</ul>
+
+<p>
+The buddy system mattered more than the wiki. The wiki carried the explicit knowledge. The buddy carried the
+implicit knowledge &mdash; the &ldquo;we usually do it this way,&rdquo; the &ldquo;this client hates
+surprises,&rdquo; the &ldquo;don't bother the creative director before noon.&rdquo; Without the buddy, the
+wiki was a manual that no one read.
+</p>
+
+<h2 id="month-four">The failure that almost killed the transition</h2>
+
+<p>
+In month four, Northbound nearly lost a second client, and this time it was not a communication problem. It
+was a handoff problem. A designer in one time zone handed work to a developer in another, with a task list but
+no context. The developer rebuilt a section from scratch because they did not understand why the designer had
+made certain choices. The client saw the rebuild in a review and asked why the work had changed. The account
+lead could not answer.
+</p>
+
+<div class="callout callout-warn">
+<p><strong>The root cause:</strong> The handoff carried the task but not the reasoning. The developer did not
+know why the design looked the way it did, so they improved it in a way that broke the reasoning. The client
+noticed the inconsistency, not the improvement.</p>
+</div>
+
+<p>
+The fix was a handoff document that carried three things: the current state, the reasoning behind the key
+decisions, and the open questions the next person was empowered to decide. It took five minutes to write and
+would have saved a week of rework. The agency added handoff documents to the review process, and the same
+failure never happened again.
+</p>
+
+<h2 id="numbers">What the numbers looked like one year in</h2>
+
+<p>
+A year after the transition, Northbound tracked a few metrics to see whether the move had actually worked.
+The numbers are specific to them, but the direction is likely generalizable to similar agencies.
+</p>
+
+<ul>
+<li><strong>Client retention held.</strong> The two clients lost during the transition were replaced, and the agency retained its longest-standing clients. The client-facing flow was working.</li>
+<li><strong>Review cycle time dropped by a third.</strong> Async reviews were faster than walk-up reviews, because the creative director could batch feedback instead of being interrupted. This was unexpected.</li>
+<li><strong>Hiring cost fell.</strong> Access to a wider talent pool meant the agency filled roles faster and at lower recruiting cost. The savings on office space were real but secondary.</li>
+<li><strong>Late-night calls dropped to near zero.</strong> The on-call rotation and the async default meant the founders were no longer woken up for non-urgent issues. This was the metric they cared most about.</li>
+</ul>
+
+<p>
+The number that mattered most was not on the list: no one quit. The transition had been hard, and two people
+had considered leaving in month four. A year in, the team was stable, the work was shipping on time, and the
+founders were sleeping through the night.
+</p>
+
+<div class="takeaways">
+<div class="takeaways-title">Key takeaways</div>
+<ul>
+<li>Service businesses cannot remote their way around an office workflow. The workflow itself has to change.</li>
+<li>Three systems carry most of the weight: async reviews, client-facing flow, and onboarding as context transfer.</li>
+<li>The async review system did not just move reviews online; it changed what designers posted for review.</li>
+<li>The client-facing flow is the system agencies most often forget. The client only knows what they are told.</li>
+<li>Handoffs must carry reasoning, not just tasks. A handoff with no reasoning is a rebuild waiting to happen.</li>
+</ul>
+</div>
+
+<h2 id="faq">Frequently asked questions</h2>
+<div class="faq">
+<details>
+<summary>Can a small creative agency work fully remote without losing quality?</summary>
+<div class="faq-answer"><p>Yes, but only if the work itself is reorganized around async defaults. The agency in this case study kept quality high by moving reviews to written documents, reserving real-time overlap for creative direction, and building an onboarding system that transferred context instead of just tasks. Agencies that try to run an in-office workflow remotely usually struggle.</p></div>
+</details>
+<details>
+<summary>What is the biggest risk for a small agency going remote?</summary>
+<div class="faq-answer"><p>Client communication. In an office, client context is implicit. Remotely, it has to be explicit and documented. The most common failure is a client feeling out of the loop because the agency has not designed a predictable upward flow of information to the client, not just within the team.</p></div>
+</details>
+<details>
+<summary>How many time zones can a 12-person agency realistically span?</summary>
+<div class="faq-answer"><p>Three to four time zones is manageable with explicit handoff design. Beyond that, the overlap becomes too thin and the handoffs become too frequent. The agency in this case study spans four time zones, but they deliberately hired into a band of hours rather than spreading randomly.</p></div>
+</details>
+<details>
+<summary>Does going remote save a small agency money?</summary>
+<div class="faq-answer"><p>On office space, yes. On tools and onboarding time, often no in the first year. The real financial benefit is access to a wider talent pool, which tends to improve quality and reduce hiring cost over time. Treating remote purely as a cost-cutting move usually underestimates the investment needed in systems.</p></div>
+</details>
+</div>
+
+<div class="author-box">
+<span class="avatar-lg">LE</span>
+<div>
+<div class="author-name">Lzhdeni Editorial Team</div>
+<p class="author-bio">We write practical, system-oriented guides for remote professionals &mdash; focused on durable frameworks over trend-driven hacks. Every guide is reviewed for clarity and real-world applicability. Learn more on our <a href="/about">About</a> and <a href="/editorial-policy">Editorial Policy</a> pages.</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="position-lg-sticky" style="top:90px;">
+<div class="toc mb-4">
+<div class="toc-title">In this guide</div>
+<ol>
+<li><a href="#context">Why service work is harder</a></li>
+<li><a href="#three-systems">The three systems</a></li>
+<li><a href="#async-reviews">Async reviews</a></li>
+<li><a href="#client-flow">Client-facing flow</a></li>
+<li><a href="#onboarding">Onboarding</a></li>
+<li><a href="#month-four">The month-four failure</a></li>
+<li><a href="#numbers">The numbers</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</div>
+<div class="card p-4 mb-4">
+<h3 class="h6 fw-semibold mb-3">Related guides</h3>
+<ul class="list-unstyled small mb-0">
+<li class="mb-2"><a href="/team-work/remote-onboarding-process">Remote Onboarding Process</a></li>
+<li class="mb-2"><a href="/team-work/async-communication-guide">Async Communication Guide</a></li>
+<li class="mb-2"><a href="/team-work/documentation-first-culture">Documentation First Culture</a></li>
+<li class="mb-2"><a href="/team-work/time-zone-collaboration">Time Zone Collaboration</a></li>
+<li class="mb-0"><a href="/case-studies/async-team-example">Async Team Example</a></li>
+</ul>
+</div>
+<div class="card p-4">
+<h3 class="h6 fw-semibold mb-2">Quick takeaway</h3>
+<p class="small text-secondary mb-0">Agencies cannot remote their way around an office workflow. Build async reviews, a client-facing flow, and onboarding that transfers context.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="bg-light border-top border-bottom next-steps">
+<div class="container">
+<div class="section-kicker mb-2" style="letter-spacing:.08em;text-transform:uppercase;font-size:.78rem;color:#6c757d;font-weight:700;">Keep building your system</div>
+<h2 class="h4 fw-semibold mb-4">Where to go next</h2>
+<div class="row g-4">
+<div class="col-md-4">
+<a class="text-decoration-none" href="/team-work/remote-onboarding-process">
+<div class="card h-100 border-0 shadow-sm"><div class="card-body p-4">
+<span class="badge text-bg-light border mb-2">Team Work</span>
+<h3 class="h6 fw-semibold">Remote Onboarding Process</h3>
+<p class="text-secondary small mb-0">The onboarding system in this case study is built on these principles. Go deeper on how to design one.</p>
+</div></div></a>
+</div>
+<div class="col-md-4">
+<a class="text-decoration-none" href="/team-work/time-zone-collaboration">
+<div class="card h-100 border-0 shadow-sm"><div class="card-body p-4">
+<span class="badge text-bg-light border mb-2">Team Work</span>
+<h3 class="h6 fw-semibold">Time Zone Collaboration</h3>
+<p class="text-secondary small mb-0">The framework behind the four-time-zone setup that let this agency ship without late-night calls.</p>
+</div></div></a>
+</div>
+<div class="col-md-4">
+<a class="text-decoration-none" href="/case-studies/async-team-example">
+<div class="card h-100 border-0 shadow-sm"><div class="card-body p-4">
+<span class="badge text-bg-light border mb-2">Case Studies</span>
+<h3 class="h6 fw-semibold">Async Team Example</h3>
+<p class="text-secondary small mb-0">A second case study of a team that went further into async defaults. Compare the patterns.</p>
+</div></div></a>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="bg-dark text-white py-5">
+<div class="container">
+<div class="row g-4">
+<div class="col-lg-5">
+<div class="fw-semibold fs-5">Lzhdeni.com</div>
+<p class="text-white-50 mb-3">Practical guides and systems for remote work productivity, built to be implemented.</p>
+<div class="gap-4 footer-links small" style="text-align:center;">
+<a href="/privacy-policy">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/terms">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/contact">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/about">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/editorial-policy">Editorial Policy</a>
+</div>
+</div>
+<div class="col-6 col-lg-3">
+<div class="text-uppercase text-white-50 small mb-2">Sections</div>
+<div class="footer-links d-flex flex-column gap-1 small">
+<a href="/foundations/">Foundations</a>
+<a href="/systems/">Systems</a>
+<a href="/tools/">Tools</a>
+<a href="/team-work/">Team Work</a>
+<a href="/comparisons/">Comparisons</a>
+<a href="/case-studies/">Case Studies</a>
+</div>
+</div>
+<div class="col-6 col-lg-4">
+<div class="text-uppercase text-white-50 small mb-2">Start</div>
+<div class="footer-links d-flex flex-column gap-1 small">
+<a href="/start-here">Start Here</a>
+<a href="/toolkit/">Free Tools</a>
+<a href="/resources">Resources</a>
+<a href="/sitemap.xml">Sitemap</a>
+<a href="/robots.txt">Robots</a>
+</div>
+<div class="mt-3 text-white-50 small">&copy; <span id="year"></span> Lzhdeni.com. All rights reserved.</div>
+</div>
+</div>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

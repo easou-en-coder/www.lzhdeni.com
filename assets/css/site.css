@@ -290,3 +290,118 @@ table.data-table tbody tr:nth-child(even) td { background: #fbfcfe; }
   .article-body h2 { margin-top: 2rem; }
   .toc { margin-bottom: 1.5rem; }
 }
+
+/* ==========================================================================
+   Interactive toolkit styles
+   ========================================================================== */
+.tool-panel {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(15, 23, 42, .06);
+  padding: 1.6rem;
+}
+.tool-panel + .tool-panel { margin-top: 1.4rem; }
+
+/* Timer display */
+.timer-display {
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  font-size: clamp(3rem, 12vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -.02em;
+  color: var(--ink);
+  text-align: center;
+}
+.timer-mode {
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: .82rem;
+  color: var(--brand-dark);
+  margin-bottom: .5rem;
+}
+.timer-mode.is-break { color: #198754; }
+.timer-ring {
+  width: 240px; height: 240px; max-width: 70vw; max-height: 70vw;
+  margin: 0 auto;
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.timer-ring svg { position: absolute; inset: 0; transform: rotate(-90deg); width: 100%; height: 100%; }
+.timer-ring .track { fill: none; stroke: #eef1f6; stroke-width: 10; }
+.timer-ring .progress { fill: none; stroke: var(--brand); stroke-width: 10; stroke-linecap: round; transition: stroke-dashoffset .4s linear; }
+.timer-ring.is-break .progress { stroke: #198754; }
+
+/* Generic tool buttons row */
+.tool-btns { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; }
+
+/* Result / output box */
+.tool-result {
+  border: 1px dashed var(--line);
+  border-radius: 14px;
+  background: var(--soft);
+  padding: 1.2rem 1.35rem;
+}
+.tool-result.is-empty { color: var(--muted); font-style: italic; }
+.tool-stat {
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--brand-dark);
+  line-height: 1.1;
+}
+.tool-stat-label { font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); font-weight: 700; }
+
+/* Priority matrix */
+.matrix-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+.matrix-cell {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  min-height: 150px;
+  padding: .9rem;
+  background: #fff;
+}
+.matrix-cell h4 { font-size: .82rem; text-transform: uppercase; letter-spacing: .05em; font-weight: 700; margin-bottom: .5rem; }
+.matrix-cell.q1 { background: #eef6ff; border-color: #cfe4ff; }
+.matrix-cell.q2 { background: #eafaf1; border-color: #cdeeda; }
+.matrix-cell.q3 { background: #fff6ec; border-color: #ffe3c2; }
+.matrix-cell.q4 { background: #f4f5f7; }
+.matrix-item {
+  background: #fff; border: 1px solid var(--line); border-radius: 9px;
+  padding: .45rem .6rem; margin-bottom: .45rem; font-size: .9rem;
+  display: flex; justify-content: space-between; align-items: center; gap: .5rem;
+}
+.matrix-item button { border: none; background: transparent; color: #c0341d; cursor: pointer; font-weight: 700; line-height: 1; }
+
+/* Chips / removable list items */
+.chip-list { display: flex; flex-direction: column; gap: .5rem; }
+.chip-row {
+  display: flex; align-items: center; gap: .5rem;
+  border: 1px solid var(--line); border-radius: 10px; padding: .5rem .7rem; background: #fff;
+}
+.chip-row .grow { flex: 1 1 auto; }
+.chip-row button.rm { border: none; background: #fbe9e6; color: #c0341d; border-radius: 6px; width: 26px; height: 26px; cursor: pointer; font-weight: 700; }
+
+/* Decision helper */
+.decision-result { border-radius: 14px; padding: 1.3rem 1.4rem; font-weight: 600; }
+.decision-result.async { background: #eafaf1; border: 1px solid #cdeeda; color: #12633b; }
+.decision-result.sync { background: #eef6ff; border: 1px solid #cfe4ff; color: #0a4a9c; }
+
+/* Toolkit hub cards */
+.tool-hub-card {
+  height: 100%; border: 1px solid var(--line); border-radius: 16px; background: #fff;
+  padding: 1.3rem; transition: box-shadow .15s ease, transform .15s ease; text-decoration: none; display: block;
+}
+.tool-hub-card:hover { box-shadow: 0 12px 28px rgba(15,23,42,.10); transform: translateY(-2px); }
+.tool-hub-card .tool-emoji { font-size: 1.7rem; }
+.tool-hub-card h3 { font-size: 1.05rem; font-weight: 700; margin: .5rem 0 .3rem; color: var(--ink); }
+.tool-hub-card p { font-size: .9rem; color: var(--muted); margin: 0; }
+
+/* Print helpers for planner */
+@media print {
+  nav.navbar, .crumbs, footer, .no-print, .tool-btns { display: none !important; }
+  body { background: #fff; }
+  .tool-panel { box-shadow: none; border: 1px solid #ccc; }
+}

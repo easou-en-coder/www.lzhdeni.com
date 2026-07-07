@@ -2,119 +2,254 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lzhdeni.com/</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/about</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/case-studies/</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/case-studies/async-team-example</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/case-studies/freelancer-productivity-system</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/case-studies/remote-developer-workflow</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/case-studies/small-agency-remote-operations</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/case-studies/startup-remote-process</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/comparisons/</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/comparisons/async-vs-synchronous-communication</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/comparisons/freelancer-vs-full-time-remote</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/comparisons/minimalist-vs-complex</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/comparisons/remote-vs-office-work</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/contact</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/editorial-policy</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/foundations/</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/foundations/attention-management</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/foundations/cost-of-context-switching</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/foundations/deep-work-principles</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/foundations/energy-vs-time-management</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/foundations/focus-vs-busyness</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/foundations/overcoming-remote-procrastination</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/foundations/personal-focus-ritual</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/foundations/time-blocking-vs-task-batching</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/privacy-policy</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/resources</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/start-here</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/systems/</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/systems/daily-review-method</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/systems/daily-review-system</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/systems/energy-aware-calendar</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/systems/goal-setting-for-remote-work</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/systems/inbox-zero-vs-time-based-email</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/systems/monthly-review-system</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/systems/okrs-for-individual-contributors</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/systems/personal-sop-library</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/systems/task-priority-framework</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/systems/weekly-planning-system</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/team-work/</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/team-work/async-communication-guide</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/team-work/documentation-first-culture</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/team-work/managing-up-remotely</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/team-work/remote-meeting-reduction</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/team-work/remote-onboarding-process</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/team-work/remote-team-workflows</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/team-work/time-zone-collaboration</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/team-work/writing-status-updates</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/terms</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/toolkit/</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/toolkit/async-or-sync</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/toolkit/daily-review</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/toolkit/goal-cascade</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/toolkit/meeting-cost-calculator</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/toolkit/pomodoro-timer</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/toolkit/priority-matrix</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/toolkit/timezone-overlap</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/toolkit/tool-stack-auditor</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://lzhdeni.com/toolkit/weekly-planner</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/tools/</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/tools/documentation-tools-guide</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/tools/notion-vs-obsidian</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/tools/remote-work-tool-stack</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://lzhdeni.com/tools/tool-overload-when-less-is-more</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
 </urlset>

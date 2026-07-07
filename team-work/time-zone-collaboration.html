@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="google-adsense-account" content="ca-pub-4361497440384535">
+
+<title>Time Zone Collaboration: How Distributed Teams Work Across Hours | Lzhdeni.com</title>
+
+<meta name="description" content="Cross-time-zone collaboration fails when teams pretend the time difference does not exist. This guide shows how to design handoffs, overlap, and async defaults that actually work."/>
+<meta name="robots" content="index,follow"/>
+<meta name="author" content="Lzhdeni Editorial Team">
+
+<link rel="canonical" href="https://lzhdeni.com/team-work/time-zone-collaboration"/>
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Time Zone Collaboration: How Distributed Teams Work Across Hours">
+<meta property="og:description" content="Cross-time-zone collaboration fails when teams pretend the time difference does not exist. Design handoffs, overlap, and async defaults that work.">
+<meta property="og:url" content="https://lzhdeni.com/team-work/time-zone-collaboration">
+<meta property="og:image" content="https://lzhdeni.com/assets/images/og-image.png">
+<meta property="article:published_time" content="2026-07-07">
+<meta property="article:modified_time" content="2026-07-07">
+<meta property="article:section" content="Team Work">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Time Zone Collaboration: How Distributed Teams Work Across Hours">
+<meta name="twitter:description" content="Cross-time-zone collaboration fails when teams pretend the time difference does not exist. Design handoffs and async defaults that work.">
+<meta name="twitter:image" content="https://lzhdeni.com/assets/images/og-image.png">
+
+<link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/web-app-manifest-192x192.png">
+<link rel="icon" href="/assets/images/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/images/favicon-96x96.png" type="image/png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<meta http-equiv="Content-Language" content="en">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/assets/css/site.css" rel="stylesheet">
+
+<style>
+:root { scroll-behavior: smooth; }
+body { font-size: 17px; line-height: 1.7; background: #f8f9fa; }
+.nav-link { border: 1px solid #999; border-radius: 8px; padding: .1rem .8rem; margin-right: 10px; margin-bottom: 5px; margin-top: 5px; font-size: 14px; }
+.nav-link:hover, .nav-link:active, .nav-link:focus { border: 1px solid #f80000; color: #f80000; }
+.hero-gradient { background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%); padding: 3rem 0; }
+.summary-box { background:#eef4ff; border:1px solid #d6e4ff; border-radius:14px; padding:1.25rem 1.4rem; margin:1.6rem 0 2rem; }
+.summary-title { font-weight:700; margin-bottom:.5rem; }
+.framework { background:#fff; border:1px solid #e6e8eb; border-radius:14px; padding:1.5rem; margin:1.8rem 0; }
+.framework-title { font-weight:700; margin-bottom:1rem; }
+.layer { display:flex; align-items:flex-start; gap:1rem; padding:.85rem 0; border-bottom:1px solid #f1f3f5; }
+.layer:last-child { border-bottom:0; }
+.step { background:#0d6efd; color:#fff; border-radius:50%; width:28px; height:28px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.85rem; flex-shrink:0; }
+.layer-body { flex:1; }
+.layer-body strong { display:block; margin-bottom:.15rem; }
+.layer-body span { color:#495057; font-size:.95rem; }
+.arrow { text-align:center; color:#adb5bd; font-size:1.2rem; }
+.callout { border-left:3px solid #0d6efd; background:#f8f9ff; padding:1rem 1.2rem; border-radius:6px; margin:1.4rem 0; }
+.callout-note { border-left-color:#6f42c1; background:#faf8ff; }
+.callout-warn { border-left-color:#dc3545; background:#fff5f5; }
+.takeaways { background:#fff8e1; border:1px solid #ffe082; border-radius:12px; padding:1.2rem 1.4rem; margin:1.8rem 0; }
+.takeaways-title { font-weight:700; margin-bottom:.5rem; }
+.checklist { list-style:none; padding-left:0; }
+.checklist li { position:relative; padding-left:1.8rem; margin-bottom:.6rem; }
+.checklist li:before { content:"\2713"; position:absolute; left:0; color:#198754; font-weight:700; }
+.faq { margin-top:1.5rem; }
+.faq details { background:#fff; border:1px solid #e6e8eb; border-radius:10px; padding:1rem 1.2rem; margin-bottom:.7rem; }
+.faq summary { font-weight:600; cursor:pointer; }
+.faq-answer { margin-top:.6rem; color:#495057; }
+.author-box { display:flex; gap:1rem; align-items:flex-start; margin-top:2rem; padding-top:1.5rem; border-top:1px solid #e6e8eb; }
+.avatar, .avatar-lg { background:#0d6efd; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0; }
+.avatar { width:28px; height:28px; font-size:.72rem; }
+.avatar-lg { width:48px; height:48px; font-size:1rem; }
+.article-meta { font-size:.9rem; color:#6c757d; margin-top:1rem; }
+.article-meta .meta-item { margin-right:.4rem; }
+.article-meta .dot { color:#adb5bd; }
+.author-name { font-weight:600; }
+.toc { background:#fff; border:1px solid #e6e8eb; border-radius:12px; padding:1.2rem 1.3rem; }
+.toc-title { font-weight:700; margin-bottom:.6rem; }
+.toc ol { padding-left:1.2rem; margin:0; }
+.toc li { margin-bottom:.4rem; font-size:.92rem; }
+.next-steps .card { transition:transform .15s; }
+.next-steps .card:hover { transform:translateY(-2px); }
+.crumbs { padding:.6rem 0; background:#fff; border-bottom:1px solid #f1f3f5; }
+.breadcrumb { margin:0; font-size:.88rem; }
+footer { background:#111 !important; }
+.footer-links a { color: rgba(255,255,255,.7); }
+.footer-links a:hover { color:#fff; }
+@media(max-width:991px) {
+    body { font-size: 16px; }
+    .hero-gradient { padding: 2rem 0; }
+    h1.display-6 { font-size: 1.7rem; }
+    .position-lg-sticky { position:static !important; }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Time Zone Collaboration: How Distributed Teams Work Across Hours",
+  "description": "Cross-time-zone collaboration fails when teams pretend the time difference does not exist. Design handoffs, overlap, and async defaults that actually work.",
+  "author": {
+    "@type": "Organization",
+    "name": "Lzhdeni Editorial Team",
+    "url": "https://lzhdeni.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lzhdeni.com",
+    "url": "https://lzhdeni.com/"
+  },
+  "datePublished": "2026-07-07",
+  "dateModified": "2026-07-07",
+  "mainEntityOfPage": "https://lzhdeni.com/team-work/time-zone-collaboration"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much overlap do distributed teams actually need?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Most teams need two to four hours of real overlap per day, not a full working day. The overlap is for decisions, sync meetings, and real-time problem solving. Everything else can and should be async. Trying to maximize overlap usually means someone is working at uncomfortable hours for no real reason." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the biggest mistake teams make with time zones?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pretending the time difference does not exist. Teams schedule meetings as if everyone is local, default to synchronous communication for everything, and never design explicit handoffs. The result is that the same work takes longer and someone is always working outside normal hours." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you handle urgent issues across time zones?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Define what urgent means before something is urgent, document who is on call, and make sure the on-call rotation is fair. Most teams that struggle with urgency do not actually have a frequency problem; they have a definition problem. Everything feels urgent because nothing has been classified." }
+    },
+    {
+      "@type": "Question",
+      "name": "Should meetings rotate across time zones to share the pain?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sometimes, but only for recurring meetings where no one time works for everyone. Rotation should be explicit and predictable, not ad hoc. For one-off meetings, pick the time that works for the most people and record it for the rest. Rotating every meeting creates unpredictable schedules and quietly burns people out." }
+    }
+  ]
+}
+</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4361497440384535" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-body">
+
+<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top" style="padding-left:10px;padding-right:10px;box-shadow:0 2px 5px rgba(16,24,40,.3);" aria-label="Main navigation">
+<div class="container">
+<a class="navbar-brand fw-semibold" href="/" aria-label="Lzhdeni Home"><img src="/assets/images/logo.png" alt="Lzhdeni Logo" class="me-2" width="30" height="30"> Lzhdeni.com</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="navMain">
+<ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
+<li class="nav-item"><a class="nav-link" href="/start-here">Start Here</a></li>
+<li class="nav-item"><a class="nav-link" href="/foundations/">Foundations</a></li>
+<li class="nav-item"><a class="nav-link" href="/systems/">Systems</a></li>
+<li class="nav-item"><a class="nav-link active" href="/team-work/">Team Work</a></li>
+<li class="nav-item"><a class="nav-link" href="/tools/">Tools</a></li>
+<li class="nav-item"><a class="nav-link" href="/comparisons/">Comparisons</a></li>
+<li class="nav-item"><a class="nav-link" href="/case-studies/">Case Studies</a></li>
+<li class="nav-item"><a class="nav-link" href="/toolkit/">Toolkit</a></li>
+</ul>
+<div class="d-flex ms-lg-3 gap-2">
+<a class="btn btn-outline-primary btn-sm" href="/about">About</a>
+<a class="btn btn-primary btn-sm" href="/start-here">Get the Framework</a>
+</div>
+</div>
+</div>
+</nav>
+
+<div class="crumbs">
+<div class="container">
+<nav aria-label="Breadcrumb">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/team-work/">Team Work</a></li>
+<li class="breadcrumb-item active" aria-current="page">Time Zone Collaboration</li>
+</ol>
+</nav>
+</div>
+</div>
+
+<header class="hero-gradient border-bottom">
+<div class="container">
+<div class="row">
+<div class="col-lg-9">
+<span class="badge text-bg-light border mb-2">Team Work &bull; Distributed Work</span>
+<h1 class="display-6 fw-bold mb-3">Time Zone Collaboration: How Distributed Teams Work Across Hours</h1>
+<p class="lead text-secondary mb-0">
+Most cross-time-zone teams fail in the same way: they pretend the time difference does not exist, then act
+surprised when work stalls overnight. The fix is not more overlap. It is designing the work so that overlap is
+used for what only overlap can do, and everything else travels async by default.
+</p>
+<div class="article-meta">
+<span class="meta-item"><span class="avatar">LE</span> <span class="author">Lzhdeni Editorial Team</span></span>
+<span class="dot">&bull;</span>
+<span class="meta-item">Published <time datetime="2026-07-07">Jul 07, 2026</time></span>
+<span class="dot">&bull;</span>
+<span class="meta-item">11 min read</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<section>
+<div class="container">
+<div class="row g-5">
+<div class="col-lg-8">
+<div class="article-body">
+
+<div class="summary-box">
+<div class="summary-title">What you'll learn</div>
+<ul>
+<li>Why pretending time zones do not exist creates the most pain</li>
+<li>How to identify what actually needs real-time overlap versus what can travel async</li>
+<li>The three-layer model for designing cross-time-zone work</li>
+<li>How to design handoffs that hand off real context, not just tasks</li>
+<li>How to handle urgency and on-call without burning out one region</li>
+</ul>
+</div>
+
+<p>
+Working across time zones is not a new problem, but it has become a common one. A team that once sat in the
+same office now spans three continents. A hire who would once have been local is now two time zones away. The
+temptation is to treat this as a scheduling problem &mdash; to find a meeting time that sort of works for everyone
+and carry on as before. That approach fails quietly, and it fails in a specific way: work slows down, people stay
+up late for meetings that do not need to be live, and decisions get made twice because the async record is weak.
+</p>
+
+<p>
+The real solution is not better scheduling. It is redesigning the work itself so that the time difference
+becomes an asset rather than a constant source of friction. This guide shows how.
+</p>
+
+<h2 id="default-failures">How cross-time-zone work usually fails</h2>
+
+<p>
+Three failure patterns account for most of the pain of distributed teams. None of them are caused by the time
+difference itself. They are caused by pretending the time difference does not exist.
+</p>
+
+<ul>
+<li><strong>Synchronous default.</strong> The team treats real-time communication as the norm and async as the fallback. Every decision becomes a meeting, every meeting becomes a scheduling problem, and the people in inconvenient time zones quietly stop contributing.</li>
+<li><strong>No handoff design.</strong> Work is handed between time zones as a task list, not as context. The next person picks up the work, does not understand why it looks the way it does, and either rebuilds it or waits for the original author to wake up.</li>
+<li><strong>Urgency without definition.</strong> Everything feels urgent because nothing has been classified as not-urgent. The result is that someone is always on call, usually the person in the time zone closest to the customer or the original office.</li>
+</ul>
+
+<p>
+Each of these failures has the same root cause: the team is running a single-time-zone workflow across multiple
+time zones. The fix is to admit that the workflow itself needs to change.
+</p>
+
+<h2 id="three-layers">The three-layer model for cross-time-zone work</h2>
+
+<p>
+A team that works well across time zones treats work as three layers, each with a different relationship to
+synchronous time. Trying to run everything in one layer is what creates the pain.
+</p>
+
+<figure>
+<div class="framework">
+<div class="framework-title">The three layers of distributed work</div>
+<div class="layer"><span class="step">1</span><div class="layer-body"><strong>Async layer</strong><span>The default. Status, updates, decisions that do not need discussion, written specs, code review, design review. Most of the work lives here and never needs real-time overlap.</span></div></div>
+<div class="arrow">&darr;</div>
+<div class="layer"><span class="step">2</span><div class="layer-body"><strong>Overlap layer</strong><span>The two to four hours per day when most of the team is online together. Used for decisions that actually need discussion, hard problems, pairing, and the few meetings that create more value than they cost.</span></div></div>
+<div class="arrow">&darr;</div>
+<div class="layer"><span class="step">3</span><div class="layer-body"><strong>On-call layer</strong><span>For genuine urgency only &mdash; production outages, customer-impacting issues, time-sensitive decisions that cannot wait for the next overlap. Explicitly rotated, explicitly compensated, and explicitly small.</span></div></div>
+</div>
+<figcaption>Most teams have only the async layer and the overlap layer, and they confuse the overlap layer with the synchronous layer.</figcaption>
+</figure>
+
+<p>
+The key insight is that the async layer is not a fallback. It is the default. The overlap layer is a deliberate
+investment of scarce synchronous time, used only for what genuinely needs it. The on-call layer exists so that
+urgency does not leak into the other two.
+</p>
+
+<h2 id="async-default">Designing the async default</h2>
+
+<p>
+The async layer is where most of the work happens, and it is usually the weakest part of a distributed team.
+The fix is to make async communication good enough that people prefer it over scheduling a meeting. That
+requires three things:
+</p>
+
+<ul class="checklist">
+<li><strong>Written decisions, not chat decisions.</strong> When a decision is made in chat, it disappears. When it is made in a written document with a clear owner and a clear status, it travels. The <a href="/team-work/documentation-first-culture">documentation-first culture</a> page goes deeper on this.</li>
+<li><strong>Self-contained requests.</strong> A request that says &ldquo;can you look at this?&rdquo; with no context forces the recipient to ask three follow-up questions before they can start. A request that includes the goal, the deadline, and the relevant links can be picked up without a conversation.</li>
+<li><strong>Predictable response times.</strong> Async does not mean instant. It means the sender knows when to expect a reply, and the recipient knows they are not expected to drop everything. Define the norm explicitly: same-day for normal messages, 24 hours for non-urgent, 48 hours for FYI.</li>
+</ul>
+
+<p>
+When the async layer is strong, the overlap layer stops being choked with work that did not need to be there
+in the first place. Meetings become shorter, fewer, and more useful.
+</p>
+
+<h2 id="overlap">Using overlap for what only overlap can do</h2>
+
+<p>
+Real-time overlap is scarce. A team spread across three time zones may have two hours a day when everyone is
+available. That two hours should not be spent on status updates, FYI announcements, or anything that could have
+been a written message. It should be spent on the small set of things that genuinely benefit from real-time
+interaction:
+</p>
+
+<ul>
+<li>Decisions that have several viable options and need discussion to choose</li>
+<li>Hard problems where live thinking together produces insights that async would take days to reach</li>
+<li>Relationship-building conversations that do not have an agenda but build the trust that later async work depends on</li>
+<li>Onboarding new team members who need to ask questions in real time before they know what to ask</li>
+</ul>
+
+<p>
+If your overlap hours are filled with status meetings, the team is paying the cost of real-time without getting
+its value. Move the status to async and reserve the overlap for what actually needs it.
+</p>
+
+<div class="callout callout-note">
+<p><strong>Practical tip:</strong> Audit your recurring meetings. For each one, ask: &ldquo;If this were an
+async document, what would be lost?&rdquo; If the answer is &ldquo;nothing&rdquo; or &ldquo;just the
+discussion,&rdquo; the meeting probably belongs in the async layer. Keep only the meetings where the live
+discussion is the point.</p>
+</div>
+
+<h2 id="handoffs">Designing handoffs that hand off context, not just tasks</h2>
+
+<p>
+The most underrated skill in cross-time-zone work is the handoff. When work moves from one time zone to another,
+what gets handed off determines whether the next person can keep moving or has to start over. A good handoff
+carries three things:
+</p>
+
+<ul>
+<li><strong>The current state.</strong> What is done, what is in progress, what is blocked, and what the next person should pick up first.</li>
+<li><strong>The reasoning.</strong> Why the work looks the way it does. Not the full history, but enough that the next person does not need to rebuild the mental model from scratch.</li>
+<li><strong>The open questions.</strong> What has not been decided yet, and what the next person is empowered to decide on their own versus what should wait.</li>
+</ul>
+
+<p>
+A handoff that carries only the task list forces the next person to guess at the reasoning. A handoff that
+carries only the reasoning leaves the next person unsure what to actually do. Both lead to the same outcome:
+the work stalls until the original author is back online.
+</p>
+
+<p>
+The practical form of a good handoff is a short written document, updated at the end of each person's working
+day, that the next person can read at the start of theirs. It takes five minutes to write and saves hours of
+rework.
+</p>
+
+<h2 id="urgency">Handling urgency without burning out one region</h2>
+
+<p>
+The hardest part of cross-time-zone work is urgency. When something goes wrong at 3am in one time zone, someone
+has to respond. The question is who, how often, and how they recover.
+</p>
+
+<p>
+Three rules prevent the most common failure mode &mdash; the person closest to the problem becoming a permanent
+on-call:
+</p>
+
+<ul class="checklist">
+<li><strong>Define urgency before something is urgent.</strong> Most &ldquo;urgent&rdquo; issues are urgent because they were not classified. Write down what counts as urgent, what does not, and what can wait until the next overlap. The list is shorter than most teams think.</li>
+<li><strong>Rotate on-call fairly.</strong> If one region is always on call, that region burns out. Rotate the on-call duty across the team, even if it is less efficient in the short term. Fairness is a long-term efficiency concern.</li>
+<li><strong>Compensate on-call explicitly.</strong> Being available outside working hours is work, even if nothing happens. Time off in lieu, pay, or a lighter load the next day. Teams that treat on-call as an invisible obligation lose people.</li>
+</ul>
+
+<div class="callout callout-warn">
+<p><strong>Watch for this pattern:</strong> If the same person keeps being the one who responds to urgent issues,
+something is wrong with the system, not with the person. Either the urgency definition is too broad, the rotation
+is not actually rotating, or the on-call role has quietly become a permanent role.</p>
+</div>
+
+<div class="takeaways">
+<div class="takeaways-title">Key takeaways</div>
+<ul>
+<li>The biggest mistake is pretending the time difference does not exist. Design the workflow around it.</li>
+<li>Treat work as three layers: async default, scarce overlap for what needs it, explicit on-call for genuine urgency.</li>
+<li>Most meetings do not need real-time. Move them to async and reserve overlap for decisions, hard problems, and relationships.</li>
+<li>Good handoffs carry state, reasoning, and open questions. Bad handoffs carry only a task list.</li>
+<li>Define urgency before something is urgent, rotate on-call fairly, and compensate it explicitly.</li>
+</ul>
+</div>
+
+<h2 id="faq">Frequently asked questions</h2>
+<div class="faq">
+<details>
+<summary>How much overlap do distributed teams actually need?</summary>
+<div class="faq-answer"><p>Most teams need two to four hours of real overlap per day, not a full working day. The overlap is for decisions, sync meetings, and real-time problem solving. Everything else can and should be async. Trying to maximize overlap usually means someone is working at uncomfortable hours for no real reason.</p></div>
+</details>
+<details>
+<summary>What is the biggest mistake teams make with time zones?</summary>
+<div class="faq-answer"><p>Pretending the time difference does not exist. Teams schedule meetings as if everyone is local, default to synchronous communication for everything, and never design explicit handoffs. The result is that the same work takes longer and someone is always working outside normal hours.</p></div>
+</details>
+<details>
+<summary>How do you handle urgent issues across time zones?</summary>
+<div class="faq-answer"><p>Define what urgent means before something is urgent, document who is on call, and make sure the on-call rotation is fair. Most teams that struggle with urgency do not actually have a frequency problem; they have a definition problem. Everything feels urgent because nothing has been classified.</p></div>
+</details>
+<details>
+<summary>Should meetings rotate across time zones to share the pain?</summary>
+<div class="faq-answer"><p>Sometimes, but only for recurring meetings where no one time works for everyone. Rotation should be explicit and predictable, not ad hoc. For one-off meetings, pick the time that works for the most people and record it for the rest. Rotating every meeting creates unpredictable schedules and quietly burns people out.</p></div>
+</details>
+</div>
+
+<div class="author-box">
+<span class="avatar-lg">LE</span>
+<div>
+<div class="author-name">Lzhdeni Editorial Team</div>
+<p class="author-bio">We write practical, system-oriented guides for remote professionals &mdash; focused on durable frameworks over trend-driven hacks. Every guide is reviewed for clarity and real-world applicability. Learn more on our <a href="/about">About</a> and <a href="/editorial-policy">Editorial Policy</a> pages.</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="position-lg-sticky" style="top:90px;">
+<div class="toc mb-4">
+<div class="toc-title">In this guide</div>
+<ol>
+<li><a href="#default-failures">How it usually fails</a></li>
+<li><a href="#three-layers">The three-layer model</a></li>
+<li><a href="#async-default">Designing the async default</a></li>
+<li><a href="#overlap">Using overlap well</a></li>
+<li><a href="#handoffs">Designing handoffs</a></li>
+<li><a href="#urgency">Handling urgency</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</div>
+<div class="card p-4 mb-4">
+<h3 class="h6 fw-semibold mb-3">Related guides</h3>
+<ul class="list-unstyled small mb-0">
+<li class="mb-2"><a href="/systems/energy-aware-calendar">Energy-Aware Calendar</a></li>
+<li class="mb-2"><a href="/team-work/async-communication-guide">Async Communication Guide</a></li>
+<li class="mb-2"><a href="/team-work/documentation-first-culture">Documentation First Culture</a></li>
+<li class="mb-2"><a href="/team-work/remote-team-workflows">Remote Team Workflows</a></li>
+<li class="mb-0"><a href="/case-studies/async-team-example">Async Team Example</a></li>
+</ul>
+</div>
+<div class="card p-4">
+<h3 class="h6 fw-semibold mb-2">Quick takeaway</h3>
+<p class="small text-secondary mb-0">Treat work as three layers: async default, scarce overlap, explicit on-call. Design the workflow around the time difference, not against it.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="bg-light border-top border-bottom next-steps">
+<div class="container">
+<div class="section-kicker mb-2" style="letter-spacing:.08em;text-transform:uppercase;font-size:.78rem;color:#6c757d;font-weight:700;">Keep building your system</div>
+<h2 class="h4 fw-semibold mb-4">Where to go next</h2>
+<div class="row g-4">
+<div class="col-md-4">
+<a class="text-decoration-none" href="/systems/energy-aware-calendar">
+<div class="card h-100 border-0 shadow-sm"><div class="card-body p-4">
+<span class="badge text-bg-light border mb-2">Systems</span>
+<h3 class="h6 fw-semibold">Energy-Aware Calendar</h3>
+<p class="text-secondary small mb-0">Time zone work is also energy work. Design the calendar so the overlap hours land where people can actually think.</p>
+</div></div></a>
+</div>
+<div class="col-md-4">
+<a class="text-decoration-none" href="/team-work/async-communication-guide">
+<div class="card h-100 border-0 shadow-sm"><div class="card-body p-4">
+<span class="badge text-bg-light border mb-2">Team Work</span>
+<h3 class="h6 fw-semibold">Async Communication Guide</h3>
+<p class="text-secondary small mb-0">The async layer only works if the communication inside it is good. Start here if handoffs are weak.</p>
+</div></div></a>
+</div>
+<div class="col-md-4">
+<a class="text-decoration-none" href="/case-studies/async-team-example">
+<div class="card h-100 border-0 shadow-sm"><div class="card-body p-4">
+<span class="badge text-bg-light border mb-2">Case Studies</span>
+<h3 class="h6 fw-semibold">Async Team Example</h3>
+<p class="text-secondary small mb-0">See what these principles look like inside a real distributed team.</p>
+</div></div></a>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="bg-dark text-white py-5">
+<div class="container">
+<div class="row g-4">
+<div class="col-lg-5">
+<div class="fw-semibold fs-5">Lzhdeni.com</div>
+<p class="text-white-50 mb-3">Practical guides and systems for remote work productivity, built to be implemented.</p>
+<div class="gap-4 footer-links small" style="text-align:center;">
+<a href="/privacy-policy">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/terms">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/contact">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/about">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/editorial-policy">Editorial Policy</a>
+</div>
+</div>
+<div class="col-6 col-lg-3">
+<div class="text-uppercase text-white-50 small mb-2">Sections</div>
+<div class="footer-links d-flex flex-column gap-1 small">
+<a href="/foundations/">Foundations</a>
+<a href="/systems/">Systems</a>
+<a href="/tools/">Tools</a>
+<a href="/team-work/">Team Work</a>
+<a href="/comparisons/">Comparisons</a>
+<a href="/case-studies/">Case Studies</a>
+</div>
+</div>
+<div class="col-6 col-lg-4">
+<div class="text-uppercase text-white-50 small mb-2">Start</div>
+<div class="footer-links d-flex flex-column gap-1 small">
+<a href="/start-here">Start Here</a>
+<a href="/toolkit/">Free Tools</a>
+<a href="/resources">Resources</a>
+<a href="/sitemap.xml">Sitemap</a>
+<a href="/robots.txt">Robots</a>
+</div>
+<div class="mt-3 text-white-50 small">&copy; <span id="year"></span> Lzhdeni.com. All rights reserved.</div>
+</div>
+</div>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
